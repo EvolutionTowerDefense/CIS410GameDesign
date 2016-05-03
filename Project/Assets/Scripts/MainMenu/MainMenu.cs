@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour {
 		}
 		if (button.name == "Exit") {
 			print ("Exit");
+			Application.Quit();
 		}
 
 
