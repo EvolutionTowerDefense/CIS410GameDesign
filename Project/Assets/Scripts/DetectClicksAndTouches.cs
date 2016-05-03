@@ -21,6 +21,8 @@ public class DetectClicksAndTouches : MonoBehaviour
 	
 	void Start()
 	{
+		Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
 		if(detectionCamera != null)
 		{
 			_camera = detectionCamera;
