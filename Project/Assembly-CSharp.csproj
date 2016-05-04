@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ControllingCameraAspectScript.cs" />
+     <Compile Include="Assets\DestoryOnTouch.cs" />
+     <Compile Include="Assets\Particle.cs" />
+     <Compile Include="Assets\Rotater.cs" />
      <Compile Include="Assets\Scripts\BasicEnemy.cs" />
      <Compile Include="Assets\Scripts\BasicTower.cs" />
      <Compile Include="Assets\Scripts\CreateTowerOnClicked.cs" />

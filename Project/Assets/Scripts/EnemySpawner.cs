@@ -48,7 +48,7 @@ public class EnemySpawner : MonoBehaviour {
 
 			spawnIndex++;
 
-			if (spawnIndex > spawnList.Length) {
+			if (spawnIndex >= spawnList.Length) {
 				CancelInvoke ();
 			
 			}

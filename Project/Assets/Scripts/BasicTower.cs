@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class BasicTower : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class BasicTower : MonoBehaviour {
 	public float fireRadius = 5.0f; //radius that tower detects and fires at enemy
 
 	private Vector3 movementDirection;
+
 
 
 
@@ -27,9 +29,19 @@ public class BasicTower : MonoBehaviour {
 
 			if (col.tag == "Enemy") {
 				if (gameObject.tag != "DontRotate") {
-					movementDirection = (col.transform.position - transform.position).normalized;
+
+
+					//Attack enemy who is farthest away from turret
+					//movementDirection = (col.transform.position - transform.position);
+
+
+					//Attack enemy who is cloests to turret
+					GameObject target = null;
+					target	= GameObject.FindGameObjectsWithTag("Enemy").Aggregate((o1, o2) => Vector3.Distance(o1.transform.position, this.transform.position) > Vector3.Distance(o2.transform.position, this.transform.position) ? o2 : o1);
+
+					movementDirection = (target.transform.position - transform.position);
 					transform.rotation = Quaternion.LookRotation (movementDirection);
-				}
+					}
 
 				break;
 			}
@@ -41,7 +53,7 @@ public class BasicTower : MonoBehaviour {
 	}
 
 
-	void SpawnBullet()
+	public void SpawnBullet()
 
 	{
 		/////////////////////////////////
@@ -59,9 +71,13 @@ public class BasicTower : MonoBehaviour {
 		foreach (Collider col in Physics.OverlapSphere (transform.position, fireRadius))
 		{
 			
-
 			if (col.tag == "Enemy") {
-				target = col.gameObject;
+
+				//Attack farthest enemy
+				//target = col.gameObject;
+
+				//Attack closests enemy
+				target = GameObject.FindGameObjectsWithTag("Enemy").Aggregate((o1, o2) => Vector3.Distance(o1.transform.position, this.transform.position) > Vector3.Distance(o2.transform.position, this.transform.position) ? o2 : o1);
 
 				break;
 			}
