@@ -18,7 +18,7 @@ public class EnergyManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		energyDisplay.GetComponent<TextMesh>().text = energy.ToString();
+		energyDisplay.GetComponent<TextMesh>().text ="Cash: " + energy.ToString();
 	
 	}
 }
