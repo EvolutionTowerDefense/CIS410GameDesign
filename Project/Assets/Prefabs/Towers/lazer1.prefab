@@ -47,6 +47,7 @@ GameObject:
   - 64: {fileID: 6452850}
   - 33: {fileID: 3311022}
   - 65: {fileID: 6555804}
+  - 114: {fileID: 11479184}
   m_Layer: 0
   m_Name: lazer1
   m_TagString: Untagged
@@ -232,6 +233,22 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 0.4
   fireRadius: 8
+--- !u!114 &11479184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706b0c08ab5074222bb8f89505206ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 100000, guid: 6ffaadfff336742b6bd59cb4b516fd9f, type: 2}
+  bulletSpeed: 20
+  fireRate: 0.4
+  fireRadius: 8
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

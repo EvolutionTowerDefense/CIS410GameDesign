@@ -12,10 +12,9 @@ GameObject:
   - 135: {fileID: 13500000}
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11472954}
   m_Layer: 8
-  m_Name: SlowDownBullet
-  m_TagString: SlowBullet
+  m_Name: GunBullet
+  m_TagString: GunBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,20 +79,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &11472954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96b46f56e885d4557a547f286c5ec0b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slowPercentage: 0.5
-  slowTime: 3
-  restoreSpeedObject: {fileID: 139898, guid: b59f198b533664b55ba69e752d7ddebf, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

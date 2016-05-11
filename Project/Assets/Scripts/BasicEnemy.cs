@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BasicEnemy : MonoBehaviour {
 
-	public int Health;
+	public float Health;
 
 	// Use this for initialization
 	void Start () {
@@ -18,16 +18,37 @@ public class BasicEnemy : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag == "Bullet") {
-			Health--;
+			Health = Health - 1.0f;
 			Destroy (collision.collider.gameObject);
 		}
-		if (collision.collider.tag == "Explosion") {
-			Health--;
-			Health--;
-			Health--;
+		else if (collision.collider.tag == "GunBullet") {
+			Health = Health - 1.0f;
+			Destroy (collision.collider.gameObject);
+		}
+		else if (collision.collider.tag == "Mortar") {
+			Health = Health - 1.0f;
+			Health = Health - 1.0f;			
+			Health = Health - 1.0f;
 			//Don't destory the explosion
 			//Destroy (collision.collider.gameObject);
 		}
+
+		else if (collision.collider.tag == "LazerBullet") {
+			Health = Health - 1.0f;
+			Destroy (collision.collider.gameObject);
+		}
+
+		else if (collision.collider.tag == "MachineGunBullet") {
+			Health = Health - 1.0f;
+			Destroy (collision.collider.gameObject);
+		}
+
+		else if (collision.collider.tag == "SlowBullet") {
+			Health = Health - 1.0f;
+			Destroy (collision.collider.gameObject);
+		}
+
+
 
 		if (Health <= 0) {
 			Destroy (collision.collider.gameObject);

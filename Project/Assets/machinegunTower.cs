@@ -1,15 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
 
-public class BasicTower : MonoBehaviour {
-
+public class machinegunTower : MonoBehaviour {
 	public GameObject bullet;
 	public float bulletSpeed = 1.0f; //How fast a bullet is shot
 	public float fireRate = 1.0f; //How fast a tower fires
 	public float fireRadius = 5.0f; //radius that tower detects and fires at enemy
 
-
+	public float damage = 1.0f; // Damage
 
 
 	private Vector3 movementDirection;
@@ -44,7 +43,7 @@ public class BasicTower : MonoBehaviour {
 
 					movementDirection = (target.transform.position - transform.position);
 					transform.rotation = Quaternion.LookRotation (movementDirection);
-					}
+				}
 
 				break;
 			}
@@ -73,7 +72,7 @@ public class BasicTower : MonoBehaviour {
 		//Loop for each enemy in area - 
 		foreach (Collider col in Physics.OverlapSphere (transform.position, fireRadius))
 		{
-			
+
 			if (col.tag == "Enemy") {
 
 				//Attack farthest enemy
@@ -95,6 +94,5 @@ public class BasicTower : MonoBehaviour {
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
 		}
 	}
-
 
 }

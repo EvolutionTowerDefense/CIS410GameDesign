@@ -10,6 +10,8 @@ public class MortarTower : MonoBehaviour {
 
 	public float bulletSpeed = 1.0f;
 
+	public float damage = 1.0f; // Damage
+
 	private Vector3 movementDirection;
 
 	// Use this for initialization
