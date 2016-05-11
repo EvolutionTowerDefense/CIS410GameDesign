@@ -3,6 +3,9 @@ using System.Collections;
 using System.Linq;
 
 public class lazerTower : MonoBehaviour {
+	public GameObject endOfBarrel;
+	public AudioClip shotSound;
+
 
 	public GameObject bullet;
 	public float bulletSpeed = 1.0f; //How fast a bullet is shot
@@ -93,6 +96,10 @@ public class lazerTower : MonoBehaviour {
 
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
+		
+			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+
+
 		}
 	}
 

@@ -69,6 +69,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &187968
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 452712}
+  m_Layer: 0
+  m_Name: endOfBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &417250
 Transform:
   m_ObjectHideFlags: 1
@@ -88,13 +103,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -100, z: -1}
+  m_LocalPosition: {x: -3.5862157, y: 0.225, z: -5.0542116}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children:
   - {fileID: 417250}
   - {fileID: 476542}
   - {fileID: 470490}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &452712
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -9, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 476542}
   m_RootOrder: 0
 --- !u!4 &470490
 Transform:
@@ -117,7 +144,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.0053747557, y: 3.9672844, z: -1.0684472}
   m_LocalScale: {x: 0.43001968, y: 0.43001968, z: 0.43001968}
-  m_Children: []
+  m_Children:
+  - {fileID: 452712}
   m_Father: {fileID: 442710}
   m_RootOrder: 1
 --- !u!23 &2335702
@@ -256,6 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c464e4d5d964253bacfa678d24e48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endOfBarrel: {fileID: 187968}
+  shotSound: {fileID: 8300000, guid: 5802cc242c56cfa47a4b9ac4bb747662, type: 3}
+  smoke: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}
   bullet: {fileID: 100000, guid: 1c1bca7a697e14de8aaec5041cd5203e, type: 2}
   bulletSpeed: 20
   fireRate: 0.5

@@ -54,6 +54,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &174450
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 475152}
+  m_Layer: 0
+  m_Name: endOfBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &184556
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: -2.507878, y: 0.225, z: 1}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children:
   - {fileID: 425956}
@@ -140,6 +155,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
+--- !u!4 &475152
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 490418}
+  m_RootOrder: 0
 --- !u!4 &490418
 Transform:
   m_ObjectHideFlags: 1
@@ -149,7 +176,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.004074707, y: 5.0968633, z: 0.7362988}
   m_LocalScale: {x: 0.43001968, y: 0.43001968, z: 0.43001968}
-  m_Children: []
+  m_Children:
+  - {fileID: 475152}
   m_Father: {fileID: 400000}
   m_RootOrder: 1
 --- !u!23 &2300000
@@ -356,11 +384,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6f41b97e5364a0a82d47f81a58e2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endOfBarrel: {fileID: 174450}
+  shotSound: {fileID: 8300000, guid: 517cb4111b60bc444813bbc62a479e05, type: 3}
+  smoke: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}
   bullet: {fileID: 100000, guid: ac75e53225c9e42fda3395dba544261d, type: 2}
   fireRate: 3
   fireRadius: 10
-  lobAmount: 2
+  lobAmount: 3
   bulletSpeed: 2
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

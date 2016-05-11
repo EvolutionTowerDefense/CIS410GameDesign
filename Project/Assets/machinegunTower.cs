@@ -3,6 +3,11 @@ using System.Collections;
 using System.Linq;
 
 public class machinegunTower : MonoBehaviour {
+	public GameObject endOfBarrel;
+	public AudioClip shotSound;
+	public GameObject smoke;
+	private GameObject instantiatedObj;
+
 	public GameObject bullet;
 	public float bulletSpeed = 1.0f; //How fast a bullet is shot
 	public float fireRate = 1.0f; //How fast a tower fires
@@ -92,6 +97,10 @@ public class machinegunTower : MonoBehaviour {
 
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
+		
+			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
+			Destroy (instantiatedObj,2.0f);		
 		}
 	}
 

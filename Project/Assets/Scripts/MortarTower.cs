@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class MortarTower : MonoBehaviour {
+	public GameObject endOfBarrel;
+	public AudioClip shotSound;
+	public GameObject smoke;
+	private GameObject instantiatedObj;
 
 	public GameObject bullet;
 	public float fireRate = 1.0f; //How fast a tower fires
@@ -76,6 +80,10 @@ public class MortarTower : MonoBehaviour {
 			Vector3 launchForce = new Vector3(distance.x * bulletSpeed, lobAmount, distance.z * bulletSpeed);                        
 			newBullet.GetComponent<Rigidbody>().AddForce(launchForce, ForceMode.VelocityChange);
 		
+			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
+			Destroy (instantiatedObj,2.0f);
+
 		}
 	}
 
