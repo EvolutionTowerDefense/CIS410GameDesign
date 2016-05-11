@@ -184,7 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 125436722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbcdb9a8310bc4b4fa6426b8851db895, type: 3}
+  m_Script: {fileID: 11500000, guid: b0d7966f51e9d41868092fe0536dcd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &125436724
@@ -864,7 +864,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125436723}
+      - m_Target: {fileID: 0}
         m_MethodName: ButtonMenu
         m_Mode: 2
         m_Arguments:

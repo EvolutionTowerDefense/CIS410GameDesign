@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MortarAI.cs" />
      <Compile Include="Assets\Scripts\MortarTower.cs" />
+     <Compile Include="Assets\Scripts\Options\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\Particle.cs" />
      <Compile Include="Assets\Scripts\PathThroughObjects.cs" />
      <Compile Include="Assets\Scripts\RestoreSpeed.cs" />
