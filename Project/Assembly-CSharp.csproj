@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\DestoryOnTouch.cs" />
      <Compile Include="Assets\Scripts\DetectClicksAndTouches.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner2.cs" />
      <Compile Include="Assets\Scripts\EnergyBonusOnDestory.cs" />
      <Compile Include="Assets\Scripts\EnergyManager.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />

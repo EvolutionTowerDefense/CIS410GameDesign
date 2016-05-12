@@ -5,7 +5,8 @@ public class EnemySpawner : MonoBehaviour {
 
 	public GameObject[] pathPoints;
 	public GameObject graphicalPathObject;
-	public int waves;
+
+	public int waveCount;
 
 	private int spawnIndex=0;
 
@@ -39,17 +40,31 @@ public class EnemySpawner : MonoBehaviour {
 			//Spawn (instantiate) next enemy in spawnlist
 			//Transform and quaterinan gives us an enemy where spawner is
 
-		if (spawnIndex > spawnList.Length) {
-			CancelInvoke ();
+			if (spawnIndex > spawnList.Length) {
 
-		}
+				waveCount = waveCount - 1;
+			if (waveCount <= 0) {
+				CancelInvoke ();
+				} 
+			else {
+				spawnIndex = 0;
+				}
+
+			}
 
 			GameObject reference = Instantiate (spawnList [spawnIndex], transform.position, Quaternion.identity) as GameObject;
 
 			spawnIndex++;
 
 			if (spawnIndex >= spawnList.Length) {
-				CancelInvoke ();
+				waveCount = waveCount - 1;
+				if (waveCount <= 0) {
+						CancelInvoke ();
+					}
+			else {
+				spawnIndex = 0;
+			}
+				//CancelInvoke ();
 			
 			}
 
@@ -57,7 +72,8 @@ public class EnemySpawner : MonoBehaviour {
 			//Set enemy path information
 			reference.SendMessage ("SetPathPoints", pathPoints);
 
-		//Add delay between waves here
+			//Add delay between waves here
+
 
 	}
 

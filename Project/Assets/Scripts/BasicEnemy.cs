@@ -54,14 +54,14 @@ public class BasicEnemy : MonoBehaviour {
 
 
 		if (Health <= 0) {
-			Instantiate(explosion, transform.position, transform.rotation);
+			GameObject clone = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
 			//Instantiate(explosion);
 
 			//Add sound for explosion
 //			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 		
 
-			Destroy (gameObject,2.0f);
+			Destroy (clone,2.0f);
 			Destroy (collision.collider.gameObject);
 			Destroy (gameObject);
 		}

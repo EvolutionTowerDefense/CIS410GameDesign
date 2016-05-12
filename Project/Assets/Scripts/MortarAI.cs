@@ -19,10 +19,18 @@ public class MortarAI : MonoBehaviour {
 	{
 		//When collide - might need to readjust 
 		//Qu.idy -- means 000 all around
-		Instantiate(explosion, transform.position, transform.rotation);
+
+
+		GameObject clone = (GameObject)	Instantiate(explosion, transform.position, transform.rotation);
 		//Instantiate(explosion);
+
+
+
 		AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
-		Destroy (gameObject,2.0f);
+
+		Destroy(clone, 2.0f);
+
+		//Destroy (explosion,2.0f);
 
 	}
 

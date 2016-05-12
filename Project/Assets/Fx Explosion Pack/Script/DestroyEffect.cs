@@ -8,6 +8,9 @@ public class DestroyEffect : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.C))
 		   Destroy(transform.gameObject);
+
+		//Destorys explosion after seconds
+		Destroy (gameObject,2.0f);
 	
 	}
 }
