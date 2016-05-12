@@ -4,6 +4,8 @@ using System.Collections;
 public class BasicEnemy : MonoBehaviour {
 
 	public float Health;
+	public AudioClip expSound;
+	public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +22,7 @@ public class BasicEnemy : MonoBehaviour {
 		if (collision.collider.tag == "Bullet") {
 			Health = Health - 1.0f;
 			Destroy (collision.collider.gameObject);
+
 		}
 		else if (collision.collider.tag == "GunBullet") {
 			Health = Health - 1.0f;
@@ -30,7 +33,7 @@ public class BasicEnemy : MonoBehaviour {
 			Health = Health - 1.0f;			
 			Health = Health - 1.0f;
 			//Don't destory the explosion
-			//Destroy (collision.collider.gameObject);
+			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "LazerBullet") {
@@ -51,6 +54,14 @@ public class BasicEnemy : MonoBehaviour {
 
 
 		if (Health <= 0) {
+			Instantiate(explosion, transform.position, transform.rotation);
+			//Instantiate(explosion);
+
+			//Add sound for explosion
+//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
+		
+
+			Destroy (gameObject,2.0f);
 			Destroy (collision.collider.gameObject);
 			Destroy (gameObject);
 		}

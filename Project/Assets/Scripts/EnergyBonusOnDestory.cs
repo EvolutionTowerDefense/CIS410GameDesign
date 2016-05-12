@@ -11,4 +11,6 @@ public class EnergyBonusOnDestory : MonoBehaviour {
 		ScoreManager.score += energyBonus;
 	}
 
+
+
 }

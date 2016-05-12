@@ -146,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 153722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.583616, y: 0.5, z: -1.6073798}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 407186}
   - {fileID: 493140}
@@ -446,7 +446,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 8}
+  m_Size: {x: 2.5, y: 3, z: 4.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9576040
 Animator:
@@ -502,6 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10
+  expSound: {fileID: 0}
+  explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 2}
 --- !u!114 &11491312
 MonoBehaviour:
   m_ObjectHideFlags: 1
