@@ -7,6 +7,7 @@ public class PathThroughObjects : MonoBehaviour
 	public float speed = 1.0f;
 	//public float goalSize = 0.1f;
 
+
 	public GameObject graphicalPathObject;
 	
 	private int currentPathIndex = 0;
@@ -43,7 +44,16 @@ public class PathThroughObjects : MonoBehaviour
 			if(currentPathIndex >= pathPoints.Length)
 			{
 				//ADD LOGIC HERE TO DEDUCT HEALTH FROM PLAYER/BASE
+
+				//Display thing for base
+
+
+				//
 				Destroy(gameObject);
+
+
+
+
 			}
 			else
 			{

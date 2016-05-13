@@ -2107,6 +2107,7 @@ MonoBehaviour:
   - {fileID: 125880}
   - {fileID: 126332}
   - {fileID: 163280}
+  - {fileID: 0}
   towers:
   - {fileID: 121988, guid: 522f862e211a3425e9a2f6fa6ff91358, type: 2}
   - {fileID: 100000, guid: 9e54f90bde6af4bac9b49c19e7594617, type: 2}

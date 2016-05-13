@@ -15,9 +15,22 @@ public class EnemySpawner : MonoBehaviour {
 	public float spawnTime; //time between enemies that spawn
 	public float delayInitial;
 
+	public TowerUpgrader gameController;
+
+
 	// Use this for initialization
 	void Start () {
+		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
+
+		if (gameControllerObject != null)
+		{
+			gameController = gameControllerObject.GetComponent <TowerUpgrader>();
+		}
+		if (gameController == null)
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
 	//	for (int i = 0; i < waves; i++) {
 			//First spawn time is initial spawn time, and second one is eash spawn after
 			InvokeRepeating ("Spawn", delayInitial, spawnTime);
@@ -29,8 +42,42 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+	int enemiesLeft = enemies.Length;
+		if (enemiesLeft == 0)
+		{ print ("Triggered");
+			
+			if (waveCount <= 0)
+			{
+
+
+				if (Application.loadedLevelName == "level1") {
+					
+					Application.LoadLevel("level2");
+					
+				} 
+				else if (Application.loadedLevelName == "level2") {
+					Application.LoadLevel("level3");
+
+				} 
+				else if (Application.loadedLevelName == "level3") {
+					Application.LoadLevel("level4");
+					
+				}
+				else if (Application.loadedLevelName == "level4") {
+					Application.LoadLevel("level5");
+
+				} 
+				else if (Application.loadedLevelName == "level5") {
+					Application.LoadLevel("level1");
+
+				}
+
+
+			}
+
+			// do something
+		}
 	}
 
 	void Spawn()
@@ -43,6 +90,7 @@ public class EnemySpawner : MonoBehaviour {
 			if (spawnIndex > spawnList.Length) {
 
 				waveCount = waveCount - 1;
+
 			if (waveCount <= 0) {
 				CancelInvoke ();
 				} 
@@ -58,8 +106,10 @@ public class EnemySpawner : MonoBehaviour {
 
 			if (spawnIndex >= spawnList.Length) {
 				waveCount = waveCount - 1;
+
 				if (waveCount <= 0) {
 						CancelInvoke ();
+
 					}
 			else {
 				spawnIndex = 0;
