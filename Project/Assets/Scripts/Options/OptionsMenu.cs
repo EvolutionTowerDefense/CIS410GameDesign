@@ -11,7 +11,7 @@ public class OptionsMenu : MonoBehaviour {
 		if (button.name == "Apply") {
 			print ("Apply");
 
-			//SceneManager.LoadScene("level1");
+			SceneManager.LoadScene("MainMenu");
 		}
 		if (button.name == "MainMenu") {
 			print ("Main");
