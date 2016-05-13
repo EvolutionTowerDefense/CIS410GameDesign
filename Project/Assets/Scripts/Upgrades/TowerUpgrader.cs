@@ -105,6 +105,12 @@ public class TowerUpgrader : MonoBehaviour {
 
 		}
 
+		if (button.name == "Back") {
+			Application.LoadLevel("mainMenu");
+
+		}
+
+
 
 	}
 
