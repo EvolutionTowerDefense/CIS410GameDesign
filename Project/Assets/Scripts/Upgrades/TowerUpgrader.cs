@@ -1,165 +1,232 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+
 
 public class TowerUpgrader : MonoBehaviour {
 
 
+		public Text FireRate;
+		public Text Dmg;
+		public Text Range;
+		public Text TowerSelected;
 
-
-		public GameObject[] towerIcones;
-
-
-		public float towerIconRotateRate = 1.0f;
-
-		//only have 1 tower selected or in the game atm
-		//Static means every instances shares this variable
-		private int selectedTower = 0;
+		private int towerNum;
 
 		// Use this for initialization
 		void Start () {
+
+		towerNum = 1;
+
+			TowerSelected.text = "";
+			FireRate.text = "";
+			Dmg.text = "";
+			Range.text = "";
 
 		}
 
 		// Update is called once per frame
 		void Update () {
 
-			if (gameObject.tag != "DontRotate") {
-				towerIcones [selectedTower].transform.Rotate (Vector3.up, towerIconRotateRate * Time.deltaTime);
-			}
+		if (towerNum == 1) {
+			TowerSelected.text = "Basic Gun";
+			FireRate.text = "Fire Rate: " + GetGunFR ();
+			Dmg.text = "Damage: " + GetGunBulletDmg();
+			Range.text = "Range: " + GetGunRange();
+
+		}
+
+		else if (towerNum == 2) {
+			TowerSelected.text = "Mortar";
+			FireRate.text = "Fire Rate: " + GetMortarFR();
+			Dmg.text = "Damage: " + GetMortarDmg();
+			Range.text = "Range: " + GetMortarRange();
+
+		} 
+
+		else if (towerNum == 3) {
+			TowerSelected.text = "Slime";
+			FireRate.text = "Fire Rate: " + GetSlowFR();
+			Dmg.text = "Damage: " + GetSlowDownBulletDmg();
+			Range.text = "Range: " + GetSlowRange();
+
+		} 
+
+		else if (towerNum == 4) {
+			TowerSelected.text = "Machine Gun";
+			FireRate.text = "Fire Rate: " + GetMgFR();
+			Dmg.text = "Damage: " + GetMgBulletDmg();
+			Range.text = "Range: " + GetMgRange();
+
+		}
+
+		else if (towerNum == 5) {
+			TowerSelected.text = "Lazer";
+			FireRate.text = "Fire Rate: " + GetLazerFR();
+			Dmg.text = "Damage: " + GetLazerDmg();
+			Range.text = "Range: " + GetLazerRange();
+
+		}
+
+		else {
+			TowerSelected.text = "Error";
+			FireRate.text = "Error";
+			Dmg.text = "Error";
+			Range.text = "Error";
+
 		}
 
 
 
-		void SetSelectedTower(GameObject inputTower)
-		{
-			int index =0;
-			foreach (GameObject towerIcon in towerIcones) {
-				if (inputTower == towerIcon) {
-					selectedTower = index;
-				}
-				index++;
-
-			}
 		}
 
 
-	public static int GetScore()
+
+	public void ButtonMenu(Button button)
+	{
+		if (button.name == "Tower1") {
+
+			towerNum = 1;
+		}
+		if (button.name == "Tower2") {
+			towerNum = 2;
+
+		}
+		if (button.name == "Tower3") {
+			towerNum = 3;
+
+		}
+		if (button.name == "Tower4") {
+			towerNum = 4;
+
+		}
+		if (button.name == "Tower5") {
+			towerNum = 5;
+
+		}
+
+
+	}
+
+
+
+	public  int GetScore()
 	{
 		return PlayerPrefs.GetInt("score");
 	}
 		
-	public static void SetScore(int score)
+	public  void SetScore(int score)
 	{
 		PlayerPrefs.SetInt("score", Mathf.Max(GetScore(), score));
 	}
 
-	public static int GetCash()
+	public  int GetCash()
 	{
 		return PlayerPrefs.GetInt("cash");
 	}
 
-	public static void SetCash(int cash)
+	public  void SetCash(int cash)
 	{
 		PlayerPrefs.SetInt("cash", Mathf.Max(GetCash(), cash));
 	}
 
 
 	// Bullet Damage Getters/Setters
-	public static float GetGunBulletDmg(){
+	public float GetGunBulletDmg(){
 		return PlayerPrefs.GetFloat("gunBulletDmg");
 	}
-	public static float GetMgBulletDmg(){
+	public float GetMgBulletDmg(){
 		return PlayerPrefs.GetFloat("mgBulletDmg");
 	}
-	public static float GetMortarDmg(){
+	public float GetMortarDmg(){
 		return PlayerPrefs.GetFloat("mortarDmg");
 	}
-	public static float GetSlowDownBulletDmg(){
+	public float GetSlowDownBulletDmg(){
 		return PlayerPrefs.GetFloat("slowDownBulletDmg");
 	}
-	public static float GetLazerDmg(){
+	public float GetLazerDmg(){
 		return PlayerPrefs.GetFloat("lazerDmg");
 	}
 
-	public static void SetGunBulletDmg(float gunBulletDmg){
+	public  void SetGunBulletDmg(float gunBulletDmg){
 		PlayerPrefs.SetFloat("gunBulletDmg", Mathf.Max(GetGunBulletDmg(), gunBulletDmg));
 	}
-	public static void SetMgBulletDmg(float mgBulletDmg){
+	public void SetMgBulletDmg(float mgBulletDmg){
 		PlayerPrefs.SetFloat("mgBulletDmg", Mathf.Max(GetMgBulletDmg(), mgBulletDmg));
 	}
-	public static void SetMortarDmg(float mortarDmg){
+	public void SetMortarDmg(float mortarDmg){
 		PlayerPrefs.SetFloat("mortarDmg", Mathf.Max(GetMortarDmg(), mortarDmg));
 	}
-	public static void SetSlowDownBulletDmg(float slowDownBulletDmg){
+	public void SetSlowDownBulletDmg(float slowDownBulletDmg){
 		PlayerPrefs.SetFloat("slowDownBulletDmg", Mathf.Max(GetSlowDownBulletDmg(), slowDownBulletDmg));
 	}
-	public static void SetLazerDmg(float lazerDmg){
+	public void SetLazerDmg(float lazerDmg){
 		PlayerPrefs.SetFloat("lazerDmg", Mathf.Max(GetLazerDmg(), lazerDmg));
 	}
 
 	// Bullet Fire Rate Getters/Setters
-	public static float GetGunFR(){
+	public float GetGunFR(){
 		return PlayerPrefs.GetFloat("gunFR");
 	}
-	public static float GetMgFR(){
+	public float GetMgFR(){
 		return PlayerPrefs.GetFloat("mgFR");
 	}
-	public static float GetMortarFR(){
+	public float GetMortarFR(){
 		return PlayerPrefs.GetFloat("mortarFR");
 	}
-	public static float GetSlowFR(){
+	public  float GetSlowFR(){
 		return PlayerPrefs.GetFloat("slowFR");
 	}
-	public static float GetLazerFR(){
+	public float GetLazerFR(){
 		return PlayerPrefs.GetFloat("lazerFR");
 	}
 
-	public static void SetGunFR(float gunFR){
+	public void SetGunFR(float gunFR){
 		PlayerPrefs.SetFloat("gunFR", Mathf.Max(GetGunFR(), gunFR));
 	}
-	public static void SetMgFR(float mgFR){
+	public void SetMgFR(float mgFR){
 		PlayerPrefs.SetFloat("mgFR", Mathf.Max(GetMgFR(), mgFR));
 	}
-	public static void SetMortarFR(float mortarFR){
+	public void SetMortarFR(float mortarFR){
 		PlayerPrefs.SetFloat("mortarFR", Mathf.Max(GetMortarFR(), mortarFR));
 	}
-	public static void SetSlowFR(float slowFR){
+	public void SetSlowFR(float slowFR){
 		PlayerPrefs.SetFloat("slowFR", Mathf.Max(GetSlowFR(), slowFR));
 	}
-	public static void SetLazerFR(float lazerFR){
+	public void SetLazerFR(float lazerFR){
 		PlayerPrefs.SetFloat("lazerFR", Mathf.Max(GetLazerFR(), lazerFR));
 	}
 
 	// Bullet Range Getters/Setters
-	public static float GetGunRange(){
+	public float GetGunRange(){
 		return PlayerPrefs.GetFloat("gunRange");
 	}
-	public static float GetMgRange(){
+	public float GetMgRange(){
 		return PlayerPrefs.GetFloat("mgRange");
 	}
-	public static float GetMortarRange(){
+	public float GetMortarRange(){
 		return PlayerPrefs.GetFloat("mortarRange");
 	}
-	public static float GetSlowRange(){
+	public float GetSlowRange(){
 		return PlayerPrefs.GetFloat("slowRange");
 	}
-	public static float GetLazerRange(){
+	public float GetLazerRange(){
 		return PlayerPrefs.GetFloat("lazerRange");
 	}
 
-	public static void SetGunRange(float gunRange){
+	public void SetGunRange(float gunRange){
 		PlayerPrefs.SetFloat("gunRange", Mathf.Max(GetGunRange(), gunRange));
 	}
-	public static void SetMgRange(float mgRange){
+	public void SetMgRange(float mgRange){
 		PlayerPrefs.SetFloat("mgRange", Mathf.Max(GetMgRange(), mgRange));
 	}
-	public static void SetMortarRange(float mortarRange){
+	public void SetMortarRange(float mortarRange){
 		PlayerPrefs.SetFloat("mortarRange", Mathf.Max(GetMortarRange(), mortarRange));
 	}
-	public static void SetSlowRange(float slowRange){
+	public void SetSlowRange(float slowRange){
 		PlayerPrefs.SetFloat("slowRange", Mathf.Max(GetSlowRange(), slowRange));
 	}
-	public static void SetLazerRange(float lazerRange){
+	public void SetLazerRange(float lazerRange){
 		PlayerPrefs.SetFloat("lazerRange", Mathf.Max(GetLazerRange(), lazerRange));
 	}
 }

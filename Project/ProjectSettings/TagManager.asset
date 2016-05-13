@@ -16,6 +16,9 @@ TagManager:
   - LazerBullet
   - MachineGunBullet
   - SlowBullet
+  - TowerUpgrader
+  - UpgradeMenu
+  - Back
   layers:
   - Default
   - TransparentFX

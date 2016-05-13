@@ -1102,9 +1102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Name Game
-
-'
+  m_Text: New Game
 --- !u!222 &1271798221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1274,6 +1272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d065d905500a4c1188d4020b8efa6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!4 &1722497382
 Transform:
   m_ObjectHideFlags: 0

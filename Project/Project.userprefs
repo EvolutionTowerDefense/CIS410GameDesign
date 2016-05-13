@@ -1,23 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemySpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu/MainMenu.cs">
     <Files>
-      <File FileName="Assets/Scripts/BasicTower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MortarTower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="38" Column="3" />
-      <File FileName="Assets/Scripts/DetectClicksAndTouches.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SlowBullet.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CreateTowerOnClicked.cs" Line="12" Column="1" />
-      <File FileName="Assets/Scripts/TowerSelector.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SelectTowerOnClick.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScrollTexture.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScaleOverTimeAndDestroy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RestoreSpeed.cs" Line="1" Column="1" />
-      <File FileName="Assets/Fx Explosion Pack/Script/DestroyEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Fx Explosion Pack/Script/csLightControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnergyBonusOnDestory.cs" Line="15" Column="2" />
-      <File FileName="Assets/Scripts/BasicEnemy.cs" Line="60" Column="29" />
-      <File FileName="Assets/Scripts/MortarAI.cs" Line="25" Column="29" />
+      <File FileName="Assets/Scripts/MainMenu/MainMenu.cs" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
