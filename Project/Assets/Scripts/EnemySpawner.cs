@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
 
@@ -53,25 +54,25 @@ public class EnemySpawner : MonoBehaviour {
 			{
 
 
-				if (Application.loadedLevelName == "level1") {
+				if (SceneManager.GetActiveScene().name == "level1") {
 					
-					Application.LoadLevel("level2");
-					
-				} 
-				else if (Application.loadedLevelName == "level2") {
-					Application.LoadLevel("level3");
+					SceneManager.LoadScene("level2");
 
 				} 
-				else if (Application.loadedLevelName == "level3") {
-					Application.LoadLevel("level4");
+				else if (SceneManager.GetActiveScene().name ==  "level2") {
+					SceneManager.LoadScene("level3");
+
+				} 
+				else if (SceneManager.GetActiveScene().name == "level3") {
+					SceneManager.LoadScene("level4");
 					
 				}
-				else if (Application.loadedLevelName == "level4") {
-					Application.LoadLevel("level5");
+				else if (SceneManager.GetActiveScene().name == "level4") {
+					SceneManager.LoadScene("level5");
 
 				} 
-				else if (Application.loadedLevelName == "level5") {
-					Application.LoadLevel("level1");
+				else if (SceneManager.GetActiveScene().name == "level5") {
+					SceneManager.LoadScene("level1");
 
 				}
 
