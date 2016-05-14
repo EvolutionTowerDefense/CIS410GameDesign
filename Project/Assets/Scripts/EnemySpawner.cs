@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject[] pathPoints;
 	public GameObject graphicalPathObject;
 
+
 	public int waveCount;
 
 	private int spawnIndex=0;
@@ -20,8 +21,9 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
+
+		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
 		if (gameControllerObject != null)
 		{
@@ -45,7 +47,7 @@ public class EnemySpawner : MonoBehaviour {
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 	int enemiesLeft = enemies.Length;
 		if (enemiesLeft == 0)
-		{ print ("Triggered");
+		{ //print ("Triggered");
 			
 			if (waveCount <= 0)
 			{
@@ -91,6 +93,7 @@ public class EnemySpawner : MonoBehaviour {
 
 				waveCount = waveCount - 1;
 
+
 			if (waveCount <= 0) {
 				CancelInvoke ();
 				} 
@@ -99,9 +102,11 @@ public class EnemySpawner : MonoBehaviour {
 				}
 
 			}
-
-			GameObject reference = Instantiate (spawnList [spawnIndex], transform.position, Quaternion.identity) as GameObject;
-
+		GameObject reference = null;
+		if (waveCount > 0) {
+			 reference = Instantiate (spawnList [spawnIndex], transform.position, Quaternion.identity) as GameObject;
+		} 
+		
 			spawnIndex++;
 
 			if (spawnIndex >= spawnList.Length) {

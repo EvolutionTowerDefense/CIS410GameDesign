@@ -17,6 +17,15 @@ public class BasicEnemy : MonoBehaviour {
 	
 	}
 
+	public void newWave (float level) {
+
+		if( level == 2)
+			Health = Health * 2;
+		if( level == 1)
+			Health = Health * 4;
+
+	}
+
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag == "Bullet") {
