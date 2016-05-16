@@ -15,11 +15,12 @@ public class BasicTower : MonoBehaviour {
 	private Vector3 movementDirection;
 
 
-
+	public TowerUpgrader gameController;
 
 	// Use this for initialization
 	void Start ()
 	{
+
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
 

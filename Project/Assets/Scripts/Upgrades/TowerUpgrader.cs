@@ -10,6 +10,9 @@ public class TowerUpgrader : MonoBehaviour {
 		public Text Dmg;
 		public Text Range;
 		public Text TowerSelected;
+		//public GameObject[] TowerImage;
+		public Text TowerLevel;
+		
 
 		private int towerNum;
 
@@ -25,6 +28,16 @@ public class TowerUpgrader : MonoBehaviour {
 
 		}
 
+
+
+
+
+
+
+
+	
+
+
 		// Update is called once per frame
 		void Update () {
 
@@ -33,6 +46,8 @@ public class TowerUpgrader : MonoBehaviour {
 			FireRate.text = "Fire Rate: " + GetGunFR ();
 			Dmg.text = "Damage: " + GetGunBulletDmg();
 			Range.text = "Range: " + GetGunRange();
+			TowerLevel.text = "Tower Level: " + 	GetGunLevel ();
+
 
 		}
 
@@ -41,6 +56,8 @@ public class TowerUpgrader : MonoBehaviour {
 			FireRate.text = "Fire Rate: " + GetMortarFR();
 			Dmg.text = "Damage: " + GetMortarDmg();
 			Range.text = "Range: " + GetMortarRange();
+			TowerLevel.text = "Tower Level: " + 	GetMortar();
+
 
 		} 
 
@@ -50,6 +67,9 @@ public class TowerUpgrader : MonoBehaviour {
 			Dmg.text = "Damage: " + GetSlowDownBulletDmg();
 			Range.text = "Range: " + GetSlowRange();
 
+			TowerLevel.text = "Tower Level: " +  GetSlowLevel();
+		
+
 		} 
 
 		else if (towerNum == 4) {
@@ -58,6 +78,8 @@ public class TowerUpgrader : MonoBehaviour {
 			Dmg.text = "Damage: " + GetMgBulletDmg();
 			Range.text = "Range: " + GetMgRange();
 
+			TowerLevel.text = "Tower Level: " + 	GetMgLevel();
+
 		}
 
 		else if (towerNum == 5) {
@@ -65,6 +87,7 @@ public class TowerUpgrader : MonoBehaviour {
 			FireRate.text = "Fire Rate: " + GetLazerFR();
 			Dmg.text = "Damage: " + GetLazerDmg();
 			Range.text = "Range: " + GetLazerRange();
+			TowerLevel.text = "Tower Level: " + 	GetLazerLevel();
 
 		}
 
@@ -234,5 +257,39 @@ public class TowerUpgrader : MonoBehaviour {
 	}
 	public void SetLazerRange(float lazerRange){
 		PlayerPrefs.SetFloat("lazerRange", Mathf.Max(GetLazerRange(), lazerRange));
+	}
+
+
+	public int GetGunLevel(){
+		return PlayerPrefs.GetInt ("gunLevel");
+	}
+	public int GetMgLevel(){
+		return PlayerPrefs.GetInt ("mgLevel");
+	}
+	public int GetMortar(){
+		return PlayerPrefs.GetInt ("mortarLevel");
+	}
+	public int GetSlowLevel(){
+		return PlayerPrefs.GetInt ("slowLevel");
+	}
+	public int GetLazerLevel(){
+		return PlayerPrefs.GetInt ("lazerLevel");
+	}
+
+
+	public void SetGunLevel(){
+		PlayerPrefs.SetInt("gunLevel",GetGunLevel() +1);
+	}
+	public void SetMgLevel(){
+		PlayerPrefs.SetInt("mgLevel",GetMgLevel() +1);
+	}
+	public void SetMortar(){
+		PlayerPrefs.SetInt("mortarLevel",GetMortar() +1);
+	}
+	public void SetSlowLevel(){
+		PlayerPrefs.SetInt("slowLevel",GetSlowLevel()+1);
+	}
+	public void SetLazerLevel(){
+		PlayerPrefs.SetInt("lazerLevel",GetLazerLevel()+1);
 	}
 }

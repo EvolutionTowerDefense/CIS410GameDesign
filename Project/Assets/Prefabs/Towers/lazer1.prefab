@@ -58,7 +58,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 410064}
   - 23: {fileID: 2347652}
-  - 114: {fileID: 11422280}
   - 64: {fileID: 6452850}
   - 33: {fileID: 3311022}
   - 65: {fileID: 6555804}
@@ -246,21 +245,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6, y: 6, z: 6}
   m_Center: {x: 0, y: 3.5, z: 0}
---- !u!114 &11422280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9095e5603dda448748ccf5e48d358a14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 100000, guid: 1c1bca7a697e14de8aaec5041cd5203e, type: 2}
-  bulletSpeed: 20
-  fireRate: 0.4
-  fireRadius: 8
 --- !u!114 &11479184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,6 +263,7 @@ MonoBehaviour:
   fireRate: 0.4
   fireRadius: 8
   damage: 1
+  gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

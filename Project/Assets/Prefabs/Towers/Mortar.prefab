@@ -393,6 +393,7 @@ MonoBehaviour:
   lobAmount: 3
   bulletSpeed: 2
   damage: 1
+  gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

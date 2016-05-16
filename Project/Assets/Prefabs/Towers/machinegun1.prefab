@@ -277,11 +277,12 @@ MonoBehaviour:
   endOfBarrel: {fileID: 166948}
   shotSound: {fileID: 8300000, guid: 30114844b380b88418785402b1e582c0, type: 3}
   smoke: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}
-  bullet: {fileID: 100000, guid: 5472dc54bafb24cf1a0e6a8a3b509e42, type: 2}
+  bullet: {fileID: 100000, guid: 674d8e40fcc0c4a27b9ff28df41cb1c4, type: 2}
   bulletSpeed: 20
   fireRate: 0.5
   fireRadius: 5
   damage: 1
+  gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

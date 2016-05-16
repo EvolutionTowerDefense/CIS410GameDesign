@@ -1,29 +1,29 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelButtons.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemySpawner.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="72" Column="6" />
-      <File FileName="Assets/Scripts/MainMenu/MainMenu.cs" Line="11" Column="3" />
-      <File FileName="Assets/Scripts/TowerSelector.cs" Line="51" Column="2" />
-      <File FileName="Assets/Scripts/EnemySpawner2.cs" Line="59" Column="34" />
-      <File FileName="Assets/Scripts/BasicEnemy.cs" Line="57" Column="38" />
-      <File FileName="Assets/Scripts/DestoryOnTouch.cs" Line="1" Column="3" />
+      <File FileName="Assets/Scripts/BasicEnemy.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="75" Column="28" />
+      <File FileName="Assets/Scripts/MainMenu/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TowerSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemySpawner2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DestoryOnTouch.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/DetectClicksAndTouches.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EnergyBonusOnDestory.cs" Line="15" Column="3" />
-      <File FileName="Assets/Scripts/EnergyManager.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/EnergyManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/gunSlowTower.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BasicTower.cs" Line="1" Column="3" />
       <File FileName="Assets/Scripts/gunTower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PathThroughObjects.cs" Line="54" Column="5" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="9" Column="33" />
+      <File FileName="Assets/Scripts/PathThroughObjects.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ScrollTexture.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SlowBullet.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SelectTowerOnClick.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ControllingCameraAspectScript.cs" Line="2" Column="15" />
+      <File FileName="Assets/Scripts/ControllingCameraAspectScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/lazerTower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelButtons.cs" Line="11" Column="31" />
+      <File FileName="Assets/Scripts/LevelButtons.cs" Line="12" Column="1" />
       <File FileName="Assets/Scripts/machinegunTower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Upgrades/TowerUpgrader.cs" Line="109" Column="28" NotebookId="1" />
+      <File FileName="Assets/Scripts/Upgrades/TowerUpgrader.cs" Line="109" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

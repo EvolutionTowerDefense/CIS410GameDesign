@@ -261,6 +261,7 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 2
   fireRadius: 5
+  gameController: {fileID: 0}
 --- !u!114 &11493832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,6 +281,7 @@ MonoBehaviour:
   fireRate: 2
   fireRadius: 5
   damage: 1
+  gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

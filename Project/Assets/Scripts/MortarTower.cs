@@ -8,8 +8,8 @@ public class MortarTower : MonoBehaviour {
 	private GameObject instantiatedObj;
 
 	public GameObject bullet;
-	public float fireRate = 1.0f; //How fast a tower fires
-	public float fireRadius = 5.0f; //radius that tower detects and fires at enemy
+	public float fireRate; //How fast a tower fires
+	public float fireRadius; //radius that tower detects and fires at enemy
 	public float lobAmount = 10.0f;
 
 	public float bulletSpeed = 1.0f;
@@ -18,9 +18,14 @@ public class MortarTower : MonoBehaviour {
 
 	private Vector3 movementDirection;
 
+	public TowerUpgrader gameController;
+
 	// Use this for initialization
 	void Start ()
 	{
+		fireRate = gameController.GetMortarFR();
+		fireRadius = gameController.GetMortarRange();
+
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
 

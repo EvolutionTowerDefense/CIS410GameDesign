@@ -19,6 +19,7 @@ TagManager:
   - TowerUpgrader
   - UpgradeMenu
   - Back
+  - Range
   layers:
   - Default
   - TransparentFX

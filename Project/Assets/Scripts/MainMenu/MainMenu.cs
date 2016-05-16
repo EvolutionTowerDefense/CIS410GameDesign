@@ -73,7 +73,11 @@ public class MainMenu : MonoBehaviour {
 			gameController.SetLazerRange(8.0f);
 
 
-			SceneManager.LoadScene("level1");
+			gameController.SetGunLevel ();
+			gameController.SetMgLevel ();
+			gameController.SetMortar ();
+			gameController.SetSlowLevel ();
+			gameController.SetLazerLevel ();
 
 		
 

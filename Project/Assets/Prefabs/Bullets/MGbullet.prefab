@@ -13,8 +13,8 @@ GameObject:
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   m_Layer: 8
-  m_Name: MachineGunBullet
-  m_TagString: MachineGunBullet
+  m_Name: MGbullet
+  m_TagString: GunBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: d271048a0b6164dd7a794993fc2248f4, type: 2}
+  - {fileID: 2100000, guid: 8b3e92145dfee4096a58fb107701b97d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

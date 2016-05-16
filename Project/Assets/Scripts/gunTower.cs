@@ -9,23 +9,27 @@ public class gunTower : MonoBehaviour {
 	private GameObject instantiatedObj;
 
 	public GameObject bullet;
-	public float bulletSpeed = 1.0f; //How fast a bullet is shot
-	public float fireRate = 1.0f; //How fast a tower fires
-	public float fireRadius = 5.0f; //radius that tower detects and fires at enemy
 
-	public float damage = 1.0f; // Damage
 
+	public float bulletSpeed; //How fast a bullet is shot
+	public float fireRate; //How fast a tower fires
+	public float fireRadius; //radius that tower detects and fires at enemy
 
 	private Vector3 movementDirection;
 
-
-
+	public TowerUpgrader gameController;
 
 	// Use this for initialization
 	void Start ()
 	{
+		gameController = GetComponent <TowerUpgrader>();
+
+		fireRate = gameController.GetGunFR();
+		fireRadius = gameController.GetGunRange();
+
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
+
 
 	void Update()
 	{
@@ -33,6 +37,7 @@ public class gunTower : MonoBehaviour {
 		foreach (Collider col in Physics.OverlapSphere (transform.position, fireRadius))
 		{
 
+		
 
 			if (col.tag == "Enemy") {
 				if (gameObject.tag != "DontRotate") {
