@@ -11,7 +11,7 @@ public class EnergyManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		energy = initialEnergy;
+		energy = TowerUpgrader.GetCash();
 
 	
 	}

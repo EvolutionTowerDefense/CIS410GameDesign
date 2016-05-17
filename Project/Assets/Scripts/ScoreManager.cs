@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
 		// Use this for initialization
 		void Start () {
 
-			score = initialScore;
+		score = TowerUpgrader.GetScore();
 			}
 
 		// Update is called once per frame

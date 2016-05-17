@@ -18,13 +18,22 @@ public class EnemySpawner : MonoBehaviour {
 	public float delayInitial;
 
 	public TowerUpgrader gameController;
+	//public EnergyManager energyManager;
+	//public ScoreManager scoreManager;
 
 
 	// Use this for initialization
 	void Start () {
 
+	
+	
 
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
+	
+
+		//energyManager = energyManager.GetComponent <EnergyManager>();
+		//scoreManager = scoreManager.GetComponent <ScoreManager>();
+
 
 		if (gameControllerObject != null)
 		{
@@ -55,23 +64,42 @@ public class EnemySpawner : MonoBehaviour {
 
 
 				if (SceneManager.GetActiveScene().name == "level1") {
-					
+
+					gameController.SetScore (ScoreManager.score);
+					gameController.SetCash(EnergyManager.energy );
+
 					SceneManager.LoadScene("level2");
 
 				} 
 				else if (SceneManager.GetActiveScene().name ==  "level2") {
+
+					gameController.SetScore (ScoreManager.score);
+					gameController.SetCash(EnergyManager.energy );
+
 					SceneManager.LoadScene("level3");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level3") {
+
+					gameController.SetScore (ScoreManager.score);
+					gameController.SetCash(EnergyManager.energy );
+
 					SceneManager.LoadScene("level4");
 					
 				}
 				else if (SceneManager.GetActiveScene().name == "level4") {
+
+					gameController.SetScore (ScoreManager.score);
+					gameController.SetCash(EnergyManager.energy );
+
 					SceneManager.LoadScene("level5");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level5") {
+
+					gameController.SetScore (ScoreManager.score);
+					gameController.SetCash(EnergyManager.energy );
+
 					SceneManager.LoadScene("level1");
 
 				}
@@ -126,6 +154,7 @@ public class EnemySpawner : MonoBehaviour {
 
 
 			//Set enemy path information
+		if(reference!=null)
 			reference.SendMessage ("SetPathPoints", pathPoints);
 
 			//Add delay between waves here

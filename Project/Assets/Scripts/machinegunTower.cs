@@ -13,8 +13,8 @@ public class machinegunTower : MonoBehaviour {
 
 
 	public float bulletSpeed = 1.0f; //How fast a bullet is shot
-	public float fireRate; //How fast a tower fires
-	public float fireRadius; //radius that tower detects and fires at enemy
+	public float fireRate = 0.0f; //How fast a tower fires
+	public float fireRadius= 0.0f; //radius that tower detects and fires at enemy
 
 	public float damage = 1.0f; // Damage
 
@@ -27,10 +27,11 @@ public class machinegunTower : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		gameController = GetComponent <TowerUpgrader>();
+//		gameController = GetComponent <TowerUpgrader>();
 
 		fireRate = gameController.GetMgFR();
 		fireRadius = gameController.GetMgRange();
+
 
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}

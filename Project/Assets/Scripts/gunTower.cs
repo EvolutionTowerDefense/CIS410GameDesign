@@ -22,10 +22,13 @@ public class gunTower : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		gameController = GetComponent <TowerUpgrader>();
+//		gameController = GetComponent <TowerUpgrader>();
+
 
 		fireRate = gameController.GetGunFR();
+		Debug.Log(fireRate);
 		fireRadius = gameController.GetGunRange();
+		Debug.Log(fireRadius);
 
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}

@@ -44,42 +44,51 @@ public class MainMenu : MonoBehaviour {
 
 		if (button.name == "NewGame") {
 
-				gameController.SetGunBulletDmg (1.0f);
-				gameController.SetGunFR (0.5f);
-				gameController.SetGunRange (10.0f);
+
+
+			gameController.SetScore (0);
+			gameController.SetCash(500);
+
+
+			TowerUpgrader.SetGunBulletDmg (1.0f);
+			gameController.SetGunFR (0.5f);
+			gameController.SetGunRange (10.0f);
 
 			
 			//print ("play");
 
 
 	
-			gameController.SetMgBulletDmg (0.25f);
+			TowerUpgrader.SetMgBulletDmg (0.25f);
 			gameController.SetMgFR (0.2f);
 			gameController.SetMgRange (5.0f);
 
 
-			gameController.SetMortarDmg (2.0f);
+			TowerUpgrader.SetMortarDmg (2.0f);
+			TowerUpgrader.SetExplosiveDmg (5.0f);
 			gameController.SetMortarFR(3.0f);
 			gameController.SetMortarRange(10.0f);
 
 
-			gameController.SetSlowDownBulletDmg (1.0f);
+			TowerUpgrader.SetSlowDownBulletDmg (1.0f);
 			gameController.SetSlowFR(2.0f);
 			gameController.SetSlowRange(5.0f);
 
 
-			gameController.SetLazerDmg (3.0f);
+			TowerUpgrader.SetLazerDmg (3.0f);
 			gameController.SetLazerFR(0.4f);
 			gameController.SetLazerRange(8.0f);
 
 
-			gameController.SetGunLevel ();
-			gameController.SetMgLevel ();
-			gameController.SetMortar ();
-			gameController.SetSlowLevel ();
-			gameController.SetLazerLevel ();
+			gameController.SetGunLevel (1);
+			gameController.SetMgLevel (1);
+			gameController.SetMortar (1);
+			gameController.SetSlowLevel (1);
+			gameController.SetLazerLevel (1);
 
 		
+
+			SceneManager.LoadScene ("level1");
 
 		}
 

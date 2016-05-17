@@ -12,12 +12,19 @@ public class TowerUpgrader : MonoBehaviour {
 		public Text TowerSelected;
 		//public GameObject[] TowerImage;
 		public Text TowerLevel;
+		public GameObject[] images;
+
+		public Image Spawn;
 		
 
 		private int towerNum;
 
 		// Use this for initialization
 		void Start () {
+		GameObject go = (GameObject)Instantiate( images[1], Spawn.transform.position, Quaternion.identity );
+		go.transform.localScale += new Vector3(10.1F, 10.1F, 10.1F);
+	
+
 
 		towerNum = 1;
 
@@ -47,6 +54,11 @@ public class TowerUpgrader : MonoBehaviour {
 			Dmg.text = "Damage: " + GetGunBulletDmg();
 			Range.text = "Range: " + GetGunRange();
 			TowerLevel.text = "Tower Level: " + 	GetGunLevel ();
+
+
+		//	GameObject go = Instantiate( images[1], Spawn.transform.position, Spawn.transform.rotation );
+		//	go.transform.parent = transform.parent;
+			//Destroy( gameObject );
 
 
 		}
@@ -139,58 +151,64 @@ public class TowerUpgrader : MonoBehaviour {
 
 
 
-	public  int GetScore()
+	public static float GetScore()
 	{
-		return PlayerPrefs.GetInt("score");
+		return PlayerPrefs.GetFloat("score");
 	}
 		
-	public  void SetScore(int score)
+	public  void SetScore(float score)
 	{
-		PlayerPrefs.SetInt("score", Mathf.Max(GetScore(), score));
+		PlayerPrefs.SetFloat("score",  score);
 	}
 
-	public  int GetCash()
+	public static float GetCash()
 	{
-		return PlayerPrefs.GetInt("cash");
+		return PlayerPrefs.GetFloat("cash");
 	}
 
-	public  void SetCash(int cash)
+	public  void SetCash(float cash)
 	{
-		PlayerPrefs.SetInt("cash", Mathf.Max(GetCash(), cash));
+		PlayerPrefs.SetFloat("cash",  cash);
 	}
 
 
 	// Bullet Damage Getters/Setters
-	public float GetGunBulletDmg(){
+	public static float GetGunBulletDmg(){
 		return PlayerPrefs.GetFloat("gunBulletDmg");
 	}
-	public float GetMgBulletDmg(){
+	public static float GetMgBulletDmg(){
 		return PlayerPrefs.GetFloat("mgBulletDmg");
 	}
-	public float GetMortarDmg(){
+	public static float GetMortarDmg(){
 		return PlayerPrefs.GetFloat("mortarDmg");
 	}
-	public float GetSlowDownBulletDmg(){
+	public static float GetSlowDownBulletDmg(){
 		return PlayerPrefs.GetFloat("slowDownBulletDmg");
 	}
-	public float GetLazerDmg(){
+	public static float GetLazerDmg(){
 		return PlayerPrefs.GetFloat("lazerDmg");
 	}
+	public static float GetExplosiveDmg(){
+		return PlayerPrefs.GetFloat("exploDMG");
+	}
 
-	public  void SetGunBulletDmg(float gunBulletDmg){
-		PlayerPrefs.SetFloat("gunBulletDmg", Mathf.Max(GetGunBulletDmg(), gunBulletDmg));
+	public static void SetGunBulletDmg(float gunBulletDmg){
+		PlayerPrefs.SetFloat("gunBulletDmg",  gunBulletDmg);
 	}
-	public void SetMgBulletDmg(float mgBulletDmg){
-		PlayerPrefs.SetFloat("mgBulletDmg", Mathf.Max(GetMgBulletDmg(), mgBulletDmg));
+	public static void SetMgBulletDmg(float mgBulletDmg){
+		PlayerPrefs.SetFloat("mgBulletDmg", mgBulletDmg);
 	}
-	public void SetMortarDmg(float mortarDmg){
-		PlayerPrefs.SetFloat("mortarDmg", Mathf.Max(GetMortarDmg(), mortarDmg));
+	public static void SetMortarDmg(float mortarDmg){
+		PlayerPrefs.SetFloat("mortarDmg",  mortarDmg);
 	}
-	public void SetSlowDownBulletDmg(float slowDownBulletDmg){
-		PlayerPrefs.SetFloat("slowDownBulletDmg", Mathf.Max(GetSlowDownBulletDmg(), slowDownBulletDmg));
+	public static void SetSlowDownBulletDmg(float slowDownBulletDmg){
+		PlayerPrefs.SetFloat("slowDownBulletDmg", slowDownBulletDmg);
 	}
-	public void SetLazerDmg(float lazerDmg){
-		PlayerPrefs.SetFloat("lazerDmg", Mathf.Max(GetLazerDmg(), lazerDmg));
+	public static void SetLazerDmg(float lazerDmg){
+		PlayerPrefs.SetFloat("lazerDmg",lazerDmg);
+	}
+	public static void SetExplosiveDmg(float exploDMG){
+		PlayerPrefs.SetFloat("exploDMG",exploDMG);
 	}
 
 	// Bullet Fire Rate Getters/Setters
@@ -211,19 +229,19 @@ public class TowerUpgrader : MonoBehaviour {
 	}
 
 	public void SetGunFR(float gunFR){
-		PlayerPrefs.SetFloat("gunFR", Mathf.Max(GetGunFR(), gunFR));
+		PlayerPrefs.SetFloat("gunFR",  gunFR);
 	}
 	public void SetMgFR(float mgFR){
-		PlayerPrefs.SetFloat("mgFR", Mathf.Max(GetMgFR(), mgFR));
+		PlayerPrefs.SetFloat("mgFR",  mgFR);
 	}
 	public void SetMortarFR(float mortarFR){
-		PlayerPrefs.SetFloat("mortarFR", Mathf.Max(GetMortarFR(), mortarFR));
+		PlayerPrefs.SetFloat("mortarFR",  mortarFR);
 	}
 	public void SetSlowFR(float slowFR){
-		PlayerPrefs.SetFloat("slowFR", Mathf.Max(GetSlowFR(), slowFR));
+		PlayerPrefs.SetFloat("slowFR",  slowFR);
 	}
 	public void SetLazerFR(float lazerFR){
-		PlayerPrefs.SetFloat("lazerFR", Mathf.Max(GetLazerFR(), lazerFR));
+		PlayerPrefs.SetFloat("lazerFR",lazerFR);
 	}
 
 	// Bullet Range Getters/Setters
@@ -244,19 +262,19 @@ public class TowerUpgrader : MonoBehaviour {
 	}
 
 	public void SetGunRange(float gunRange){
-		PlayerPrefs.SetFloat("gunRange", Mathf.Max(GetGunRange(), gunRange));
+		PlayerPrefs.SetFloat("gunRange",gunRange);
 	}
 	public void SetMgRange(float mgRange){
-		PlayerPrefs.SetFloat("mgRange", Mathf.Max(GetMgRange(), mgRange));
+		PlayerPrefs.SetFloat("mgRange", mgRange);
 	}
 	public void SetMortarRange(float mortarRange){
-		PlayerPrefs.SetFloat("mortarRange", Mathf.Max(GetMortarRange(), mortarRange));
+		PlayerPrefs.SetFloat("mortarRange", mortarRange);
 	}
 	public void SetSlowRange(float slowRange){
-		PlayerPrefs.SetFloat("slowRange", Mathf.Max(GetSlowRange(), slowRange));
+		PlayerPrefs.SetFloat("slowRange", slowRange);
 	}
 	public void SetLazerRange(float lazerRange){
-		PlayerPrefs.SetFloat("lazerRange", Mathf.Max(GetLazerRange(), lazerRange));
+		PlayerPrefs.SetFloat("lazerRange",  lazerRange);
 	}
 
 
@@ -277,19 +295,19 @@ public class TowerUpgrader : MonoBehaviour {
 	}
 
 
-	public void SetGunLevel(){
-		PlayerPrefs.SetInt("gunLevel",GetGunLevel() +1);
+	public void SetGunLevel(int temp){
+		PlayerPrefs.SetInt("gunLevel",temp);
 	}
-	public void SetMgLevel(){
-		PlayerPrefs.SetInt("mgLevel",GetMgLevel() +1);
+	public void SetMgLevel(int temp){
+		PlayerPrefs.SetInt("mgLevel",temp);
 	}
-	public void SetMortar(){
-		PlayerPrefs.SetInt("mortarLevel",GetMortar() +1);
+	public void SetMortar(int temp){
+		PlayerPrefs.SetInt("mortarLevel",temp);
 	}
-	public void SetSlowLevel(){
-		PlayerPrefs.SetInt("slowLevel",GetSlowLevel()+1);
+	public void SetSlowLevel(int temp){
+		PlayerPrefs.SetInt("slowLevel",temp);
 	}
-	public void SetLazerLevel(){
-		PlayerPrefs.SetInt("lazerLevel",GetLazerLevel()+1);
+	public void SetLazerLevel(int temp){
+		PlayerPrefs.SetInt("lazerLevel",temp);
 	}
 }

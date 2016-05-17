@@ -202,6 +202,12 @@ Transform:
   - {fileID: 1508938132}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &61098731 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11407674, guid: fd7b47c6d5867439190e39c4eb04266f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004569157}
+  m_Script: {fileID: 11500000, guid: ed5c76627a3d045628370430ca39622d, type: 3}
 --- !u!1001 &88540797
 Prefab:
   m_ObjectHideFlags: 0
@@ -527,6 +533,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2004569157}
   m_Script: {fileID: 11500000, guid: e0538b3fc2ae54d048120c8f5956076f, type: 3}
+--- !u!114 &240860503 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11477436, guid: fd7b47c6d5867439190e39c4eb04266f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2004569157}
+  m_Script: {fileID: 11500000, guid: d73f49786e2884a1684e3cc4c9961f6d, type: 3}
 --- !u!1 &264366087
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +930,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11459960, guid: 6e1be420dfbd64c1bba7984fa9c1d889, type: 2}
       propertyPath: spawnList.Array.size
-      value: 40
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 403130, guid: 6e1be420dfbd64c1bba7984fa9c1d889, type: 2}
       propertyPath: m_LocalPosition.x
@@ -982,7 +994,7 @@ Prefab:
       objectReference: {fileID: 1506678515}
     - target: {fileID: 11459960, guid: 6e1be420dfbd64c1bba7984fa9c1d889, type: 2}
       propertyPath: waveCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11459960, guid: 6e1be420dfbd64c1bba7984fa9c1d889, type: 2}
       propertyPath: spawnList.Array.data[5]
@@ -1774,7 +1786,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2234,7 +2246,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414274, guid: ed295b73de5574a288036d8e268de2c4, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11447024, guid: ed295b73de5574a288036d8e268de2c4, type: 2}
       propertyPath: towerSelector
@@ -2844,7 +2856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463760, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
@@ -2994,7 +3006,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 411430, guid: 6f019357125e045b48d1317eed5b1ea8, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f019357125e045b48d1317eed5b1ea8, type: 2}
@@ -3024,7 +3036,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11477866, guid: 89477c84463a344609f61b08df47880c, type: 2}
       propertyPath: spawnList.Array.size
-      value: 41
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 418616, guid: 89477c84463a344609f61b08df47880c, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3088,7 +3100,7 @@ Prefab:
       objectReference: {fileID: 1506678515}
     - target: {fileID: 11477866, guid: 89477c84463a344609f61b08df47880c, type: 2}
       propertyPath: waveCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11477866, guid: 89477c84463a344609f61b08df47880c, type: 2}
       propertyPath: spawnList.Array.data[3]
@@ -3251,6 +3263,14 @@ Prefab:
       propertyPath: bs
       value: 
       objectReference: {fileID: 945790020}
+    - target: {fileID: 11477866, guid: 89477c84463a344609f61b08df47880c, type: 2}
+      propertyPath: energyManager
+      value: 
+      objectReference: {fileID: 240860503}
+    - target: {fileID: 11477866, guid: 89477c84463a344609f61b08df47880c, type: 2}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 61098731}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89477c84463a344609f61b08df47880c, type: 2}
   m_IsPrefabParent: 0

@@ -7,6 +7,8 @@ public class BasicEnemy : MonoBehaviour {
 	public AudioClip expSound;
 	public GameObject explosion;
 
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -22,35 +24,37 @@ public class BasicEnemy : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag == "Bullet") {
-			Health = Health - 1.0f;
+			Health = Health - TowerUpgrader.GetGunBulletDmg();
 			Destroy (collision.collider.gameObject);
 
 		}
 		else if (collision.collider.tag == "GunBullet") {
-			Health = Health - 1.0f;
+			Health = Health - TowerUpgrader.GetGunBulletDmg();
 			Destroy (collision.collider.gameObject);
 		}
 		else if (collision.collider.tag == "Mortar") {
-			Health = Health - 1.0f;
-			Health = Health - 1.0f;			
-			Health = Health - 1.0f;
+			Health = Health - TowerUpgrader.GetMortarDmg();
 			//Don't destory the explosion
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "LazerBullet") {
-			Health = Health - 1.0f;
+			Health = Health - TowerUpgrader.GetLazerDmg();
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "MachineGunBullet") {
-			Health = Health - 1.0f;
+			Health = Health -TowerUpgrader.GetMgBulletDmg();
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "SlowBullet") {
-			Health = Health - 1.0f;
+			Health = Health - TowerUpgrader.GetSlowDownBulletDmg();
 			Destroy (collision.collider.gameObject);
+		}
+		else if (collision.collider.tag == "ExplosiveDmg") {
+			Health = Health - TowerUpgrader.GetExplosiveDmg();
+			//Destroy (collision.collider.gameObject)();
 		}
 
 

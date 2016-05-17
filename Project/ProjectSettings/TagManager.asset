@@ -20,6 +20,7 @@ TagManager:
   - UpgradeMenu
   - Back
   - Range
+  - ExplosiveDmg
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Ground
   - Explosion
   - Border
-  - 
+  - ExplosionDMG
   - 
   - 
   - 
