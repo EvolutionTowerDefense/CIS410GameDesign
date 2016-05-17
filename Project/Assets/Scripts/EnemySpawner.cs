@@ -62,6 +62,9 @@ public class EnemySpawner : MonoBehaviour {
 			if (waveCount <= 0)
 			{
 
+				//Have some check if there is a building still alive...
+
+
 
 				if (SceneManager.GetActiveScene().name == "level1") {
 

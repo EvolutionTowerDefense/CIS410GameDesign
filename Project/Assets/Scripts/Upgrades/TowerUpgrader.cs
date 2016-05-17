@@ -13,9 +13,9 @@ public class TowerUpgrader : MonoBehaviour {
 		//public GameObject[] TowerImage;
 		public Text TowerLevel;
 		public Text Cash;
-		public Image[] images;
+		public Text UpgradeCost;
+		public RawImage[] images;
 
-		public Image Spawn;
 		
 
 		private int towerNum;
@@ -33,48 +33,77 @@ public class TowerUpgrader : MonoBehaviour {
 			Dmg.text = "";
 			Range.text = "";
 			Cash.text = "";
+			UpgradeCost.text = "";
 		}
 
+	void SetToFalse()
+	{
+		int i;
+		int temp = images.Length;
+		for (i =0 ; i < temp; i++) {
+			images [i].gameObject.SetActive (false);
+		}
+	}
 		// Update is called once per frame
 		void Update () {
 
 		Cash.text = "Cash: " + GetCash ();
 
 		if (towerNum == 1) {
+			SetToFalse ();
+			images [0].gameObject.SetActive (true);
+
+
 			TowerSelected.text = "Basic Gun";
 			FireRate.text = "Fire Rate: " + GetGunFR ();
 			Dmg.text = "Damage: " + GetGunBulletDmg ();
 			Range.text = "Range: " + GetGunRange ();
 			TowerLevel.text = "Tower Level: " + GetGunLevel ();
 
+
+			UpgradeCost.text = "Upgarde Cost: " + (100 * GetGunLevel ()).ToString();
+
 			//	GameObject go = Instantiate( images[1], Spawn.transform.position, Spawn.transform.rotation );
 			//	go.transform.parent = transform.parent;
 			//Destroy( gameObject );
 
 		} else if (towerNum == 2) {
+			SetToFalse ();
+			images [1].gameObject.SetActive (true);
+
 			TowerSelected.text = "Mortar";
 			FireRate.text = "Fire Rate: " + GetMortarFR ();
 			Dmg.text = "Damage: " + GetMortarDmg ();
 			Range.text = "Range: " + GetMortarRange ();
 			TowerLevel.text = "Tower Level: " + GetMortarLevel ();
+			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMortarLevel ()).ToString();
 		} else if (towerNum == 3) {
+			SetToFalse ();
+			images [2].gameObject.SetActive (true);
 			TowerSelected.text = "Slime";
 			FireRate.text = "Fire Rate: " + GetSlowFR ();
 			Dmg.text = "Damage: " + GetSlowDownBulletDmg ();
 			Range.text = "Range: " + GetSlowRange ();
 			TowerLevel.text = "Tower Level: " + GetSlowLevel ();
+			UpgradeCost.text = "Upgarde Cost: " + (100 * GetSlowLevel ()).ToString();
 		} else if (towerNum == 4) {
+			SetToFalse ();
+			images [3].gameObject.SetActive (true);
 			TowerSelected.text = "Machine Gun";
 			FireRate.text = "Fire Rate: " + GetMgFR ();
 			Dmg.text = "Damage: " + GetMgBulletDmg ();
 			Range.text = "Range: " + GetMgRange ();
 			TowerLevel.text = "Tower Level: " + GetMgLevel ();
+			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMgLevel ()).ToString();
 		} else if (towerNum == 5) {
+			SetToFalse ();
+			images [4].gameObject.SetActive (true);
 			TowerSelected.text = "Lazer";
 			FireRate.text = "Fire Rate: " + GetLazerFR ();
 			Dmg.text = "Damage: " + GetLazerDmg ();
 			Range.text = "Range: " + GetLazerRange ();
 			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
+			UpgradeCost.text = "Upgarde Cost: " + (100 * GetLazerLevel ()).ToString();
 
 		} else {
 			TowerSelected.text = "Error";
