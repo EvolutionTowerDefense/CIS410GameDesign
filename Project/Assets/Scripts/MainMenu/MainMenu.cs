@@ -82,7 +82,7 @@ public class MainMenu : MonoBehaviour {
 
 			gameController.SetGunLevel (1);
 			gameController.SetMgLevel (1);
-			gameController.SetMortar (1);
+			gameController.SetMortarLevel (1);
 			gameController.SetSlowLevel (1);
 			gameController.SetLazerLevel (1);
 

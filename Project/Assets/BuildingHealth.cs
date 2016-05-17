@@ -22,9 +22,13 @@ public class BuildingHealth : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
+		Debug.Log("sdfadfs");
 		if (collision.collider.tag == "Enemy") {
+			Debug.Log("-1");
 			Health = Health - 1.0f;
+		
 			Destroy (collision.collider.gameObject);
+			//Do something that reloads the previous level, don't reset any points...
 
 		}
 

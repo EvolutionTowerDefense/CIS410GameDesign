@@ -12,7 +12,8 @@ public class TowerUpgrader : MonoBehaviour {
 		public Text TowerSelected;
 		//public GameObject[] TowerImage;
 		public Text TowerLevel;
-		public GameObject[] images;
+		public Text Cash;
+		public Image[] images;
 
 		public Image Spawn;
 		
@@ -21,10 +22,9 @@ public class TowerUpgrader : MonoBehaviour {
 
 		// Use this for initialization
 		void Start () {
-		GameObject go = (GameObject)Instantiate( images[1], Spawn.transform.position, Quaternion.identity );
-		go.transform.localScale += new Vector3(10.1F, 10.1F, 10.1F);
-	
 
+		//GameObject go = (GameObject)Instantiate( images[1], Spawn.transform.position, Quaternion.identity );
+		//go.transform.localScale += new Vector3(10.1F, 10.1F, 10.1F);
 
 		towerNum = 1;
 
@@ -32,121 +32,133 @@ public class TowerUpgrader : MonoBehaviour {
 			FireRate.text = "";
 			Dmg.text = "";
 			Range.text = "";
-
+			Cash.text = "";
 		}
-
-
-
-
-
-
-
-
-	
-
 
 		// Update is called once per frame
 		void Update () {
 
+		Cash.text = "Cash: " + GetCash ();
+
 		if (towerNum == 1) {
 			TowerSelected.text = "Basic Gun";
 			FireRate.text = "Fire Rate: " + GetGunFR ();
-			Dmg.text = "Damage: " + GetGunBulletDmg();
-			Range.text = "Range: " + GetGunRange();
-			TowerLevel.text = "Tower Level: " + 	GetGunLevel ();
+			Dmg.text = "Damage: " + GetGunBulletDmg ();
+			Range.text = "Range: " + GetGunRange ();
+			TowerLevel.text = "Tower Level: " + GetGunLevel ();
 
-
-		//	GameObject go = Instantiate( images[1], Spawn.transform.position, Spawn.transform.rotation );
-		//	go.transform.parent = transform.parent;
+			//	GameObject go = Instantiate( images[1], Spawn.transform.position, Spawn.transform.rotation );
+			//	go.transform.parent = transform.parent;
 			//Destroy( gameObject );
 
-
-		}
-
-		else if (towerNum == 2) {
+		} else if (towerNum == 2) {
 			TowerSelected.text = "Mortar";
-			FireRate.text = "Fire Rate: " + GetMortarFR();
-			Dmg.text = "Damage: " + GetMortarDmg();
-			Range.text = "Range: " + GetMortarRange();
-			TowerLevel.text = "Tower Level: " + 	GetMortar();
-
-
-		} 
-
-		else if (towerNum == 3) {
+			FireRate.text = "Fire Rate: " + GetMortarFR ();
+			Dmg.text = "Damage: " + GetMortarDmg ();
+			Range.text = "Range: " + GetMortarRange ();
+			TowerLevel.text = "Tower Level: " + GetMortarLevel ();
+		} else if (towerNum == 3) {
 			TowerSelected.text = "Slime";
-			FireRate.text = "Fire Rate: " + GetSlowFR();
-			Dmg.text = "Damage: " + GetSlowDownBulletDmg();
-			Range.text = "Range: " + GetSlowRange();
-
-			TowerLevel.text = "Tower Level: " +  GetSlowLevel();
-		
-
-		} 
-
-		else if (towerNum == 4) {
+			FireRate.text = "Fire Rate: " + GetSlowFR ();
+			Dmg.text = "Damage: " + GetSlowDownBulletDmg ();
+			Range.text = "Range: " + GetSlowRange ();
+			TowerLevel.text = "Tower Level: " + GetSlowLevel ();
+		} else if (towerNum == 4) {
 			TowerSelected.text = "Machine Gun";
-			FireRate.text = "Fire Rate: " + GetMgFR();
-			Dmg.text = "Damage: " + GetMgBulletDmg();
-			Range.text = "Range: " + GetMgRange();
-
-			TowerLevel.text = "Tower Level: " + 	GetMgLevel();
-
-		}
-
-		else if (towerNum == 5) {
+			FireRate.text = "Fire Rate: " + GetMgFR ();
+			Dmg.text = "Damage: " + GetMgBulletDmg ();
+			Range.text = "Range: " + GetMgRange ();
+			TowerLevel.text = "Tower Level: " + GetMgLevel ();
+		} else if (towerNum == 5) {
 			TowerSelected.text = "Lazer";
-			FireRate.text = "Fire Rate: " + GetLazerFR();
-			Dmg.text = "Damage: " + GetLazerDmg();
-			Range.text = "Range: " + GetLazerRange();
-			TowerLevel.text = "Tower Level: " + 	GetLazerLevel();
+			FireRate.text = "Fire Rate: " + GetLazerFR ();
+			Dmg.text = "Damage: " + GetLazerDmg ();
+			Range.text = "Range: " + GetLazerRange ();
+			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
 
-		}
-
-		else {
+		} else {
 			TowerSelected.text = "Error";
 			FireRate.text = "Error";
 			Dmg.text = "Error";
 			Range.text = "Error";
-
 		}
-
-
-
-		}
-
-
+	}
 
 	public void ButtonMenu(Button button)
 	{
 		if (button.name == "Tower1") {
-
 			towerNum = 1;
 		}
 		if (button.name == "Tower2") {
 			towerNum = 2;
-
 		}
 		if (button.name == "Tower3") {
 			towerNum = 3;
-
 		}
 		if (button.name == "Tower4") {
 			towerNum = 4;
-
 		}
 		if (button.name == "Tower5") {
 			towerNum = 5;
-
 		}
-
 		if (button.name == "Back") {
-			Application.LoadLevel("mainMenu");
-
+			Application.LoadLevel ("mainMenu");
 		}
 
+		if (button.name == "Upgrade") {
+			if (towerNum == 1) {
+
+				if (GetCash () > 100 * GetGunLevel ()) {
+					SetCash (GetCash () - (100 * GetGunLevel ()));
+					SetGunLevel (GetGunLevel () + 1);
+					SetGunBulletDmg (GetGunBulletDmg () + 1.0f);
+					SetGunFR (GetGunFR () - 0.1f);
+					SetGunRange (GetGunRange () + 1.0f);
 
 
+				}
+			}
+			if (towerNum == 2) {
+				if (GetCash () > 100 * GetMortarLevel ()) {
+					SetCash (GetCash () - (100 * GetMortarLevel ()));
+					SetMortarLevel (GetMortarLevel () + 1);
+					SetMortarDmg (GetMortarDmg () + 1.0f);
+					SetMortarFR (GetMortarFR () - 0.1f);
+					SetMortarRange (GetMortarRange () + 1.0f);
+
+				}
+			}
+			if (towerNum == 3) {
+				if (GetCash () > 100 * GetSlowLevel ()) {
+					SetCash (GetCash () - (100 * GetSlowLevel ()));
+					SetSlowLevel (GetSlowLevel () + 1);
+					SetSlowDownBulletDmg (GetSlowDownBulletDmg () + 1.0f);
+					SetSlowFR (GetSlowFR () - 0.1f);
+					SetSlowRange (GetSlowRange () + 1.0f);
+
+				}
+			}
+			if (towerNum == 4) {
+				if (GetCash () > 100 * GetMgLevel ()) {
+					SetCash (GetCash () - (100 * GetMgLevel ()));
+					SetMgLevel (GetMgLevel () + 1);
+					SetMgBulletDmg (GetMgBulletDmg () + 1.0f);
+					SetMgFR (GetMgFR () - 0.1f);
+					SetMgRange (GetMgRange () + 1.0f);
+
+				}
+			}
+			if (towerNum == 5) {
+				if (GetCash () > 100 * GetLazerLevel ()) {
+					SetCash (GetCash () - (100 * GetLazerLevel ()));
+					SetLazerLevel (GetLazerLevel () + 1);
+					SetLazerDmg (GetLazerDmg () + 1.0f);
+					SetLazerFR (GetLazerFR () - 0.1f);
+					SetLazerRange (GetLazerRange () + 1.0f);
+
+				}
+			}
+		}
 	}
 
 
@@ -284,7 +296,7 @@ public class TowerUpgrader : MonoBehaviour {
 	public int GetMgLevel(){
 		return PlayerPrefs.GetInt ("mgLevel");
 	}
-	public int GetMortar(){
+	public int GetMortarLevel(){
 		return PlayerPrefs.GetInt ("mortarLevel");
 	}
 	public int GetSlowLevel(){
@@ -301,7 +313,7 @@ public class TowerUpgrader : MonoBehaviour {
 	public void SetMgLevel(int temp){
 		PlayerPrefs.SetInt("mgLevel",temp);
 	}
-	public void SetMortar(int temp){
+	public void SetMortarLevel(int temp){
 		PlayerPrefs.SetInt("mortarLevel",temp);
 	}
 	public void SetSlowLevel(int temp){

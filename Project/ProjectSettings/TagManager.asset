@@ -21,6 +21,7 @@ TagManager:
   - Back
   - Range
   - ExplosiveDmg
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - Explosion
   - Border
   - ExplosionDMG
-  - 
+  - MainBase
   - 
   - 
   - 
