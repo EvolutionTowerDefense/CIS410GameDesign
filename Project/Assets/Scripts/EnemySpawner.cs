@@ -55,7 +55,7 @@ public class EnemySpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-	int enemiesLeft = enemies.Length;
+		int enemiesLeft = enemies.Length;
 		if (enemiesLeft == 0)
 		{ //print ("Triggered");
 			
@@ -123,6 +123,8 @@ public class EnemySpawner : MonoBehaviour {
 
 			if (spawnIndex > spawnList.Length) {
 
+				
+				//LevelButtons.displayText (waveCount);
 				waveCount = waveCount - 1;
 
 
@@ -138,12 +140,14 @@ public class EnemySpawner : MonoBehaviour {
 		if (waveCount > 0) {
 			 reference = Instantiate (spawnList [spawnIndex], transform.position, Quaternion.identity) as GameObject;
 		} 
-		
+			
 			spawnIndex++;
 
 			if (spawnIndex >= spawnList.Length) {
+				//LevelButtons.displayText (waveCount);
+				
 				waveCount = waveCount - 1;
-
+				
 				if (waveCount <= 0) {
 						CancelInvoke ();
 
