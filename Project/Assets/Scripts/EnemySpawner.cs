@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour {
 	public int waveCount;
 
 	private int spawnIndex=0;
+	private float waves;
+	private int maxWaves;
 
 	public GameObject[] spawnList; //List of enemies that spawn
 
@@ -26,7 +28,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Start () {
 
 	
-	
+
 
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 	
@@ -50,6 +52,11 @@ public class EnemySpawner : MonoBehaviour {
 			CreatGraphicalPathObjects ();
 		//}
 	
+		//Initialize Waves
+		waves = 1.0f;
+		WaveManager.wave = waves;
+		maxWaves = waveCount;
+		//gameController.SetWave (waves);
 	}
 	
 	// Update is called once per frame
@@ -124,8 +131,14 @@ public class EnemySpawner : MonoBehaviour {
 			if (spawnIndex > spawnList.Length) {
 
 				
-				//LevelButtons.displayText (waveCount);
+//			gameController2.displayText (waveCount);
 				waveCount = waveCount - 1;
+
+				waves = waves + 1.0f;
+				//gameController.SetWave (waves);
+			if (waves <= maxWaves) {
+				WaveManager.wave = waves;
+			}
 
 
 			if (waveCount <= 0) {
@@ -144,9 +157,16 @@ public class EnemySpawner : MonoBehaviour {
 			spawnIndex++;
 
 			if (spawnIndex >= spawnList.Length) {
-				//LevelButtons.displayText (waveCount);
+//			gameController2.displayText (waveCount);
 				
 				waveCount = waveCount - 1;
+				waves = waves + 1.0f;
+				//gameController.SetWave (waves);
+				
+			if (waves <= maxWaves) {
+				WaveManager.wave = waves;
+			}
+
 				
 				if (waveCount <= 0) {
 						CancelInvoke ();

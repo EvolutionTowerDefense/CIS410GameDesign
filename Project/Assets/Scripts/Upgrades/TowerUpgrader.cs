@@ -190,6 +190,16 @@ public class TowerUpgrader : MonoBehaviour {
 		}
 	}
 
+	public static float GetLevel()
+	{
+		return PlayerPrefs.GetFloat("level");
+	}
+
+	public  void SetLevel(float level)
+	{
+		PlayerPrefs.SetFloat("level",  level);
+	}
+
 
 
 	public static float GetScore()

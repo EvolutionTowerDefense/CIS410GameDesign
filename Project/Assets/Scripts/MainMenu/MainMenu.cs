@@ -45,6 +45,7 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "NewGame") {
 
 
+			gameController.SetLevel (1.0f);
 
 			gameController.SetScore (0);
 			gameController.SetCash(500);
