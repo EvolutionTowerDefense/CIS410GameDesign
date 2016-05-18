@@ -22,6 +22,11 @@ TagManager:
   - Range
   - ExplosiveDmg
   - Building
+  - MortarTower
+  - gun1
+  - gunslow
+  - lazer1
+  - machinegun1
   layers:
   - Default
   - TransparentFX

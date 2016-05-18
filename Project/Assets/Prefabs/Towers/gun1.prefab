@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11422150}
   m_Layer: 0
   m_Name: gun1
-  m_TagString: Untagged
+  m_TagString: gun1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442710}
@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.23, y: 0.5, z: 9.29}
+  m_LocalPosition: {x: -2.839322, y: 0.225, z: -1.3982402}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children:
   - {fileID: 417250}
@@ -336,7 +336,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 7.7, z: 6}
+  m_Size: {x: 6, y: 6, z: 6}
   m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!114 &11422150
 MonoBehaviour:
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fab8ed6853b4c97a71902fb77f7704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {fileID: 121988}
+  currentTower: {fileID: 121988}
 --- !u!135 &13579056
 SphereCollider:
   m_ObjectHideFlags: 1
