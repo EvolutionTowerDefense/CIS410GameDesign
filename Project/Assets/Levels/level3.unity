@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34968bcf86e414c5fb4a143c4c754ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerSelector: {fileID: 0}
+  towerSelector: {fileID: 438999545}
 --- !u!114 &381098091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1044,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &438999545 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11449090, guid: fd7b47c6d5867439190e39c4eb04266f,
+    type: 2}
+  m_PrefabInternal: {fileID: 438999544}
+  m_Script: {fileID: 11500000, guid: e0538b3fc2ae54d048120c8f5956076f, type: 3}
 --- !u!1001 &563416222
 Prefab:
   m_ObjectHideFlags: 0
