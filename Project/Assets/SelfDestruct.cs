@@ -12,7 +12,7 @@ public class SelfDestruct : MonoBehaviour {
 		//Scales
 		temp = temp * 4.275f;//was 2.45f
 		transform.localScale += new Vector3(temp,temp,temp);
-		Object.Destroy(gameObject, 2.5f);
+		Object.Destroy(gameObject, 10.5f);
 	}
 	
 	// Update is called once per frame

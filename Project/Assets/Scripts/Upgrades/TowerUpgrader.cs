@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class TowerUpgrader : MonoBehaviour {
 
@@ -131,7 +131,7 @@ public class TowerUpgrader : MonoBehaviour {
 			towerNum = 5;
 		}
 		if (button.name == "Back") {
-			Application.LoadLevel ("mainMenu");
+			SceneManager.LoadScene ("mainMenu");
 		}
 
 		if (button.name == "Upgrade") {
