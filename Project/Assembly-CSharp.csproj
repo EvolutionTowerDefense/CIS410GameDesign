@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\ScrollTexture.cs" />
      <Compile Include="Assets\Scripts\SelectTowerOnClick.cs" />
      <Compile Include="Assets\Scripts\SlowBullet.cs" />
+     <Compile Include="Assets\Scripts\Sound\volumeControl.cs" />
      <Compile Include="Assets\Scripts\TowerSelector.cs" />
      <Compile Include="Assets\Scripts\Upgrades\TowerUpgrader.cs" />
      <Compile Include="Assets\Scripts\gunSlowTower.cs" />
@@ -99,11 +100,11 @@
      <Compile Include="Assets\SelfDestruct.cs" />
      <Compile Include="Assets\WaveManager.cs" />
      <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

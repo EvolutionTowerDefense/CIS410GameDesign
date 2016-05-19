@@ -11,6 +11,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 		//Check if you got energy to buy
 		if (EnergyManager.energy >= towerSelector.GetSelectedTowerCost ()) {
 			GameObject tower = towerSelector.GetSelectedTower ();
+			//Instantiate 4
 			Instantiate (tower, position + Vector3.up * 0.5f, tower.transform.rotation);
 
 			//subtract after buying

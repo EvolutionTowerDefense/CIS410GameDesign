@@ -13,7 +13,7 @@ GameObject:
   - 54: {fileID: 5416908}
   - 136: {fileID: 13625568}
   m_Layer: 8
-  m_Name: MGBullet
+  m_Name: MGbullet
   m_TagString: MachineGunBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
