@@ -94,6 +94,7 @@ public class BasicTower : MonoBehaviour {
 
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
+
 		}
 	}
 

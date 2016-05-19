@@ -26,9 +26,9 @@ public class gunTower : MonoBehaviour {
 
 
 		fireRate = gameController.GetGunFR();
-		Debug.Log(fireRate);
+//		Debug.Log(fireRate);
 		fireRadius = gameController.GetGunRange();
-		Debug.Log(fireRadius);
+//		Debug.Log(fireRadius);
 
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
@@ -108,6 +108,7 @@ public class gunTower : MonoBehaviour {
 		
 			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
 			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
+			newBullet.transform.LookAt (target.transform.position);
 			Destroy (instantiatedObj,2.0f);
 		}
 	}

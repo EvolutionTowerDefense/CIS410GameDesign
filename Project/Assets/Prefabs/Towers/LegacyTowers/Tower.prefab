@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 64: {fileID: 6426172}
   m_Layer: 0
-  m_Name: TowerPurple
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2772bdbf6f79649fdbe1886a08c5a22d, type: 2}
+  - {fileID: 2100000, guid: 364011eb74b1a47c8afeadc2bfd45fac, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -102,8 +102,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 1c1bca7a697e14de8aaec5041cd5203e, type: 2}
   bulletSpeed: 20
-  fireRate: 0.2
-  fireRadius: 2.5
+  fireRate: 0.5
+  fireRadius: 10
+  gameController: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

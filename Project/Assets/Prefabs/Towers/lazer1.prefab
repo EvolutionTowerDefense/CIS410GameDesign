@@ -335,7 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endOfBarrel: {fileID: 135046}
   shotSound: {fileID: 8300000, guid: f6cb1f581b7444b23a05b613a16420d5, type: 3}
-  bullet: {fileID: 100000, guid: 6ffaadfff336742b6bd59cb4b516fd9f, type: 2}
+  bullet: {fileID: 189020, guid: 23d446a78127945f490e324c668fd6ac, type: 2}
   bulletSpeed: 20
   fireRate: 0.4
   fireRadius: 8

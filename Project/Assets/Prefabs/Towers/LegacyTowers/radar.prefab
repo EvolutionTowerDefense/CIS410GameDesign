@@ -123,6 +123,7 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 1
   fireRadius: 3
+  gameController: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

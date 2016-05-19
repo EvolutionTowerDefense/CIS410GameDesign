@@ -342,7 +342,7 @@ MonoBehaviour:
   endOfBarrel: {fileID: 166948}
   shotSound: {fileID: 8300000, guid: 30114844b380b88418785402b1e582c0, type: 3}
   smoke: {fileID: 100000, guid: 5a97962f7d5ba4df0823334b52c7c02c, type: 2}
-  bullet: {fileID: 100000, guid: 674d8e40fcc0c4a27b9ff28df41cb1c4, type: 2}
+  bullet: {fileID: 111594, guid: 632d8181f3fbc4c69b3f7e72db0f826c, type: 2}
   bulletSpeed: 20
   fireRate: 0.5
   fireRadius: 5

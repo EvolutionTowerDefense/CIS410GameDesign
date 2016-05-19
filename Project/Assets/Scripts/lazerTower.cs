@@ -100,6 +100,7 @@ public class lazerTower : MonoBehaviour {
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
 		
+			newBullet.transform.LookAt (target.transform.position);
 			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
 
 

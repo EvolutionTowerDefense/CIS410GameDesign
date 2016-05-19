@@ -12,6 +12,8 @@ public class RestoreSpeed : MonoBehaviour {
 		Invoke ("RestoreSpeedFunction", time);
 	}
 
+
+
 	void RestoreSpeedFunction()
 	{
 		PathThroughObjects scriptInstance = gameObject.transform.parent.GetComponent<PathThroughObjects>();

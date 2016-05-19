@@ -9,7 +9,7 @@ public class SelfDestruct : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		string Tag = currentTower.tag;
-		print (Tag);
+//		print (Tag);
 		float temp = 0;
 		if(Tag == "MortarTower")
 			temp = currentTower.GetComponent <MortarTower>().fireRadius;
@@ -25,7 +25,7 @@ public class SelfDestruct : MonoBehaviour {
 		//Scales
 		temp = temp * 4.275f;//was 2.45f
 		transform.localScale += new Vector3(temp,temp,temp);
-		Object.Destroy(gameObject, 10.5f);
+		Object.Destroy(gameObject, 2.5f);
 	}
 	
 	// Update is called once per frame

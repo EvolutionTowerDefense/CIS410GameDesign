@@ -106,6 +106,8 @@ public class gunSlowTower : MonoBehaviour {
 
 			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
 			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
+
+			newBullet.transform.LookAt (target.transform.position);
 			Destroy (instantiatedObj,2.0f);
 			
 

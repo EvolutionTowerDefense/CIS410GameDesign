@@ -33,12 +33,15 @@ public class SlowBullet : MonoBehaviour {
 				RestoreSpeed scriptInstance2 = restoreSpeedInstance.GetComponent<RestoreSpeed> ();
 
 
-				scriptInstance2.time = slowTime; 
+				scriptInstance2.time =  slowTime; 
+				if (scriptInstance2.time >= slowTime)
+					scriptInstance2.time = slowTime + slowTime;
+					//scriptInstance2.time = scriptInstance2.time + slowTime; 
 				scriptInstance2.originalSpeed = scriptInstance.speed;
 
 				scriptInstance.speed *= slowPercentage;
 			} 
-			else {
+			/*else {
 				PathThroughObjects scriptInstance = collision.collider.GetComponent<PathThroughObjects> ();
 
 
@@ -55,7 +58,7 @@ public class SlowBullet : MonoBehaviour {
 				scriptInstance.speed *= slowPercentage;
 
 				
-			}
+			}*/
 
 
 		}
