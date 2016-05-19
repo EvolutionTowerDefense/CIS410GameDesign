@@ -4,10 +4,10 @@ using System.Linq;
 
 public class gunTower : MonoBehaviour {
 	public GameObject endOfBarrel;
-	public AudioClip shotSound;
+	//public AudioClip shotSound; //Previous way of doing it
 	public GameObject smoke;
 	private GameObject instantiatedObj;
-
+	private AudioSource shotSound;
 	public GameObject bullet;
 
 
@@ -24,7 +24,7 @@ public class gunTower : MonoBehaviour {
 	{
 //		gameController = GetComponent <TowerUpgrader>();
 
-
+		shotSound = GetComponent<AudioSource> ();
 		fireRate = gameController.GetGunFR();
 //		Debug.Log(fireRate);
 		fireRadius = gameController.GetGunRange();
@@ -106,7 +106,8 @@ public class gunTower : MonoBehaviour {
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
 		
-			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+			//AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position); //Previous way
+			shotSound.Play ();
 			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
 			newBullet.transform.LookAt (target.transform.position);
 			Destroy (instantiatedObj,2.0f);

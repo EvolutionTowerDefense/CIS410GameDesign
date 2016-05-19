@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MortarTower : MonoBehaviour {
 	public GameObject endOfBarrel;
-	public AudioClip shotSound;
+	public AudioSource shotSound;
 	public GameObject smoke;
 	private GameObject instantiatedObj;
 
@@ -25,7 +25,7 @@ public class MortarTower : MonoBehaviour {
 	{
 		fireRate = gameController.GetMortarFR();
 		fireRadius = gameController.GetMortarRange();
-
+		shotSound = GetComponent<AudioSource> ();
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
 
@@ -85,7 +85,7 @@ public class MortarTower : MonoBehaviour {
 			Vector3 launchForce = new Vector3(distance.x * bulletSpeed, lobAmount, distance.z * bulletSpeed);                        
 			newBullet.GetComponent<Rigidbody>().AddForce(launchForce, ForceMode.VelocityChange);
 		
-			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+			shotSound.Play ();
 			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
 
 			newBullet.transform.LookAt (target.transform.position);

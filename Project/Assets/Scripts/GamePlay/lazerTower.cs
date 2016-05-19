@@ -4,16 +4,13 @@ using System.Linq;
 
 public class lazerTower : MonoBehaviour {
 	public GameObject endOfBarrel;
-	public AudioClip shotSound;
-
-
 	public GameObject bullet;
 	public float bulletSpeed = 1.0f; //How fast a bullet is shot
 	public float fireRate; //How fast a tower fires
 	public float fireRadius; //radius that tower detects and fires at enemy
 
 	public float damage = 1.0f; // Damage
-
+	private AudioSource shotSound;
 
 	private Vector3 movementDirection;
 
@@ -25,7 +22,7 @@ public class lazerTower : MonoBehaviour {
 	{
 		fireRate = gameController.GetLazerFR();
 		fireRadius = gameController.GetLazerRange();
-
+		shotSound = GetComponent<AudioSource> ();
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
 
@@ -99,9 +96,9 @@ public class lazerTower : MonoBehaviour {
 
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
-		
+			shotSound.Play ();
 			newBullet.transform.LookAt (target.transform.position);
-			AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
+			//AudioSource.PlayClipAtPoint(shotSound, endOfBarrel.transform.position);
 
 
 		}

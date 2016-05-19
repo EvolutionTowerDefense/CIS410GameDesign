@@ -5,6 +5,7 @@ public class MortarAI : MonoBehaviour {
 
 	public AudioClip expSound;
 	public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 	
