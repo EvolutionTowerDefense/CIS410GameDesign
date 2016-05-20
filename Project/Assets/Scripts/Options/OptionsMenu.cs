@@ -10,26 +10,50 @@ public class OptionsMenu : MonoBehaviour {
 	public AudioMixer masterMixer;
 	float musicVol;
 	float sfxVol;
-	void Start () {		
+	void Start () {
 		masterMixer.GetFloat("musicVol", out( musicVol));
 		masterMixer.GetFloat ("sfxVol", out(sfxVol));
-		musicSilder.value = musicVol;
-		sfxSlider.value = sfxVol;
+
+		if (musicVol != GetMusicVol ()) {
+			musicSilder.value = GetMusicVol ();
+		} 
+		else {
+			musicSilder.value = musicVol;
+		}
+
+		if (sfxVol != GetSFXVol()) {
+
+			sfxSlider.value = GetSFXVol();
+		} 
+		else {
+			sfxSlider.value = sfxVol;
+		}
 	}
 
 	public void ButtonMenu(Button button)
 	{
-		/*
-		if (button.name == "Apply") {
-			print ("Apply");
-			SceneManager.LoadScene("MainMenu");
-		}
-		*/
+
 		if (button.name == "MainMenu") {
 			print ("Main");
+			SetSFXVol (sfxVol);
+			SetMusicVol(musicVol);
 			SceneManager.LoadScene ("MainMenu");
 		}
 
+	}
+
+	public void SetMusicVol(float temp){
+		PlayerPrefs.SetFloat ("musicVol", temp);
+	}
+	public float GetMusicVol(){
+		return PlayerPrefs.GetFloat ("musicVol");
+	}
+
+	public void SetSFXVol(float temp){
+		PlayerPrefs.SetFloat ("sfxVol", temp);
+	}
+	public float GetSFXVol(){
+		return PlayerPrefs.GetFloat ("SfxVol");
 	}
 
 }
