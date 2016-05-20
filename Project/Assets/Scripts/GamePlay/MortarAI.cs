@@ -3,12 +3,12 @@ using System.Collections;
 
 public class MortarAI : MonoBehaviour {
 
-	public AudioClip expSound;
+	private AudioSource expSound;
 	public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
-	
+		expSound = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -27,8 +27,7 @@ public class MortarAI : MonoBehaviour {
 
 
 
-		AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
-
+		expSound.Play ();
 		Destroy(clone, 2.0f);
 
 		//Destroy (explosion,2.0f);

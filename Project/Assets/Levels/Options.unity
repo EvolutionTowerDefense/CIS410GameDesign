@@ -1816,9 +1816,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1186631705}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: -10
+  m_MaxValue: -30
   m_WholeNumbers: 0
-  m_Value: -10
+  m_Value: -30
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
