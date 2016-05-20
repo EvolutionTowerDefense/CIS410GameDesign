@@ -20,7 +20,7 @@ public class OptionsMenu : MonoBehaviour {
 			SceneManager.LoadScene("MainMenu");
 		}
 		if (button.name == "MainMenu") {
-			print ("Main");
+//			print ("Main");
 			SceneManager.LoadScene ("MainMenu");
 		}
 

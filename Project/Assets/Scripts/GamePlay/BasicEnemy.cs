@@ -79,21 +79,24 @@ public class BasicEnemy : MonoBehaviour {
 				//Destroy (collision.collider.gameObject)();
 											}
 			if (Health <= 0) {
-				//GameObject clone = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
+			
+				GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
 				//Instantiate(explosion);
 				
 				//Add sound for explosion
 				//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 
 
-				//Destroy (clone,2.0f);
+				Destroy (clone, 2.0f);
+				
 				Destroy (gameObject);
 			}
 		}
-	void OnDestroy()
+
+	/*void OnDestroy()
 	{
 		GameObject clone = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
 		Destroy (clone,2.0f);
-	}
+	}*/
 
 }

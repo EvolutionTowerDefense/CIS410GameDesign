@@ -44,6 +44,8 @@ public class EnemySpawner : MonoBehaviour {
 		}
 		if (gameController == null)
 		{
+		
+			//This can occure when not a bug too, which is ok.
 			Debug.Log ("Cannot find 'GameController' script");
 		}
 	//	for (int i = 0; i < waves; i++) {
@@ -81,17 +83,26 @@ public class EnemySpawner : MonoBehaviour {
 
 			//Possible reload display message.
 
-			GameObject[] enemiesDestory = GameObject.FindGameObjectsWithTag("Enemy");
+			//If we want to destory enemies when level ends
+			/*GameObject[] enemiesDestory = GameObject.FindGameObjectsWithTag("Enemy");
 
 			for (int i = 0; i < enemiesDestory.Length; i++) {
 				Destroy (enemiesDestory [i]);
 			}
+			*/
 
+			//Blow up buildings when level ends
 			GameObject[] buildingsDestory = GameObject.FindGameObjectsWithTag("Building");
-
 			for (int i = 0; i < buildingsDestory.Length; i++) {
-				Destroy (buildingsDestory [i]);
+				
+				//BuildingHealth myHealth = (BuildingHealth) buildingsDestory [i].GetComponent(typeof(BuildingHealth)) ;
+				//myHealth.Health = 0;
+				Destroy(buildingsDestory[i]);
+
 			}
+
+
+
 		}
 
 

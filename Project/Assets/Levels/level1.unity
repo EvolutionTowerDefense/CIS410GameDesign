@@ -723,7 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
-  Health: 0
+  Health: 10
   expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
 --- !u!1 &347398790 stripped

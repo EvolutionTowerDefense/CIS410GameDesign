@@ -11,5 +11,6 @@ public class LevelButtons : MonoBehaviour {
 		if (button.name == "Back") {
 			SceneManager.LoadScene ("mainMenu");
 		}
+		BuildingHealth.isQuitting = true;
 	}
 }

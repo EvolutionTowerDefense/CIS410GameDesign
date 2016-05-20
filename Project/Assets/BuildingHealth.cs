@@ -12,7 +12,7 @@ public class BuildingHealth : MonoBehaviour {
 	private float lifeHeight;
 	private float lifeBackgroundWidth;
 	private float maxLife;
-
+	public static bool isQuitting;
 
 	public float Health;
 	public AudioClip expSound;
@@ -24,6 +24,7 @@ public class BuildingHealth : MonoBehaviour {
 		lifeHeight = 10.0f;
 		maxLife = Health;
 		myCamera = Camera.main;
+		isQuitting = false;
 
 	}
 
@@ -31,6 +32,7 @@ public class BuildingHealth : MonoBehaviour {
 	void Update () {
 		lifeRatio = Health / maxLife; //TODO:fix to represent max life
 		lifeWidth = lifeRatio *lifeBackgroundWidth;
+			
 
 	}
 	void OnGUI(){
@@ -63,6 +65,12 @@ public class BuildingHealth : MonoBehaviour {
 			
 
 		if (Health <= 0) {
+
+
+				GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+				Destroy (clone, 2.0f);
+
+
 			//Instantiate(explosion);
 
 			//Add sound for explosion
@@ -76,9 +84,20 @@ public class BuildingHealth : MonoBehaviour {
 
 	}
 
-	void OnDestroy()
-	{			GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
-		Destroy (clone, 2.0f);
+	void OnApplicationQuit()
+	{
+		isQuitting = true;
 	}
+
+	void OnDestroy()
+	{
+		if (isQuitting == false) {
+			GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+			Destroy (clone, 2.0f);
+		}
+
+	}
+
+
 
 }
