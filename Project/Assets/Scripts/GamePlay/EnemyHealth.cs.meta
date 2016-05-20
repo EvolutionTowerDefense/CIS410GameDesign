@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: eea19bb4e7d754f7ca4801b565884eab
+timeCreated: 1463764659
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

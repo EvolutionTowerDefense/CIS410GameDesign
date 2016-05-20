@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11472698}
   - 114: {fileID: 11473736}
   - 114: {fileID: 11496642}
+  - 114: {fileID: 11466388}
   m_Layer: 9
   m_Name: Bagi_box_b1
   m_TagString: Enemy
@@ -157,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.117995, y: 0.5, z: -0.033293523}
+  m_LocalPosition: {x: 0.08955218, y: 0.125, z: -6.2053185}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 499078}
@@ -478,6 +479,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionCamera: {fileID: 0}
   debug: 0
+--- !u!114 &11466388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea19bb4e7d754f7ca4801b565884eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vec: {x: 0, y: 0, z: 0}
+  redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
 --- !u!114 &11472698
 MonoBehaviour:
   m_ObjectHideFlags: 1
