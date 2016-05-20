@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
 public class EnemySpawner : MonoBehaviour {
 
 	public GameObject[] pathPoints;
@@ -58,9 +59,45 @@ public class EnemySpawner : MonoBehaviour {
 		maxWaves = waveCount;
 		//gameController.SetWave (waves);
 	}
-	
+
+
+	IEnumerator Wait() {
+
+		yield return new WaitForSeconds (2);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+
+	}
+
 	// Update is called once per frame
 	void Update () {
+
+		//Check to see if level Ended (main base blown up)
+		GameObject Building = GameObject.FindWithTag ("MainBuilding");
+
+		if (Building == null)
+		{
+			//Start the countdown to reload
+			StartCoroutine (Wait ());
+
+			//Possible reload display message.
+
+			GameObject[] enemiesDestory = GameObject.FindGameObjectsWithTag("Enemy");
+
+			for (int i = 0; i < enemiesDestory.Length; i++) {
+				Destroy (enemiesDestory [i]);
+			}
+
+			GameObject[] buildingsDestory = GameObject.FindGameObjectsWithTag("Building");
+
+			for (int i = 0; i < buildingsDestory.Length; i++) {
+				Destroy (buildingsDestory [i]);
+			}
+		}
+
+
+	
+
+
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		int enemiesLeft = enemies.Length;
 		if (enemiesLeft == 0)
@@ -76,41 +113,46 @@ public class EnemySpawner : MonoBehaviour {
 				if (SceneManager.GetActiveScene().name == "level1") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
+					gameController.SetCash(EnergyManager.energy + 500f );
+					TowerUpgrader.SetLevel (2);
 
-					SceneManager.LoadScene("level2");
+					SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name ==  "level2") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
+					gameController.SetCash(EnergyManager.energy+ 500f  );
+					TowerUpgrader.SetLevel (3);
 
-					SceneManager.LoadScene("level3");
+					SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level3") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
+					gameController.SetCash(EnergyManager.energy + 500f );
+					TowerUpgrader.SetLevel (4);
 
-					SceneManager.LoadScene("level4");
+					SceneManager.LoadScene("Upgrades");
 					
 				}
 				else if (SceneManager.GetActiveScene().name == "level4") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
+					gameController.SetCash(EnergyManager.energy + 500f );
+					TowerUpgrader.SetLevel (5);
 
-					SceneManager.LoadScene("level5");
+					SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level5") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
+					gameController.SetCash(EnergyManager.energy+ 500f  );
+					TowerUpgrader.SetLevel (1);
 
-					SceneManager.LoadScene("level1");
+					SceneManager.LoadScene("Upgrades");
 
 				}
 

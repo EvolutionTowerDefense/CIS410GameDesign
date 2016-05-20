@@ -23,6 +23,7 @@ public class lazerTower : MonoBehaviour {
 		fireRate = gameController.GetLazerFR();
 		fireRadius = gameController.GetLazerRange();
 		shotSound = GetComponent<AudioSource> ();
+
 		InvokeRepeating("SpawnBullet",fireRate,fireRate);
 	}
 

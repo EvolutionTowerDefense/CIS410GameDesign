@@ -51,7 +51,7 @@ public class DestoryOnTouch : MonoBehaviour {
 		else if (gameObject.name == "MachineGunBullet") {
 			Destroy (gameObject);
 		}
-		else if (gameObject.name == "SlowDownBullet") {
+		else if (gameObject.name == "SlowBullet") {
 			Destroy (gameObject);
 		}
 		else if (gameObject.name == "Mortar") {

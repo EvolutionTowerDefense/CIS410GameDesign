@@ -68,10 +68,32 @@ public class BasicEnemy : MonoBehaviour {
 		
 
 			Destroy (clone,2.0f);
-			Destroy (collision.collider.gameObject);
+			//Destroy (collision.collider.gameObject);
 			Destroy (gameObject);
 		}
 
+	}
+	void OnTriggerEnter(Collider other) {
+			if (other.tag == "ExplosiveDmg") {
+				Health = Health - TowerUpgrader.GetExplosiveDmg();
+				//Destroy (collision.collider.gameObject)();
+											}
+			if (Health <= 0) {
+				//GameObject clone = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
+				//Instantiate(explosion);
+				
+				//Add sound for explosion
+				//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
+
+
+				//Destroy (clone,2.0f);
+				Destroy (gameObject);
+			}
+		}
+	void OnDestroy()
+	{
+		GameObject clone = (GameObject)Instantiate(explosion, transform.position, transform.rotation);
+		Destroy (clone,2.0f);
 	}
 
 }
