@@ -10,8 +10,7 @@ public class EnergyManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		energy = TowerUpgrader.GetCash();
+		energy = TowerUpgrader.GetCash()+500;
 
 	
 	}

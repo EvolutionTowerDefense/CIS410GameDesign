@@ -45,8 +45,12 @@ public class MainMenu : MonoBehaviour {
 			TowerUpgrader.SetLevel (1.0f);
 
 			gameController.SetScore (0);
-			gameController.SetCash(500);
 
+			//Due to extra cash at start of each level
+			gameController.SetCash(0);
+
+			// With no cash at start of each level
+			//gameController.SetCash(0);
 
 			TowerUpgrader.SetGunBulletDmg (1.0f);
 			gameController.SetGunFR (0.5f);
@@ -70,7 +74,7 @@ public class MainMenu : MonoBehaviour {
 
 			TowerUpgrader.SetLazerDmg (3.0f);
 			gameController.SetLazerFR(0.4f);
-			gameController.SetLazerRange(8.0f);
+			gameController.SetLazerRange(5.0f);
 
 
 			gameController.SetGunLevel (1);

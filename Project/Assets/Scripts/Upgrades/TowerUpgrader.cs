@@ -57,7 +57,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerSelected.text = "Cannon: Range";
 			FireRate.text = "Fire Rate: " + GetGunFR ();
 			Dmg.text = "Damage: " + GetGunBulletDmg ();
-			Range.text = "Range: " + GetGunRange ();
+			Range.text = "Range: " + System.Math.Round(GetGunRange (),2);
 			TowerLevel.text = "Tower Level: " + GetGunLevel ();
 
 
@@ -74,7 +74,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerSelected.text = "Mortar: Splash Damage";
 			FireRate.text = "Fire Rate: " + GetMortarFR ();
 			Dmg.text = "Damage: " + GetMortarDmg ();
-			Range.text = "Range: " + GetMortarRange ();
+			Range.text = "Range: " + System.Math.Round(GetMortarRange (),2);
 			TowerLevel.text = "Tower Level: " + GetMortarLevel ();
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMortarLevel ()).ToString();
 		} else if (towerNum == 3) {
@@ -83,7 +83,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerSelected.text = "Slime: Slow Enemies";
 			FireRate.text = "Fire Rate: " + GetSlowFR ();
 			Dmg.text = "Damage: " + GetSlowDownBulletDmg ();
-			Range.text = "Range: " + GetSlowRange ();
+			Range.text = "Range: " + System.Math.Round(GetSlowRange (),2);
 			TowerLevel.text = "Tower Level: " + GetSlowLevel ();
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetSlowLevel ()).ToString();
 		} else if (towerNum == 4) {
@@ -92,7 +92,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerSelected.text = "Machine Gun: Fire Fast";
 			FireRate.text = "Fire Rate: " + GetMgFR ();
 			Dmg.text = "Damage: " + GetMgBulletDmg ();
-			Range.text = "Range: " + GetMgRange ();
+			Range.text = "Range: " + System.Math.Round(GetMgRange (),2);
 			TowerLevel.text = "Tower Level: " + GetMgLevel ();
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMgLevel ()).ToString();
 		} else if (towerNum == 5) {
@@ -101,7 +101,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerSelected.text = "Lazer: Heavy Damage";
 			FireRate.text = "Fire Rate: " + GetLazerFR ();
 			Dmg.text = "Damage: " + GetLazerDmg ();
-			Range.text = "Range: " + GetLazerRange ();
+			Range.text = "Range: " + System.Math.Round(GetLazerRange (),2);
 			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetLazerLevel ()).ToString();
 
@@ -153,53 +153,72 @@ public class TowerUpgrader : MonoBehaviour {
 		if (button.name == "Upgrade") {
 			if (towerNum == 1) {
 
-				if (GetCash () > 100 * GetGunLevel ()) {
+				if ((GetCash ()) >= 100 * GetGunLevel () +200) {
 					SetCash (GetCash () - (100 * GetGunLevel ()));
 					SetGunLevel (GetGunLevel () + 1);
-					SetGunBulletDmg (GetGunBulletDmg () + 1.0f);
-					SetGunFR (GetGunFR () - 0.1f);
-					SetGunRange (GetGunRange () + 1.0f);
+					SetGunBulletDmg (GetGunBulletDmg () + 0.5f);
 
+					if(GetGunFR () > 0.2f)
+						SetGunFR (GetGunFR () - 0.005f);
+
+					SetGunRange (GetGunRange () + 0.3f);
 
 				}
 			}
 			if (towerNum == 2) {
-				if (GetCash () > 100 * GetMortarLevel ()) {
+				if ((GetCash ()) >= 100 * GetMortarLevel () +200) {
 					SetCash (GetCash () - (100 * GetMortarLevel ()));
 					SetMortarLevel (GetMortarLevel () + 1);
-					SetMortarDmg (GetMortarDmg () + 1.0f);
-					SetMortarFR (GetMortarFR () - 0.1f);
-					SetMortarRange (GetMortarRange () + 1.0f);
+
+					SetMortarDmg (GetMortarDmg () + 0.5f);
+
+					SetExplosiveDmg(GetExplosiveDmg() + 0.5f);
+
+					if(GetMortarFR () > 0.02f)
+						SetMortarFR (GetMortarFR () - 0.01f);
+					
+					SetMortarRange (GetMortarRange () + .2f);
 
 				}
 			}
 			if (towerNum == 3) {
-				if (GetCash () > 100 * GetSlowLevel ()) {
+				if  ((GetCash ()) >= 100 * GetSlowLevel () +200) {
 					SetCash (GetCash () - (100 * GetSlowLevel ()));
 					SetSlowLevel (GetSlowLevel () + 1);
-					SetSlowDownBulletDmg (GetSlowDownBulletDmg () + 1.0f);
-					SetSlowFR (GetSlowFR () - 0.1f);
-					SetSlowRange (GetSlowRange () + 1.0f);
+					SetSlowDownBulletDmg (GetSlowDownBulletDmg () + 0.25f);
+
+					if(GetSlowFR () > 0.02f)
+						SetSlowFR (GetSlowFR () - 0.01f);
+					
+					SetSlowRange (GetSlowRange () + 0.2f);
 
 				}
 			}
 			if (towerNum == 4) {
-				if (GetCash () > 100 * GetMgLevel ()) {
+				if  ((GetCash ())  >= 100 * GetMgLevel ()+200) {
 					SetCash (GetCash () - (100 * GetMgLevel ()));
 					SetMgLevel (GetMgLevel () + 1);
-					SetMgBulletDmg (GetMgBulletDmg () + 1.0f);
-					SetMgFR (GetMgFR () - 0.1f);
-					SetMgRange (GetMgRange () + 1.0f);
+
+					SetMgBulletDmg (GetMgBulletDmg () + 0.25f);
+
+					if(GetMgFR () > 0.02f)
+						SetMgFR (GetMgFR () - 0.02f);
+
+					SetMgRange (GetMgRange () + 0.1f);
 
 				}
 			}
 			if (towerNum == 5) {
-				if (GetCash () > 100 * GetLazerLevel ()) {
+				if  ((GetCash ())  >= 100 * GetLazerLevel () +200) {
 					SetCash (GetCash () - (100 * GetLazerLevel ()));
 					SetLazerLevel (GetLazerLevel () + 1);
+
 					SetLazerDmg (GetLazerDmg () + 1.0f);
-					//SetLazerFR (GetLazerFR () ); //Keep the same
-					SetLazerRange (GetLazerRange () + 1.0f);
+
+					if(GetLazerFR () > 0.02f)
+						SetLazerFR (GetLazerFR () + 0.005f); //Keep the same
+					
+					SetLazerRange (GetLazerRange () + .2f);
 
 				}
 			}

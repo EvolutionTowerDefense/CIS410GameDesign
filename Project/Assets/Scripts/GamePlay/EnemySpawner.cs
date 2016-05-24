@@ -113,8 +113,8 @@ public class EnemySpawner : MonoBehaviour {
 		int enemiesLeft = enemies.Length;
 		if (enemiesLeft == 0)
 		{ //print ("Triggered");
-			
-			if (waveCount <= 0)
+
+			if (waveCount <= 0 && gameController != null)
 			{
 
 				//Have some check if there is a building still alive...
@@ -124,7 +124,7 @@ public class EnemySpawner : MonoBehaviour {
 				if (SceneManager.GetActiveScene().name == "level1") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy + 500f );
+					gameController.SetCash(EnergyManager.energy );
 					TowerUpgrader.SetLevel (2);
 
 					SceneManager.LoadScene("Upgrades");
@@ -133,7 +133,7 @@ public class EnemySpawner : MonoBehaviour {
 				else if (SceneManager.GetActiveScene().name ==  "level2") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy+ 500f  );
+					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (3);
 
 					SceneManager.LoadScene("Upgrades");
@@ -142,7 +142,7 @@ public class EnemySpawner : MonoBehaviour {
 				else if (SceneManager.GetActiveScene().name == "level3") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy + 500f );
+					gameController.SetCash(EnergyManager.energy );
 					TowerUpgrader.SetLevel (4);
 
 					SceneManager.LoadScene("Upgrades");
@@ -151,7 +151,7 @@ public class EnemySpawner : MonoBehaviour {
 				else if (SceneManager.GetActiveScene().name == "level4") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy + 500f );
+					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (5);
 
 					SceneManager.LoadScene("Upgrades");
@@ -160,7 +160,7 @@ public class EnemySpawner : MonoBehaviour {
 				else if (SceneManager.GetActiveScene().name == "level5") {
 
 					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy+ 500f  );
+					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (1);
 
 					SceneManager.LoadScene("Upgrades");
