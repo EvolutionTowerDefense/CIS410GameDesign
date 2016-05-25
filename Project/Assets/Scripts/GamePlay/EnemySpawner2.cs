@@ -96,7 +96,9 @@ public class EnemySpawner2 : MonoBehaviour {
 			for(int i = 1; i < pathPoints.Length; i++)
 			{
 				pathObjectPosition = ((pathPoints[i].transform.position - pathPoints[i-1].transform.position)*0.5f) + pathPoints[i-1].transform.position;
-				pathObjectOrientation = Quaternion.LookRotation(pathPoints[i].transform.position - pathPoints[i-1].transform.position);
+
+					pathObjectOrientation = Quaternion.LookRotation(pathPoints[i].transform.position - pathPoints[i-1].transform.position);
+				
 				pathObject = Instantiate(graphicalPathObject, pathObjectPosition, pathObjectOrientation) as GameObject;
 				newScale = Vector3.one;
 				newScale.z = (pathPoints[i].transform.position - pathPoints[i-1].transform.position).magnitude;

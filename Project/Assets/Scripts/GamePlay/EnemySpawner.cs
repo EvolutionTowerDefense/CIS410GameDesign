@@ -203,7 +203,7 @@ public class EnemySpawner : MonoBehaviour {
 
 			}
 		GameObject reference = null;
-		if (waveCount > 0) {
+		if (waveCount > 0 && spawnList [spawnIndex] !=null){
 			 reference = Instantiate (spawnList [spawnIndex], transform.position, Quaternion.identity) as GameObject;
 		} 
 			

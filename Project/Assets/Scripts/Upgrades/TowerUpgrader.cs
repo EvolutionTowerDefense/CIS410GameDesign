@@ -16,7 +16,7 @@ public class TowerUpgrader : MonoBehaviour {
 		public Text UpgradeCost;
 		public RawImage[] images;
 
-		
+
 
 		private int towerNum;
 
@@ -153,7 +153,7 @@ public class TowerUpgrader : MonoBehaviour {
 		if (button.name == "Upgrade") {
 			if (towerNum == 1) {
 
-				if ((GetCash ()) >= 100 * GetGunLevel () +200) {
+				if ((GetCash ()) >= 100 * GetGunLevel ()) {
 					SetCash (GetCash () - (100 * GetGunLevel ()));
 					SetGunLevel (GetGunLevel () + 1);
 					SetGunBulletDmg (GetGunBulletDmg () + 0.5f);
@@ -166,7 +166,7 @@ public class TowerUpgrader : MonoBehaviour {
 				}
 			}
 			if (towerNum == 2) {
-				if ((GetCash ()) >= 100 * GetMortarLevel () +200) {
+				if ((GetCash ()) >= 100 * GetMortarLevel ()) {
 					SetCash (GetCash () - (100 * GetMortarLevel ()));
 					SetMortarLevel (GetMortarLevel () + 1);
 
@@ -182,7 +182,7 @@ public class TowerUpgrader : MonoBehaviour {
 				}
 			}
 			if (towerNum == 3) {
-				if  ((GetCash ()) >= 100 * GetSlowLevel () +200) {
+				if  ((GetCash ()) >= 100 * GetSlowLevel ()) {
 					SetCash (GetCash () - (100 * GetSlowLevel ()));
 					SetSlowLevel (GetSlowLevel () + 1);
 					SetSlowDownBulletDmg (GetSlowDownBulletDmg () + 0.25f);
@@ -195,7 +195,7 @@ public class TowerUpgrader : MonoBehaviour {
 				}
 			}
 			if (towerNum == 4) {
-				if  ((GetCash ())  >= 100 * GetMgLevel ()+200) {
+				if  ((GetCash ())  >= 100 * GetMgLevel ()) {
 					SetCash (GetCash () - (100 * GetMgLevel ()));
 					SetMgLevel (GetMgLevel () + 1);
 
@@ -209,7 +209,7 @@ public class TowerUpgrader : MonoBehaviour {
 				}
 			}
 			if (towerNum == 5) {
-				if  ((GetCash ())  >= 100 * GetLazerLevel () +200) {
+				if  ((GetCash ())  >= 100 * GetLazerLevel ()) {
 					SetCash (GetCash () - (100 * GetLazerLevel ()));
 					SetLazerLevel (GetLazerLevel () + 1);
 
@@ -223,6 +223,17 @@ public class TowerUpgrader : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+
+	public static float GetDifficulty()
+	{
+		return PlayerPrefs.GetFloat("Difficulty");
+	}
+
+	public static void SetDifficulty(float level)
+	{
+		PlayerPrefs.SetFloat("Difficulty",  level);
 	}
 
 	public static float GetLevel()

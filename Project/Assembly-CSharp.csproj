@@ -99,6 +99,7 @@
      <Compile Include="Assets\Scripts\Sound\volumeControl.cs" />
      <Compile Include="Assets\Scripts\Upgrades\TowerUpgrader.cs" />
      <Compile Include="Assets\SelfDestruct.cs" />
+     <Compile Include="Assets\TowerStatManager.cs" />
      <Compile Include="Assets\WaveManager.cs" />
      <None Include="Assets\Prefabs\FXS\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
  <Reference Include="UnityEngine.UI">

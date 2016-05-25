@@ -3,14 +3,15 @@ using System.Collections;
 
 public class EnergyManager : MonoBehaviour {
 
-	public float initialEnergy = 500;
+	public float initialEnergy = 0;
 	public GameObject energyDisplay;
 
 	public static float energy;
 
 	// Use this for initialization
 	void Start () {
-		energy = TowerUpgrader.GetCash()+500;
+
+			energy = TowerUpgrader.GetCash()+TowerUpgrader.GetDifficulty()+300.0f;
 
 	
 	}

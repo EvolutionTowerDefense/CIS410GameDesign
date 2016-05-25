@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour {
 	{
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
-
 		if (gameControllerObject != null)
 		{
 			gameController = gameControllerObject.GetComponent <TowerUpgrader>();

@@ -13,17 +13,32 @@ public class OptionsMenu : MonoBehaviour {
 	}
 	public void ButtonMenu(Button button)
 	{
+		/*
 		if (button.name == "Apply") {
 			print ("Apply");
 
 
 			SceneManager.LoadScene("MainMenu");
 		}
+
+		*/
 		if (button.name == "MainMenu") {
 //			print ("Main");
 			SceneManager.LoadScene ("MainMenu");
 		}
 
+		if (button.name == "Easy") {
+			TowerUpgrader.SetDifficulty (400.0f);
+		}
+
+		if (button.name == "Med") {
+			
+			TowerUpgrader.SetDifficulty (200.0f);
+		}
+
+		if (button.name == "Hard") {
+			TowerUpgrader.SetDifficulty (0.0f);
+		}
 	}
 
 }
