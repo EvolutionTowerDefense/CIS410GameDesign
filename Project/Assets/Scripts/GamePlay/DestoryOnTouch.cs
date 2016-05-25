@@ -16,7 +16,7 @@ public class DestoryOnTouch : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		print( "Collision");
+	//	print( "Collision");
 		if (collision.collider.tag == "GunBullet") {
 			Destroy (collision.collider.gameObject);
 		}

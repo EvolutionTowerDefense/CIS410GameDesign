@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject[] pathPoints;
 	public GameObject graphicalPathObject;
 
-
 	public int waveCount;
 
 	private int spawnIndex=0;
@@ -27,7 +26,6 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 	
 
 
@@ -70,6 +68,17 @@ public class EnemySpawner : MonoBehaviour {
 
 	}
 
+
+	IEnumerator Wait2() {
+
+		//Debug.Log ("Before 2");
+		yield return new WaitForSeconds (2);
+
+		//Debug.Log ("After 2");
+		SceneManager.LoadScene ("Upgrades");
+		//Debug.Log ("Failed Load");
+
+	}
 	// Update is called once per frame
 	void Update () {
 
@@ -114,20 +123,24 @@ public class EnemySpawner : MonoBehaviour {
 		if (enemiesLeft == 0)
 		{ //print ("Triggered");
 
+
+
 			if (waveCount <= 0 && gameController != null)
 			{
+				BuildingHealth.isQuitting = true;
 
-				//Have some check if there is a building still alive...
+				FadeIn.ChangeToWin (1);
+				FadeIn.BeginFade (1);
 
-
-
+				//FadeIn.ChangeToWin (0);
+			
 				if (SceneManager.GetActiveScene().name == "level1") {
 
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy );
 					TowerUpgrader.SetLevel (2);
-
-					SceneManager.LoadScene("Upgrades");
+					StartCoroutine (Wait2 ());
+					//SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name ==  "level2") {
@@ -135,8 +148,9 @@ public class EnemySpawner : MonoBehaviour {
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (3);
+					StartCoroutine (Wait2 ());
 
-					SceneManager.LoadScene("Upgrades");
+					//SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level3") {
@@ -144,8 +158,9 @@ public class EnemySpawner : MonoBehaviour {
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy );
 					TowerUpgrader.SetLevel (4);
+					StartCoroutine (Wait2 ());
 
-					SceneManager.LoadScene("Upgrades");
+					//SceneManager.LoadScene("Upgrades");
 					
 				}
 				else if (SceneManager.GetActiveScene().name == "level4") {
@@ -153,8 +168,8 @@ public class EnemySpawner : MonoBehaviour {
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (5);
-
-					SceneManager.LoadScene("Upgrades");
+					StartCoroutine (Wait2 ());
+					//SceneManager.LoadScene("Upgrades");
 
 				} 
 				else if (SceneManager.GetActiveScene().name == "level5") {
@@ -162,8 +177,9 @@ public class EnemySpawner : MonoBehaviour {
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy  );
 					TowerUpgrader.SetLevel (1);
+					StartCoroutine (Wait2 ());
 
-					SceneManager.LoadScene("Upgrades");
+					//SceneManager.LoadScene("Upgrades");
 
 				}
 

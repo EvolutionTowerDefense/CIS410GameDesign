@@ -13,6 +13,7 @@ public class TowerSelector : MonoBehaviour {
 	public GameObject damageDisplay;
 	public GameObject costDisplay;
 
+
 	public TowerUpgrader gameController;
 
 	public GameObject[] towerIcones;
@@ -27,6 +28,8 @@ public class TowerSelector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
 
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
@@ -46,42 +49,44 @@ public class TowerSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
+
 
 		if (selectedTower == 0) {
 			nameDisplay.GetComponent<TextMesh> ().text = "Cannon";
 			rangeDisplay.GetComponent<TextMesh> ().text = "RG:" + System.Math.Round(gameController.GetGunRange(),2);
 			fireRateDisplay.GetComponent<TextMesh> ().text = "FR:" + System.Math.Round(gameController.GetGunFR(),3);
 			damageDisplay.GetComponent<TextMesh> ().text = "Dm:" + System.Math.Round(TowerUpgrader.GetGunBulletDmg(),2);
-			costDisplay.GetComponent<TextMesh> ().text = "$:" + GetSelectedTowerCost();
+			costDisplay.GetComponent<TextMesh> ().text = "$" + GetSelectedTowerCost();
 		} 
 		else if (selectedTower == 1) {
 			nameDisplay.GetComponent<TextMesh> ().text = "Mortar";
 			rangeDisplay.GetComponent<TextMesh> ().text = "RG:" + System.Math.Round(gameController.GetMortarRange(),2);
 			fireRateDisplay.GetComponent<TextMesh> ().text = "FR:" + System.Math.Round(gameController.GetMortarFR(),2);
 			damageDisplay.GetComponent<TextMesh> ().text = "Dm:" + System.Math.Round(TowerUpgrader.GetMortarDmg(),2);
-			costDisplay.GetComponent<TextMesh> ().text = "$:" +GetSelectedTowerCost();
+			costDisplay.GetComponent<TextMesh> ().text = "$" +GetSelectedTowerCost();
 		} 
 		else if (selectedTower == 2) {
 			nameDisplay.GetComponent<TextMesh> ().text = "Slow";
 			rangeDisplay.GetComponent<TextMesh> ().text = "RG:" + System.Math.Round(gameController.GetSlowRange(),2);
 			fireRateDisplay.GetComponent<TextMesh> ().text = "FR:" + System.Math.Round(gameController.GetSlowFR(),2);
 			damageDisplay.GetComponent<TextMesh> ().text = "Dm:" + System.Math.Round(TowerUpgrader.GetSlowDownBulletDmg(),2);
-			costDisplay.GetComponent<TextMesh> ().text = "$:" + GetSelectedTowerCost();
+			costDisplay.GetComponent<TextMesh> ().text = "$" + GetSelectedTowerCost();
 		}
 		else if (selectedTower == 3) {
 			nameDisplay.GetComponent<TextMesh> ().text = "MG";
 			rangeDisplay.GetComponent<TextMesh> ().text = "RG: " + System.Math.Round(gameController.GetMgRange(),2);
 			fireRateDisplay.GetComponent<TextMesh> ().text = "FR: " + System.Math.Round(gameController.GetMgFR(),2);
 			damageDisplay.GetComponent<TextMesh> ().text = "Dm:" + System.Math.Round(TowerUpgrader.GetMgBulletDmg(),2);
-			costDisplay.GetComponent<TextMesh> ().text = "$:" + GetSelectedTowerCost();
+			costDisplay.GetComponent<TextMesh> ().text = "$" + GetSelectedTowerCost();
 		}
 		else if (selectedTower == 4) {
 			nameDisplay.GetComponent<TextMesh> ().text = "Lazer";
 			rangeDisplay.GetComponent<TextMesh> ().text = "RG:" + System.Math.Round(gameController.GetLazerRange(),2);
 			fireRateDisplay.GetComponent<TextMesh> ().text = "FR:" + System.Math.Round(gameController.GetLazerFR(),3);
 			damageDisplay.GetComponent<TextMesh> ().text = "Dm:" + System.Math.Round(TowerUpgrader.GetLazerDmg(),2);
-			costDisplay.GetComponent<TextMesh> ().text = "$:" + GetSelectedTowerCost();
+			costDisplay.GetComponent<TextMesh> ().text = "$" + GetSelectedTowerCost();
 		}
 	
 		if (gameObject.tag != "DontRotate") {
@@ -110,7 +115,6 @@ public class TowerSelector : MonoBehaviour {
 	{
 		return towerCosts [selectedTower];
 	}
-
 
 
 }

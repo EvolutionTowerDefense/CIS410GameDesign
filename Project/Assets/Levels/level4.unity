@@ -2889,6 +2889,48 @@ MonoBehaviour:
   Health: 10
   expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+--- !u!1 &950448651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 950448653}
+  - 114: {fileID: 950448652}
+  m_Layer: 0
+  m_Name: Fade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &950448652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950448651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9bc572fcc514645971b115ef26c8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTexture: {fileID: 2800000, guid: 419fe520e984c4d56a3e9ed7fcd6a06f, type: 3}
+  fadeWinTexture: {fileID: 2800000, guid: 6f3498b1cdaf24b07a2a8a596ed2583f, type: 3}
+  fadeSpeed: 0.5
+--- !u!4 &950448653
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950448651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.249, y: 2.376, z: 38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1001 &966890792
 Prefab:
   m_ObjectHideFlags: 0
