@@ -30,8 +30,8 @@ public class EnemyHealth : MonoBehaviour {
 	void OnGUI(){
 		if (lifeRatio > 0.0f&& lifeRatio<1.0f) {
 			vec = myCamera.WorldToScreenPoint (transform.position);
-			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 30.0f), lifeBackgroundWidth, lifeHeight), new RenderTexture(256, 255, 255, RenderTextureFormat.ARGB32));
-			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 30.0f), lifeWidth, lifeHeight), redTexture);
+			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 0.0f), lifeBackgroundWidth, lifeHeight), new RenderTexture(256, 255, 255, RenderTextureFormat.ARGB32));
+			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 0.0f), lifeWidth, lifeHeight), redTexture);
 
 		}
 	}

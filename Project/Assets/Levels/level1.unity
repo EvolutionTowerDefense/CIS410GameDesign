@@ -822,7 +822,7 @@ Transform:
   - {fileID: 1708119470}
   - {fileID: 2064646046}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1001 &683220940
 Prefab:
   m_ObjectHideFlags: 0
@@ -2887,7 +2887,7 @@ Transform:
   - {fileID: 2143080417}
   - {fileID: 88540798}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!114 &1963357331
 MonoBehaviour:
   m_ObjectHideFlags: 0
