@@ -3738,7 +3738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTexture: {fileID: 2800000, guid: 419fe520e984c4d56a3e9ed7fcd6a06f, type: 3}
   fadeWinTexture: {fileID: 2800000, guid: 6f3498b1cdaf24b07a2a8a596ed2583f, type: 3}
-  fadeSpeed: 0.5
 --- !u!4 &1853988293
 Transform:
   m_ObjectHideFlags: 0
@@ -3980,7 +3979,7 @@ MonoBehaviour:
   - {fileID: 347398790}
   - {fileID: 1388994245}
   - {fileID: 563416223}
-  - {fileID: 563416223}
+  - {fileID: 27229444}
   - {fileID: 1506678515}
   graphicalPathObject: {fileID: 109342, guid: 5f5c13ae1323e4e5da9f7cd288810f88, type: 2}
   waveCount: 1
