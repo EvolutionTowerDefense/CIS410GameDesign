@@ -55,8 +55,8 @@ public class MainMenu : MonoBehaviour {
 			gameController.SetGunFR (0.5f);
 			gameController.SetGunRange (10.0f);
 
-			TowerUpgrader.SetMgBulletDmg (0.25f);
-			gameController.SetMgFR (0.2f);
+			TowerUpgrader.SetMgBulletDmg (0.70f);
+			gameController.SetMgFR (0.18f);
 			gameController.SetMgRange (5.0f);
 
 
@@ -72,7 +72,7 @@ public class MainMenu : MonoBehaviour {
 
 
 			TowerUpgrader.SetLazerDmg (3.0f);
-			gameController.SetLazerFR(0.4f);
+			gameController.SetLazerFR(0.6f);
 			gameController.SetLazerRange(5.0f);
 
 

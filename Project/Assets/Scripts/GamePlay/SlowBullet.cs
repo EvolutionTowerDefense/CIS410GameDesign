@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SlowBullet : MonoBehaviour {
 
-	public float slowPercentage = 0.5f;
+	public float slowPercentage = 0.50f;
 	public float slowTime;
 	public GameObject restoreSpeedObject;
 
@@ -22,7 +22,10 @@ public class SlowBullet : MonoBehaviour {
 	{
 		if (collision.collider.tag == "Enemy") {
 
+
 			if (!collision.collider.GetComponentInChildren<RestoreSpeed> ()) {
+				
+
 				PathThroughObjects scriptInstance = collision.collider.GetComponent<PathThroughObjects> ();
 
 
@@ -33,32 +36,15 @@ public class SlowBullet : MonoBehaviour {
 				RestoreSpeed scriptInstance2 = restoreSpeedInstance.GetComponent<RestoreSpeed> ();
 
 
-				scriptInstance2.time =  slowTime; 
-				if (scriptInstance2.time >= slowTime)
-					scriptInstance2.time = slowTime + slowTime;
-					//scriptInstance2.time = scriptInstance2.time + slowTime; 
+				scriptInstance2.time = slowTime; 
 				scriptInstance2.originalSpeed = scriptInstance.speed;
 
 				scriptInstance.speed *= slowPercentage;
 			} 
-			/*else {
-				PathThroughObjects scriptInstance = collision.collider.GetComponent<PathThroughObjects> ();
 
-
-				GameObject restoreSpeedInstance = Instantiate (restoreSpeedObject, collision.collider.transform.position, Quaternion.identity) as GameObject;
-
-				restoreSpeedInstance.transform.parent = collision.collider.transform;
-
-				RestoreSpeed scriptInstance2 = restoreSpeedInstance.GetComponent<RestoreSpeed> ();
-
-
-				scriptInstance2.time = scriptInstance2.time + slowTime; 
-				scriptInstance2.originalSpeed = scriptInstance.speed;
-
-				scriptInstance.speed *= slowPercentage;
 
 				
-			}*/
+
 
 
 		}

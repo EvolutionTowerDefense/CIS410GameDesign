@@ -9,6 +9,7 @@ public class BasicEnemy : MonoBehaviour {
 
 
 
+
 	// Use this for initialization
 	void Start () {
 	
@@ -78,8 +79,10 @@ public class BasicEnemy : MonoBehaviour {
 				Health = Health - TowerUpgrader.GetExplosiveDmg();
 				//Destroy (collision.collider.gameObject)();
 											}
+
 			if (Health <= 0) {
-			
+
+			if(explosion != null){
 				GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
 				//Instantiate(explosion);
 				
@@ -87,8 +90,8 @@ public class BasicEnemy : MonoBehaviour {
 				//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 
 
-				Destroy (clone, 2.0f);
-				
+				Destroy (clone, 0.5f);
+			}
 				Destroy (gameObject);
 			}
 		}

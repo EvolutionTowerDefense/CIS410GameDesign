@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour {
 	public TowerUpgrader gameController;
 	//public EnergyManager energyManager;
 	//public ScoreManager scoreManager;
-
+	//public GameObject explosionBuilding;
 
 	// Use this for initialization
 	void Start () {
@@ -63,7 +63,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	IEnumerator Wait() {
 
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (3);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
 	}
@@ -72,7 +72,7 @@ public class EnemySpawner : MonoBehaviour {
 	IEnumerator Wait2() {
 
 		//Debug.Log ("Before 2");
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (3);
 
 		//Debug.Log ("After 2");
 		SceneManager.LoadScene ("Upgrades");
@@ -84,32 +84,44 @@ public class EnemySpawner : MonoBehaviour {
 
 		//Check to see if level Ended (main base blown up)
 		GameObject Building = GameObject.FindWithTag ("MainBuilding");
+		GameObject Building2 = GameObject.FindWithTag ("MainBuilding2");
 
-		if (Building == null)
+		if (Building == null || Building2 == null )
 		{
-			//Start the countdown to reload
-			StartCoroutine (Wait ());
+				
+			if (  TowerUpgrader.GetLevel()   == 5 || Building == null) {
 
-			//Possible reload display message.
+				//Start the countdown to reload
+				StartCoroutine (Wait ());
 
-			//If we want to destory enemies when level ends
-			/*GameObject[] enemiesDestory = GameObject.FindGameObjectsWithTag("Enemy");
+				//Possible reload display message.
+
+				//If we want to destory enemies when level ends
+			/*	GameObject[] enemiesDestory = GameObject.FindGameObjectsWithTag("Enemy");
 
 			for (int i = 0; i < enemiesDestory.Length; i++) {
 				Destroy (enemiesDestory [i]);
 			}
-			*/
 
-			//Blow up buildings when level ends
-			GameObject[] buildingsDestory = GameObject.FindGameObjectsWithTag("Building");
-			for (int i = 0; i < buildingsDestory.Length; i++) {
-				
-				//BuildingHealth myHealth = (BuildingHealth) buildingsDestory [i].GetComponent(typeof(BuildingHealth)) ;
-				//myHealth.Health = 0;
-				Destroy(buildingsDestory[i]);
+*/
+				//Blow up buildings when level ends
+
+
+
+
+				GameObject[] buildingsDestory = GameObject.FindGameObjectsWithTag ("Building");
+				for (int i = 0; i < buildingsDestory.Length; i++) {
+
+					GameObject temp = buildingsDestory [i];
+
+					BuildingHealth sn = temp.gameObject.GetComponent<BuildingHealth> ();
+					sn.goDestroy();
+
+					//Destroy (buildingsDestory [i]);
+
+				}
 
 			}
-
 
 
 		}
@@ -127,7 +139,7 @@ public class EnemySpawner : MonoBehaviour {
 
 			if (waveCount <= 0 && gameController != null)
 			{
-				BuildingHealth.isQuitting = true;
+				
 
 				FadeIn.ChangeToWin (1);
 				FadeIn.BeginFade (1);

@@ -28,6 +28,7 @@ TagManager:
   - lazer1
   - machinegun1
   - MainBuilding
+  - MainBuilding2
   layers:
   - Default
   - TransparentFX

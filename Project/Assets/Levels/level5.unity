@@ -212,6 +212,7 @@ MonoBehaviour:
   spawnTime: 3
   delayInitial: 171
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
+  explosionBuilding: {fileID: 0}
 --- !u!1001 &88540797
 Prefab:
   m_ObjectHideFlags: 0
@@ -535,6 +536,7 @@ MonoBehaviour:
   spawnTime: 4
   delayInitial: 10
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
+  explosionBuilding: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
 --- !u!4 &201714493
 Transform:
   m_ObjectHideFlags: 0
@@ -2407,7 +2409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1165477687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTexture: {fileID: 2800000, guid: 419fe520e984c4d56a3e9ed7fcd6a06f, type: 3}
   fadeWinTexture: {fileID: 2800000, guid: 6f3498b1cdaf24b07a2a8a596ed2583f, type: 3}
-  fadeSpeed: 0.5
 --- !u!4 &1393576879
 Transform:
   m_ObjectHideFlags: 0
@@ -2898,7 +2899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c4298a431ebd5d44582bfc113b17f588, type: 3}
       propertyPath: m_TagString
-      value: MainBuilding
+      value: MainBuilding2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4298a431ebd5d44582bfc113b17f588, type: 3}
@@ -3345,7 +3346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1744700764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4065,7 +4066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2138094398
 MonoBehaviour:
   m_ObjectHideFlags: 0

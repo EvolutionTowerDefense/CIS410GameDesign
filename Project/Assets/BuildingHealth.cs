@@ -12,9 +12,8 @@ public class BuildingHealth : MonoBehaviour {
 	private float lifeHeight;
 	private float lifeBackgroundWidth;
 	private float maxLife;
-	public static bool isQuitting;
 
-	public float Health;
+	public static float Health;
 	public AudioClip expSound;
 	public GameObject explosion;
 
@@ -24,7 +23,6 @@ public class BuildingHealth : MonoBehaviour {
 		lifeHeight = 10.0f;
 		maxLife = Health;
 		myCamera = Camera.main;
-		isQuitting = false;
 
 	}
 
@@ -48,11 +46,22 @@ public class BuildingHealth : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
+
+
+
+	
+		 if (collision.gameObject.name == "level1_boss" || collision.gameObject.name == "level2Boss"  || collision.gameObject.name == "level3boss" ||collision.gameObject.name == "level4Boss" || collision.gameObject.name == "level5boss" || collision.gameObject.name == "level5Boss2"){
+
+			Health = 0.0f;
+
+			Destroy (collision.collider.gameObject);
+
+		}
 		//Debug.Log("sdfadfs");
-		if (collision.collider.tag == "Enemy") {
+		else if (collision.collider.tag == "Enemy") {
 			//Debug.Log("-1");
 			Health = Health - 1.0f;
-		
+
 			Destroy (collision.collider.gameObject);
 			//Do something that reloads the previous level, don't reset any points...
 
@@ -60,7 +69,7 @@ public class BuildingHealth : MonoBehaviour {
 			//Do a message about you lose
 
 
-		}
+		} 
 
 			
 
@@ -68,6 +77,9 @@ public class BuildingHealth : MonoBehaviour {
 
 
 				GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+
+
+
 				Destroy (clone, 2.0f);
 
 
@@ -84,18 +96,13 @@ public class BuildingHealth : MonoBehaviour {
 
 	}
 
-	void OnApplicationQuit()
-	{
-		isQuitting = true;
-	}
 
-	void OnDestroy()
+
+	public void  goDestroy()
 	{
-		if (isQuitting == false) {
 			GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
 			Destroy (clone, 2.0f);
-		}
-
+			Destroy (gameObject);
 	}
 
 

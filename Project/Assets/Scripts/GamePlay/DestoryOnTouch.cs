@@ -35,6 +35,9 @@ public class DestoryOnTouch : MonoBehaviour {
 		else if (collision.collider.tag == "Mortar") {
 			Destroy (collision.collider.gameObject);
 		}
+		else if (collision.collider.tag == "Enemy") {
+			Destroy (collision.collider.gameObject);
+		}
 
 	}
 
@@ -56,6 +59,9 @@ public class DestoryOnTouch : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		else if (gameObject.name == "Mortar") {
+			Destroy (gameObject);
+		}
+		else if (gameObject.name == "Enemy") {
 			Destroy (gameObject);
 		}
 
