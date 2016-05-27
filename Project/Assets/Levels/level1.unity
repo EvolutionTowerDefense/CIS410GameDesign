@@ -124,6 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11449090, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
+      propertyPath: towerCosts.Array.data[0]
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
   m_IsPrefabParent: 0
@@ -822,7 +826,7 @@ Transform:
   - {fileID: 1708119470}
   - {fileID: 2064646046}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &683220940
 Prefab:
   m_ObjectHideFlags: 0
