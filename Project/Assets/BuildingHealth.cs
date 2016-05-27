@@ -62,7 +62,7 @@ public class BuildingHealth : MonoBehaviour {
 		//Debug.Log("sdfadfs");
 		 if (collision.collider.tag == "Enemy") {
 			//Debug.Log("-1");
-			Health = Health - 5.0f;
+			Health = Health - 1.0f;
 
 			Destroy (collision.collider.gameObject);
 			//Do something that reloads the previous level, don't reset any points...
