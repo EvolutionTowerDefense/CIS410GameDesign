@@ -13,7 +13,7 @@ public class BuildingHealth : MonoBehaviour {
 	private float lifeBackgroundWidth;
 	private float maxLife;
 
-	public static float Health;
+	public float Health;
 	public AudioClip expSound;
 	public GameObject explosion;
 
@@ -21,6 +21,7 @@ public class BuildingHealth : MonoBehaviour {
 	void Start () {
 		lifeBackgroundWidth = 70.0f;
 		lifeHeight = 10.0f;
+		Health = 10;
 		maxLife = Health;
 		myCamera = Camera.main;
 
@@ -58,7 +59,7 @@ public class BuildingHealth : MonoBehaviour {
 
 		}
 		//Debug.Log("sdfadfs");
-		else if (collision.collider.tag == "Enemy") {
+		 if (collision.collider.tag == "Enemy") {
 			//Debug.Log("-1");
 			Health = Health - 1.0f;
 

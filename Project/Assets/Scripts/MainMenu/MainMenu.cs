@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour {
 
 	void Start ()
 	{
+		
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 
 		if (gameControllerObject != null)
