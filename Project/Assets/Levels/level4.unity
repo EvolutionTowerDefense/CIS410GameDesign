@@ -157,8 +157,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &27229443
 Prefab:
   m_ObjectHideFlags: 0
@@ -309,8 +310,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &88540797
 Prefab:
   m_ObjectHideFlags: 0
@@ -515,8 +517,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &147931920
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,8 +730,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &166312507 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e0c86d595feb856439f4836e7c239dda, type: 3}
@@ -829,8 +833,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &201714490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,8 +1067,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &347398790 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 165230, guid: 29653c8422c8540d09a6d02d3509b111, type: 2}
@@ -1140,8 +1146,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &381098085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,8 +1323,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &452997022
 Prefab:
   m_ObjectHideFlags: 0
@@ -1386,8 +1394,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &460348239
 Prefab:
   m_ObjectHideFlags: 0
@@ -1786,8 +1795,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &650337197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,8 +2344,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &736765402 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: f6f16aa89e8a23d43b0319c113f5824c, type: 3}
@@ -2379,8 +2390,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &755180879
 Prefab:
   m_ObjectHideFlags: 0
@@ -2735,8 +2747,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &873310389
 Prefab:
   m_ObjectHideFlags: 0
@@ -2809,8 +2822,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &907681154
 Prefab:
   m_ObjectHideFlags: 0
@@ -2887,8 +2901,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &950448651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2918,7 +2933,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTexture: {fileID: 2800000, guid: 419fe520e984c4d56a3e9ed7fcd6a06f, type: 3}
   fadeWinTexture: {fileID: 2800000, guid: 6f3498b1cdaf24b07a2a8a596ed2583f, type: 3}
-  fadeSpeed: 0.5
 --- !u!4 &950448653
 Transform:
   m_ObjectHideFlags: 0
@@ -2930,7 +2944,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &966890792
 Prefab:
   m_ObjectHideFlags: 0
@@ -3003,8 +3017,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &997268915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,8 +3144,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1015253434 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e0c86d595feb856439f4836e7c239dda, type: 3}
@@ -3594,8 +3610,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &1263731561
 Prefab:
   m_ObjectHideFlags: 0
@@ -3728,8 +3745,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 177892, guid: 9da2e6d26ea0341a79e5bf92bb374c5a, type: 2}
+  evilLaugh: {fileID: 145666, guid: daccb3adf5d12433db48069364dab403, type: 2}
 --- !u!54 &1308035570
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3829,8 +3847,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1322733995 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e0c86d595feb856439f4836e7c239dda, type: 3}
@@ -4171,8 +4190,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1583140387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,8 +4395,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &1687290682
 Prefab:
   m_ObjectHideFlags: 0
@@ -4523,8 +4544,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1744700763
 GameObject:
   m_ObjectHideFlags: 0
@@ -4671,8 +4693,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1790440508
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,8 +4882,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1878232960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,8 +5067,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &1971303643
 Prefab:
   m_ObjectHideFlags: 0
@@ -5117,8 +5142,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &1980478640
 Prefab:
   m_ObjectHideFlags: 0
@@ -5203,8 +5229,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &1987556996
 Prefab:
   m_ObjectHideFlags: 0
@@ -5591,8 +5618,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &2143291358
 Prefab:
   m_ObjectHideFlags: 0

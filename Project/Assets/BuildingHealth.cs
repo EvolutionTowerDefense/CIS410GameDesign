@@ -13,9 +13,11 @@ public class BuildingHealth : MonoBehaviour {
 	private float lifeBackgroundWidth;
 	private float maxLife;
 
+
 	public float Health;
-	public AudioClip expSound;
 	public GameObject explosion;
+	public GameObject expSound;
+	public GameObject evilLaugh;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +26,6 @@ public class BuildingHealth : MonoBehaviour {
 		Health = 10;
 		maxLife = Health;
 		myCamera = Camera.main;
-
 	}
 
 	// Update is called once per frame
@@ -61,7 +62,7 @@ public class BuildingHealth : MonoBehaviour {
 		//Debug.Log("sdfadfs");
 		 if (collision.collider.tag == "Enemy") {
 			//Debug.Log("-1");
-			Health = Health - 1.0f;
+			Health = Health - 5.0f;
 
 			Destroy (collision.collider.gameObject);
 			//Do something that reloads the previous level, don't reset any points...
@@ -75,10 +76,10 @@ public class BuildingHealth : MonoBehaviour {
 			
 
 		if (Health <= 0) {
-
-
-				GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
-
+			GameObject expClone = (GameObject)Instantiate (expSound, transform.position, transform.rotation);
+			GameObject laugh = (GameObject)Instantiate (evilLaugh, transform.position, transform.rotation);
+			GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+				
 
 
 				Destroy (clone, 2.0f);
@@ -87,7 +88,6 @@ public class BuildingHealth : MonoBehaviour {
 			//Instantiate(explosion);
 
 			//Add sound for explosion
-			//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 
 
 			Destroy (collision.collider.gameObject);

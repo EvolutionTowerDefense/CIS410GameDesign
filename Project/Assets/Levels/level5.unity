@@ -212,7 +212,6 @@ MonoBehaviour:
   spawnTime: 3
   delayInitial: 171
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
-  explosionBuilding: {fileID: 0}
 --- !u!1001 &88540797
 Prefab:
   m_ObjectHideFlags: 0
@@ -536,7 +535,6 @@ MonoBehaviour:
   spawnTime: 4
   delayInitial: 10
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
-  explosionBuilding: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
 --- !u!4 &201714493
 Transform:
   m_ObjectHideFlags: 0
@@ -696,8 +694,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &313698817
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +884,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463760, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 108406, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
       propertyPath: m_IsActive
@@ -1062,8 +1061,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &450157313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,8 +1377,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1001 &634954361
 Prefab:
   m_ObjectHideFlags: 0
@@ -1396,11 +1397,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.000011920929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_LocalRotation.y
@@ -1412,11 +1413,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1424,15 +1425,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -81.99999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 449.70413
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1452,11 +1453,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22302384, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_Camera
@@ -2678,8 +2679,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 177892, guid: 9da2e6d26ea0341a79e5bf92bb374c5a, type: 2}
+  evilLaugh: {fileID: 177892, guid: 9da2e6d26ea0341a79e5bf92bb374c5a, type: 2}
 --- !u!54 &1308035570
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2962,8 +2964,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 177892, guid: 9da2e6d26ea0341a79e5bf92bb374c5a, type: 2}
+  evilLaugh: {fileID: 145666, guid: daccb3adf5d12433db48069364dab403, type: 2}
 --- !u!54 &1503063354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3841,8 +3844,9 @@ MonoBehaviour:
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
   Health: 10
-  expSound: {fileID: 0}
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
+  expSound: {fileID: 0}
+  evilLaugh: {fileID: 0}
 --- !u!1 &1988918851
 GameObject:
   m_ObjectHideFlags: 0

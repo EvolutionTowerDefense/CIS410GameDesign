@@ -7,6 +7,7 @@ public class machinegunTower : MonoBehaviour {
 	private AudioSource shotSound;
 	public GameObject smoke;
 	private GameObject instantiatedObj;
+	private Quaternion smokeRotation;
 
 	public GameObject bullet;
 
@@ -108,7 +109,11 @@ public class machinegunTower : MonoBehaviour {
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
 			newBullet.GetComponent<Rigidbody> ().AddForce ((target.transform.position - transform.position).normalized * bulletSpeed, ForceMode.VelocityChange);
 			shotSound.Play ();		
-			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, endOfBarrel.transform.rotation);
+			float xSpin = Random.Range(0,360); 
+			float ySpin = Random.Range(0,360);
+			float zSpin = Random.Range(0,360);
+
+			instantiatedObj= (GameObject) Instantiate(smoke, endOfBarrel.transform.position, Quaternion.Euler(xSpin, ySpin,zSpin));
 			newBullet.transform.LookAt (target.transform.position);
 
 			Destroy (instantiatedObj,2.0f);		
