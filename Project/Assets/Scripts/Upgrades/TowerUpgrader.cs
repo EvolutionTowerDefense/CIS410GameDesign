@@ -53,15 +53,14 @@ public class TowerUpgrader : MonoBehaviour {
 			SetToFalse ();
 			images [0].gameObject.SetActive (true);
 
-
 			TowerSelected.text = "Cannon: Range";
-			FireRate.text = "Fire Rate: " + GetGunFR ();
-			Dmg.text = "Damage: " + GetGunBulletDmg ();
-			Range.text = "Range: " + System.Math.Round(GetGunRange (),2);
-			TowerLevel.text = "Tower Level: " + GetGunLevel ();
+			FireRate.text = "Fire Rate: " + GetGunFR ()+ "  +0.005";
+			Dmg.text = "Damage: " + GetGunBulletDmg () + "  +0.5";
+			Range.text = "Range: " + System.Math.Round(GetGunRange (),2) + "  +0.3";
+			TowerLevel.text = "Tower Level: " + GetGunLevel () + "  +1";
 
 
-			UpgradeCost.text = "Upgarde Cost: " + (100 * GetGunLevel ()).ToString();
+			UpgradeCost.text = "Upgrade Cost: " + (100 * GetGunLevel ()).ToString();
 
 			//	GameObject go = Instantiate( images[1], Spawn.transform.position, Spawn.transform.rotation );
 			//	go.transform.parent = transform.parent;
@@ -72,37 +71,45 @@ public class TowerUpgrader : MonoBehaviour {
 			images [1].gameObject.SetActive (true);
 
 			TowerSelected.text = "Mortar: Splash Damage";
-			FireRate.text = "Fire Rate: " + GetMortarFR ();
-			Dmg.text = "Damage: " + GetMortarDmg ();
-			Range.text = "Range: " + System.Math.Round(GetMortarRange (),2);
-			TowerLevel.text = "Tower Level: " + GetMortarLevel ();
+			FireRate.text = "Fire Rate: " + GetMortarFR () + "  -0.1";
+			Dmg.text = "Damage: " + GetMortarDmg () + "  +0.5";
+			Range.text = "Range: " + System.Math.Round(GetMortarRange (),2)+ "  +0.2";
+			TowerLevel.text = "Tower Level: " + GetMortarLevel ()+ "  +1";
+
+
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMortarLevel ()).ToString();
 		} else if (towerNum == 3) {
 			SetToFalse ();
 			images [2].gameObject.SetActive (true);
 			TowerSelected.text = "Slime: Slow Enemies";
-			FireRate.text = "Fire Rate: " + GetSlowFR ();
-			Dmg.text = "Damage: " + GetSlowDownBulletDmg ();
-			Range.text = "Range: " + System.Math.Round(GetSlowRange (),2);
-			TowerLevel.text = "Tower Level: " + GetSlowLevel ();
+			FireRate.text = "Fire Rate: " + GetSlowFR ()+ "  -0.01";
+			Dmg.text = "Damage: " + GetSlowDownBulletDmg ()+ "  +0.25";
+			Range.text = "Range: " + System.Math.Round(GetSlowRange (),2) + "  +0.2";
+			TowerLevel.text = "Tower Level: " + GetSlowLevel () + "  +1";
+
+
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetSlowLevel ()).ToString();
 		} else if (towerNum == 4) {
 			SetToFalse ();
 			images [3].gameObject.SetActive (true);
 			TowerSelected.text = "Machine Gun: Fire Fast";
-			FireRate.text = "Fire Rate: " + GetMgFR ();
-			Dmg.text = "Damage: " + GetMgBulletDmg ();
-			Range.text = "Range: " + System.Math.Round(GetMgRange (),2);
-			TowerLevel.text = "Tower Level: " + GetMgLevel ();
+			FireRate.text = "Fire Rate: " + GetMgFR ()+ "  -0.02";
+			Dmg.text = "Damage: " + GetMgBulletDmg ()+ "  +0.25";
+			Range.text = "Range: " + System.Math.Round(GetMgRange (),2)+ "  +0.1";
+			TowerLevel.text = "Tower Level: " + GetMgLevel ()+ "  +1";
+
+
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMgLevel ()).ToString();
 		} else if (towerNum == 5) {
 			SetToFalse ();
 			images [4].gameObject.SetActive (true);
 			TowerSelected.text = "Lazer: Heavy Damage";
-			FireRate.text = "Fire Rate: " + GetLazerFR ();
-			Dmg.text = "Damage: " + GetLazerDmg ();
-			Range.text = "Range: " + System.Math.Round(GetLazerRange (),2);
+			FireRate.text = "Fire Rate: " + GetLazerFR ()+ "  -0.01";
+			Dmg.text = "Damage: " + GetLazerDmg ()+ "  +0.5";
+			Range.text = "Range: " + System.Math.Round(GetLazerRange (),2)+ "  +0.1";
 			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
+
+
 			UpgradeCost.text = "Upgarde Cost: " + (100 * GetLazerLevel ()).ToString();
 
 		} else {
@@ -213,12 +220,12 @@ public class TowerUpgrader : MonoBehaviour {
 					SetCash (GetCash () - (100 * GetLazerLevel ()));
 					SetLazerLevel (GetLazerLevel () + 1);
 
-					SetLazerDmg (GetLazerDmg () + 1.0f);
+					SetLazerDmg (GetLazerDmg () + 0.5f);
 
 					if(GetLazerFR () > 0.02f)
-						SetLazerFR (GetLazerFR () + 0.005f); //Keep the same
+						SetLazerFR (GetLazerFR () - 0.01f); //Keep the same
 					
-					SetLazerRange (GetLazerRange () + .2f);
+					SetLazerRange (GetLazerRange () + .1f);
 
 				}
 			}
