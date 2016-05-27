@@ -2,11 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BuildingHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/GamePlay/TowerSelector.cs" Line="89" Column="51" />
-      <File FileName="Assets/Scripts/GamePlay/EnemySpawner.cs" Line="131" Column="5" />
-      <File FileName="Assets/Scripts/GamePlay/DestoryOnTouch.cs" Line="19" Column="4" />
-      <File FileName="Assets/Scripts/FadeIn.cs" Line="22" Column="3" />
-      <File FileName="Assets/BuildingHealth.cs" Line="15" Column="31" />
+      <File FileName="Assets/Scripts/GamePlay/EnemySpawner.cs" Line="118" Column="9" />
+      <File FileName="Assets/Scripts/GamePlay/ScaleOverTimeAndDestroy.cs" Line="4" Column="37" />
+      <File FileName="Assets/BuildingHealth.cs" Line="24" Column="15" />
+      <File FileName="Assets/Scripts/GamePlay/EnergyManager.cs" Line="14" Column="68" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

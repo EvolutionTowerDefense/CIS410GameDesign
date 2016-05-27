@@ -122,11 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463760, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11449090, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: towerCosts.Array.data[0]
-      value: 150
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
@@ -604,7 +600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2387,7 +2383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414274, guid: ed295b73de5574a288036d8e268de2c4, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11447024, guid: ed295b73de5574a288036d8e268de2c4, type: 2}
       propertyPath: towerSelector
