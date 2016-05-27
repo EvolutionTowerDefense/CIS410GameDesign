@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MortarTower : MonoBehaviour {
 	public GameObject endOfBarrel;
-	public AudioSource shotSound;
+	private AudioSource shotSound;
 	public GameObject smoke;
 	private GameObject instantiatedObj;
 

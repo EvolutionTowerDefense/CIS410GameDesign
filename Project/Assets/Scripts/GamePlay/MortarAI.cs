@@ -27,7 +27,7 @@ public class MortarAI : MonoBehaviour {
 
 
 		//Caused an Error
-//		expSound.Play ();
+		expSound.Play ();
 		Destroy(clone, 2.0f);
 
 		//Destroy (explosion,2.0f);
