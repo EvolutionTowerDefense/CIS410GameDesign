@@ -89,7 +89,7 @@ public class EnemySpawner : MonoBehaviour {
 		if (Building == null || Building2 == null )
 		{
 				
-			if (  TowerUpgrader.GetLevel()   == 5 || Building == null) {
+			if (  TowerUpgrader.GetLevel()   == 5  || Building == null) {
 
 				//Start the countdown to reload
 				StartCoroutine (Wait ());
@@ -115,7 +115,9 @@ public class EnemySpawner : MonoBehaviour {
 					GameObject temp = buildingsDestory [i];
 
 					BuildingHealth sn = temp.gameObject.GetComponent<BuildingHealth> ();
-					sn.goDestroy();
+
+					if(sn!=null)
+						sn.goDestroy();
 
 					//Destroy (buildingsDestory [i]);
 

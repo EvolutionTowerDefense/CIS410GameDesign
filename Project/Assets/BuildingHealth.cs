@@ -52,7 +52,7 @@ public class BuildingHealth : MonoBehaviour {
 
 
 	
-		 if (collision.gameObject.name == "level1_boss" || collision.gameObject.name == "level2Boss"  || collision.gameObject.name == "level3boss" ||collision.gameObject.name == "level4Boss" || collision.gameObject.name == "level5boss" || collision.gameObject.name == "level5Boss2"){
+		 if (collision.gameObject.name == "level1_boss" || collision.gameObject.name == "level2Boss"  || collision.gameObject.name == "level3boss" ||collision.gameObject.name == "level4Boss" || collision.gameObject.name == "level5boss" || collision.gameObject.name == "level5boss2"){
 
 			Health = 0.0f;
 

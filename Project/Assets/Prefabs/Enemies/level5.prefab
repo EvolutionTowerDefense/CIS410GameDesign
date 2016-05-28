@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4018f3c229569476b828199d05e839c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 200
+  Health: 110
   expSound: {fileID: 0}
   explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 2}
 --- !u!114 &11427542
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5164627b9b24d489686070fc8ec402d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyBonus: 100
+  energyBonus: 50
 --- !u!114 &11482526
 MonoBehaviour:
   m_ObjectHideFlags: 1

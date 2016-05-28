@@ -174,7 +174,7 @@ public class TowerUpgrader : MonoBehaviour {
 			}
 			if (towerNum == 2) {
 				if ((GetCash ()) >= 100 * GetMortarLevel ()) {
-					SetCash (GetCash () - (100 * GetMortarLevel ()));
+					SetCash (GetCash () - (100* GetMortarLevel ()));
 					SetMortarLevel (GetMortarLevel () + 1);
 
 					SetMortarDmg (GetMortarDmg () + 0.5f);

@@ -598,6 +598,7 @@ MonoBehaviour:
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
+  - {fileID: 112214, guid: 74ac69b8f576b494b8ed08434740fa19, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
@@ -607,9 +608,8 @@ MonoBehaviour:
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
-  - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
-  - {fileID: 0}
-  spawnTime: 3
+  - {fileID: 112214, guid: 74ac69b8f576b494b8ed08434740fa19, type: 2}
+  spawnTime: 4
   delayInitial: 0
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!4 &201714493
@@ -3221,7 +3221,7 @@ MonoBehaviour:
   - {fileID: 27229444}
   - {fileID: 1506678515}
   graphicalPathObject: {fileID: 109342, guid: 5f5c13ae1323e4e5da9f7cd288810f88, type: 2}
-  waveCount: 3
+  waveCount: 4
   spawnList:
   - {fileID: 128666, guid: b00d8b9f77ecf44b2a536918f09f5cb8, type: 2}
   - {fileID: 128666, guid: b00d8b9f77ecf44b2a536918f09f5cb8, type: 2}
@@ -3233,8 +3233,8 @@ MonoBehaviour:
   - {fileID: 128666, guid: b00d8b9f77ecf44b2a536918f09f5cb8, type: 2}
   - {fileID: 129428, guid: b0865c732e3d74ce4939b553711767c7, type: 2}
   - {fileID: 129428, guid: b0865c732e3d74ce4939b553711767c7, type: 2}
-  spawnTime: 3
-  delayInitial: 88.5
+  spawnTime: 4
+  delayInitial: 82
 --- !u!4 &1744700766
 Transform:
   m_ObjectHideFlags: 0
@@ -3995,8 +3995,8 @@ MonoBehaviour:
   waveCount: 1
   spawnList:
   - {fileID: 129428, guid: d9c6fe2e1140d47e286efbefbc1e36c0, type: 2}
-  spawnTime: 3
-  delayInitial: 181
+  spawnTime: 0
+  delayInitial: 241
 --- !u!1001 &1987556996
 Prefab:
   m_ObjectHideFlags: 0
