@@ -668,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
+  backTexture: {fileID: 0}
 --- !u!114 &11435866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -692,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4018f3c229569476b828199d05e839c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 90
   expSound: {fileID: 0}
   explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 2}
 --- !u!114 &11472862

@@ -3925,7 +3925,7 @@ MonoBehaviour:
   - {fileID: 189570, guid: accc39801b6014413a4a981f4b257afc, type: 2}
   - {fileID: 189570, guid: accc39801b6014413a4a981f4b257afc, type: 2}
   spawnTime: 3
-  delayInitial: 1
+  delayInitial: 0
 --- !u!1001 &1508938131
 Prefab:
   m_ObjectHideFlags: 0

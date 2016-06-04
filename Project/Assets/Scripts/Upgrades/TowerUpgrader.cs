@@ -93,8 +93,10 @@ public class TowerUpgrader : MonoBehaviour {
 			SetToFalse ();
 			images [3].gameObject.SetActive (true);
 			TowerSelected.text = "Machine Gun: Fire Fast";
+
 			FireRate.text = "Fire Rate: " + GetMgFR ()+ "  -0.02";
 			Dmg.text = "Damage: " + GetMgBulletDmg ()+ "  +0.25";
+
 			Range.text = "Range: " + System.Math.Round(GetMgRange (),2)+ "  +0.1";
 			TowerLevel.text = "Tower Level: " + GetMgLevel ()+ "  +1";
 
