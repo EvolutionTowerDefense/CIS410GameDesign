@@ -112,14 +112,14 @@ public class TowerUpgrader : MonoBehaviour {
 			images [3].gameObject.SetActive (true);
 			TowerSelected.text = "Machine Gun: Fire Fast";
 
-			if (GetMgFR () > 0.02) {
-				FireRate.text = "Fire Rate: " + GetMgFR () + "  -0.02";
+			if (GetMgFR () > 0.04) {
+				FireRate.text = "Fire Rate: " + GetMgFR () + "  -0.01";
 			}
 			else
 				FireRate.text = "Fire Rate: " + GetMgFR () + "  -0.0";
 				
 
-			Dmg.text = "Damage: " + GetMgBulletDmg ()+ "  +0.25";
+			Dmg.text = "Damage: " + GetMgBulletDmg ()+ "  +0.15";
 
 			Range.text = "Range: " + System.Math.Round(GetMgRange (),2)+ "  +0.1";
 			TowerLevel.text = "Tower Level: " + GetMgLevel ()+ "  +1";
@@ -242,10 +242,10 @@ public class TowerUpgrader : MonoBehaviour {
 					SetCash (GetCash () - (100 * GetMgLevel ()));
 					SetMgLevel (GetMgLevel () + 1);
 
-					SetMgBulletDmg (GetMgBulletDmg () + 0.25f);
+					SetMgBulletDmg (GetMgBulletDmg () + 0.15f);
 
-					if(GetMgFR () > 0.02f)
-						SetMgFR (GetMgFR () - 0.02f);
+					if(GetMgFR () > 0.04f)
+						SetMgFR (GetMgFR () - 0.01f);
 
 					SetMgRange (GetMgRange () + 0.1f);
 

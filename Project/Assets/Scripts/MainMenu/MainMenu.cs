@@ -79,7 +79,7 @@ public class MainMenu : MonoBehaviour {
 			gameController.SetSlowRange(5.0f);
 
 
-			TowerUpgrader.SetLazerDmg (4.0f);
+			TowerUpgrader.SetLazerDmg (3.0f);
 			gameController.SetLazerFR(0.6f);
 			gameController.SetLazerRange(5.0f);
 
