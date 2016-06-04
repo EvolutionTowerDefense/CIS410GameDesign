@@ -8,7 +8,7 @@ public class EnergyBonusOnDestory : MonoBehaviour {
 	void OnDestroy()
 	{
 		//Money
-		EnergyManager.energy += (energyBonus/2);
+		EnergyManager.energy += (energyBonus/2)*TowerUpgrader.GetDifficulty();
 
 		//Score
 		ScoreManager.score += energyBonus;

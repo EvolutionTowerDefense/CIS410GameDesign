@@ -313,7 +313,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112214}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -687,13 +687,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea19bb4e7d754f7ca4801b565884eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
+  backTexture: {fileID: 0}
 --- !u!114 &11410306
 MonoBehaviour:
   m_ObjectHideFlags: 1

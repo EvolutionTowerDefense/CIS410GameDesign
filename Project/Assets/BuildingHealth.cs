@@ -52,24 +52,30 @@ public class BuildingHealth : MonoBehaviour {
 
 
 
-	
-		 if (collision.gameObject.name == "level1_boss" || collision.gameObject.name == "level2Boss"  || collision.gameObject.name == "level3boss" ||collision.gameObject.name == "level4Boss" || collision.gameObject.name == "level5boss" || collision.gameObject.name == "level5boss2"){
 
+	
+		if (collision.gameObject.name == "level1_boss(Clone)" || collision.gameObject.name == "level1_boss" || 
+			collision.gameObject.name == "level2Boss(Clone)"  || collision.gameObject.name == "level2Boss"  || 
+			collision.gameObject.name == "level3boss(Clone)" || collision.gameObject.name == "level3boss" ||
+			collision.gameObject.name == "level4Boss(Clone)" || 	collision.gameObject.name == "level4Boss" ||
+			collision.gameObject.name == "level5boss(Clone)" || collision.gameObject.name == "level5boss" ||
+			collision.gameObject.name == "level5boss2(Clone)" || collision.gameObject.name == "level5boss2")
+		{
+			//Debug.Log("1");
+			//print ("made it here");
 			Health = 0.0f;
 
 			Destroy (collision.collider.gameObject);
 
 		}
 		//Debug.Log("sdfadfs");
-		 if (collision.collider.tag == "Enemy") {
+		 else if (collision.collider.tag == "Enemy") {
 			//Debug.Log("-1");
+			//print ("Bugg");
 			Health = Health - 1.0f;
 
 			Destroy (collision.collider.gameObject);
-			//Do something that reloads the previous level, don't reset any points...
 
-
-			//Do a message about you lose
 
 
 		} 

@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour {
 	private int spawnIndex=0;
 	private float waves;
 	private int maxWaves;
-
+	private bool gameWin;
 	public GameObject[] spawnList; //List of enemies that spawn
 
 	public float spawnTime; //time between enemies that spawn
@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour {
 	void Start () {
 	
 
-
+		gameWin = true;
 		GameObject gameControllerObject = GameObject.FindWithTag ("TowerUpgrader");
 	
 
@@ -91,7 +91,7 @@ public class EnemySpawner : MonoBehaviour {
 		{
 				
 			if (  TowerUpgrader.GetLevel()   == 5  || Building == null) {
-
+				gameWin = false;
 				//Start the countdown to reload
 				StartCoroutine (Wait ());
 
@@ -140,7 +140,7 @@ public class EnemySpawner : MonoBehaviour {
 
 
 
-			if (waveCount <= 0 && gameController != null)
+			if (waveCount <= 0 && gameController != null && gameWin==true)
 			{
 				
 
