@@ -54,7 +54,13 @@ public class TowerUpgrader : MonoBehaviour {
 			images [0].gameObject.SetActive (true);
 
 			TowerSelected.text = "Cannon: Range";
-			FireRate.text = "Fire Rate: " + GetGunFR ()+ "  +0.005";
+
+			if (GetGunFR () > 0.1) {
+				FireRate.text = "Fire Rate: " + GetGunFR () + "  -0.005";
+			}
+			else
+				FireRate.text = "Fire Rate: " + GetGunFR () + "  -0.0";
+
 			Dmg.text = "Damage: " + GetGunBulletDmg () + "  +0.5";
 			Range.text = "Range: " + System.Math.Round(GetGunRange (),2) + "  +0.3";
 			TowerLevel.text = "Tower Level: " + GetGunLevel () + "  +1";
@@ -71,7 +77,13 @@ public class TowerUpgrader : MonoBehaviour {
 			images [1].gameObject.SetActive (true);
 
 			TowerSelected.text = "Mortar: Splash Damage";
-			FireRate.text = "Fire Rate: " + GetMortarFR () + "  -0.1";
+
+			if (GetMortarFR () > 0.1) {
+				FireRate.text = "Fire Rate: " + GetMortarFR () + "  -0.1";
+			}
+			else
+				FireRate.text = "Fire Rate: " + GetMortarFR () + "  -0.0";
+				
 			Dmg.text = "Damage: " + GetMortarDmg () + "  +0.5";
 			Range.text = "Range: " + System.Math.Round(GetMortarRange (),2)+ "  +0.2";
 			TowerLevel.text = "Tower Level: " + GetMortarLevel ()+ "  +1";
@@ -81,8 +93,14 @@ public class TowerUpgrader : MonoBehaviour {
 		} else if (towerNum == 3) {
 			SetToFalse ();
 			images [2].gameObject.SetActive (true);
-			TowerSelected.text = "Slime: Slow Enemies";
-			FireRate.text = "Fire Rate: " + GetSlowFR ()+ "  -0.01";
+			TowerSelected.text = "Slow: Slow Enemies";
+
+			if (GetSlowFR () > 0.1) {
+				FireRate.text = "Fire Rate: " + GetSlowFR () + "  -0.01";
+			}
+			else
+				FireRate.text = "Fire Rate: " + GetSlowFR () + "  -0.0";
+				
 			Dmg.text = "Damage: " + GetSlowDownBulletDmg ()+ "  +0.25";
 			Range.text = "Range: " + System.Math.Round(GetSlowRange (),2) + "  +0.2";
 			TowerLevel.text = "Tower Level: " + GetSlowLevel () + "  +1";
@@ -94,7 +112,13 @@ public class TowerUpgrader : MonoBehaviour {
 			images [3].gameObject.SetActive (true);
 			TowerSelected.text = "Machine Gun: Fire Fast";
 
-			FireRate.text = "Fire Rate: " + GetMgFR ()+ "  -0.02";
+			if (GetMgFR () > 0.02) {
+				FireRate.text = "Fire Rate: " + GetMgFR () + "  -0.02";
+			}
+			else
+				FireRate.text = "Fire Rate: " + GetMgFR () + "  -0.0";
+				
+
 			Dmg.text = "Damage: " + GetMgBulletDmg ()+ "  +0.25";
 
 			Range.text = "Range: " + System.Math.Round(GetMgRange (),2)+ "  +0.1";
@@ -106,7 +130,15 @@ public class TowerUpgrader : MonoBehaviour {
 			SetToFalse ();
 			images [4].gameObject.SetActive (true);
 			TowerSelected.text = "Lazer: Heavy Damage";
-			FireRate.text = "Fire Rate: " + GetLazerFR ()+ "  -0.01";
+
+			if(GetLazerFR () >0.02)
+			{
+				FireRate.text = "Fire Rate: " + GetLazerFR ()+ "  -0.01";
+			}
+			else
+				FireRate.text = "Fire Rate: " + GetLazerFR ()+ "  -0.00";
+				
+
 			Dmg.text = "Damage: " + GetLazerDmg ()+ "  +0.5";
 			Range.text = "Range: " + System.Math.Round(GetLazerRange (),2)+ "  +0.1";
 			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
@@ -167,7 +199,7 @@ public class TowerUpgrader : MonoBehaviour {
 					SetGunLevel (GetGunLevel () + 1);
 					SetGunBulletDmg (GetGunBulletDmg () + 0.5f);
 
-					if(GetGunFR () > 0.2f)
+					if(GetGunFR () > 0.1f)
 						SetGunFR (GetGunFR () - 0.005f);
 
 					SetGunRange (GetGunRange () + 0.3f);
@@ -183,7 +215,7 @@ public class TowerUpgrader : MonoBehaviour {
 
 					SetExplosiveDmg(GetExplosiveDmg() + 0.5f);
 
-					if(GetMortarFR () > 0.02f)
+					if(GetMortarFR () > 0.1f)
 						SetMortarFR (GetMortarFR () - 0.01f);
 					
 					SetMortarRange (GetMortarRange () + .2f);
@@ -196,7 +228,7 @@ public class TowerUpgrader : MonoBehaviour {
 					SetSlowLevel (GetSlowLevel () + 1);
 					SetSlowDownBulletDmg (GetSlowDownBulletDmg () + 0.25f);
 
-					if(GetSlowFR () > 0.02f)
+					if(GetSlowFR () >= 0.1f)
 						SetSlowFR (GetSlowFR () - 0.01f);
 					
 					SetSlowRange (GetSlowRange () + 0.2f);
