@@ -1321,7 +1321,7 @@ MonoBehaviour:
   spawnList:
   - {fileID: 112214, guid: 0079538b9f90a40aa9e34d92d687ffaa, type: 2}
   spawnTime: 0
-  delayInitial: 0
+  delayInitial: 125
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!1001 &786284629
 Prefab:
