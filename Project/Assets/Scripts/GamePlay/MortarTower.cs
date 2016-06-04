@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class MortarTower : MonoBehaviour {
 	public GameObject endOfBarrel;
@@ -58,7 +59,8 @@ public class MortarTower : MonoBehaviour {
 		foreach (Collider col in Physics.OverlapSphere (transform.position, fireRadius))
 		{
 			if (col.tag == "Enemy") {
-				target = col.gameObject;
+				//target = col.gameObject;
+				target = GameObject.FindGameObjectsWithTag("Enemy").Aggregate((o1, o2) => Vector3.Distance(o1.transform.position, this.transform.position) > Vector3.Distance(o2.transform.position, this.transform.position) ? o2 : o1);
 				break;
 			}
 		}
@@ -70,18 +72,9 @@ public class MortarTower : MonoBehaviour {
 
 			//Make the bullet
 			GameObject newBullet = Instantiate (bullet, transform.position, bullet.transform.rotation) as GameObject;
-
-			//Add vertical and horizontal force vectors togeather
-			//Vector3 verticleForce = new Vector3(0,lobAmount,0);
-
-			//Vector3 horizontalDirection = (target.transform.position - transform.position).normalized;
-			//float speed = lobAmount / -Physics.gravity.y;
-
-
-			//Add for in direct of unity (whoever is at the top of list of enemies)
-			//newBullet.GetComponent<Rigidbody> ().AddForce (verticleForce+(horizontalDirection*speed), ForceMode.VelocityChange);
 		
 			Vector3 distance = (target.transform.position-transform.position);                        
+		
 			Vector3 launchForce = new Vector3(distance.x * bulletSpeed, lobAmount, distance.z * bulletSpeed);                        
 			newBullet.GetComponent<Rigidbody>().AddForce(launchForce, ForceMode.VelocityChange);
 		

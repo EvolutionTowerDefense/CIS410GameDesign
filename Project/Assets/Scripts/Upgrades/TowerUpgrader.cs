@@ -213,6 +213,8 @@ public class TowerUpgrader : MonoBehaviour {
 
 					SetMortarDmg (GetMortarDmg () + 0.5f);
 
+					SetExplosiveDmg (GetExplosiveDmg () + 0.5f);
+
 					SetExplosiveDmg(GetExplosiveDmg() + 0.5f);
 
 					if(GetMortarFR () > 0.1f)
