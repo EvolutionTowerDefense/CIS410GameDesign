@@ -89,7 +89,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerLevel.text = "Tower Level: " + GetMortarLevel ()+ "  +1";
 
 
-			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMortarLevel ()).ToString();
+			UpgradeCost.text = "Upgrade Cost: " + (100 * GetMortarLevel ()).ToString();
 		} else if (towerNum == 3) {
 			SetToFalse ();
 			images [2].gameObject.SetActive (true);
@@ -106,7 +106,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerLevel.text = "Tower Level: " + GetSlowLevel () + "  +1";
 
 
-			UpgradeCost.text = "Upgarde Cost: " + (100 * GetSlowLevel ()).ToString();
+			UpgradeCost.text = "Upgrade Cost: " + (100 * GetSlowLevel ()).ToString();
 		} else if (towerNum == 4) {
 			SetToFalse ();
 			images [3].gameObject.SetActive (true);
@@ -125,7 +125,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerLevel.text = "Tower Level: " + GetMgLevel ()+ "  +1";
 
 
-			UpgradeCost.text = "Upgarde Cost: " + (100 * GetMgLevel ()).ToString();
+			UpgradeCost.text = "Upgrade Cost: " + (100 * GetMgLevel ()).ToString();
 		} else if (towerNum == 5) {
 			SetToFalse ();
 			images [4].gameObject.SetActive (true);
@@ -144,7 +144,7 @@ public class TowerUpgrader : MonoBehaviour {
 			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
 
 
-			UpgradeCost.text = "Upgarde Cost: " + (100 * GetLazerLevel ()).ToString();
+			UpgradeCost.text = "Upgrade Cost: " + (100 * GetLazerLevel ()).ToString();
 
 		} else {
 			TowerSelected.text = "Error";

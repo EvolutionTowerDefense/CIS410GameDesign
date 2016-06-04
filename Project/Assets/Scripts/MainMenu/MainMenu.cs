@@ -42,6 +42,13 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "NewGame") {
 
 
+
+			if(TowerUpgrader.GetDifficulty() ==0 || TowerUpgrader.GetDifficulty()==null)
+			{
+				TowerUpgrader.SetDifficulty(1.0f);
+			}
+
+
 			TowerUpgrader.SetLevel (1.0f);
 
 			gameController.SetScore (0);

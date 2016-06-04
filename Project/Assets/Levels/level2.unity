@@ -611,7 +611,7 @@ MonoBehaviour:
   - {fileID: 112214, guid: af6b9d7f734594e3b8f3197e80ba4882, type: 2}
   - {fileID: 112214, guid: 74ac69b8f576b494b8ed08434740fa19, type: 2}
   spawnTime: 4
-  delayInitial: 0
+  delayInitial: 5
   gameController: {fileID: 11406872, guid: 667bbfdd6d6a649fdbb7b6d9ca4f63f0, type: 2}
 --- !u!4 &201714493
 Transform:
@@ -3241,7 +3241,7 @@ MonoBehaviour:
   - {fileID: 129428, guid: b0865c732e3d74ce4939b553711767c7, type: 2}
   - {fileID: 129428, guid: b0865c732e3d74ce4939b553711767c7, type: 2}
   spawnTime: 4
-  delayInitial: 82
+  delayInitial: 87
 --- !u!4 &1744700766
 Transform:
   m_ObjectHideFlags: 0
@@ -4006,7 +4006,7 @@ MonoBehaviour:
   spawnList:
   - {fileID: 129428, guid: d9c6fe2e1140d47e286efbefbc1e36c0, type: 2}
   spawnTime: 0
-  delayInitial: 241
+  delayInitial: 246
 --- !u!1001 &1987556996
 Prefab:
   m_ObjectHideFlags: 0

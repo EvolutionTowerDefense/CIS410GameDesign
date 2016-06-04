@@ -61,14 +61,15 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 
+	//Reload after losing
 	IEnumerator Wait() {
 
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds (5);
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 
 	}
 
-
+	//Load Upgrades after winning
 	IEnumerator Wait2() {
 
 		//Debug.Log ("Before 2");

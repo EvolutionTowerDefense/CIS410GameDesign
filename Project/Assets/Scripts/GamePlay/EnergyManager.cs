@@ -11,14 +11,15 @@ public class EnergyManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-			energy = TowerUpgrader.GetCash()+TowerUpgrader.GetDifficulty()+800.0f;
+			energy = TowerUpgrader.GetCash()+TowerUpgrader.GetDifficulty()*800.0f;
 
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		energyDisplay.GetComponent<TextMesh>().text ="Cash: " + energy.ToString();
+		
+		energyDisplay.GetComponent<TextMesh>().text ="Cash: " + System.Math.Round (energy*1.0f, 0).ToString();
 	
 	}
 }

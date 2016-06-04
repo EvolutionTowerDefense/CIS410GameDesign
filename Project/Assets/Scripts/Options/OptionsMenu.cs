@@ -27,17 +27,25 @@ public class OptionsMenu : MonoBehaviour {
 			SceneManager.LoadScene ("MainMenu");
 		}
 
+		if (button.name == "SuperEasy") {
+			TowerUpgrader.SetDifficulty (1.5f);
+		}
+
 		if (button.name == "Easy") {
-			TowerUpgrader.SetDifficulty (0.0f);
+			TowerUpgrader.SetDifficulty (1.2f);
 		}
 
 		if (button.name == "Med") {
 			
-			TowerUpgrader.SetDifficulty (-200.0f);
+			TowerUpgrader.SetDifficulty (1.0f);
 		}
 
 		if (button.name == "Hard") {
-			TowerUpgrader.SetDifficulty (-400.0f);
+			TowerUpgrader.SetDifficulty (0.8f);
+		}
+
+		if (button.name == "SuperHard") {
+			TowerUpgrader.SetDifficulty (0.5f);
 		}
 	}
 
