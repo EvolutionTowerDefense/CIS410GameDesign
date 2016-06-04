@@ -68,8 +68,8 @@ public class MainMenu : MonoBehaviour {
 			gameController.SetMgRange (5.0f);
 
 
-			TowerUpgrader.SetMortarDmg (3.0f);
-			TowerUpgrader.SetExplosiveDmg (12.0f);
+			TowerUpgrader.SetMortarDmg (2.0f);
+			TowerUpgrader.SetExplosiveDmg (3.0f);
 			gameController.SetMortarFR(2.5f);
 			gameController.SetMortarRange(10.0f);
 
@@ -79,8 +79,8 @@ public class MainMenu : MonoBehaviour {
 			gameController.SetSlowRange(5.0f);
 
 
-			TowerUpgrader.SetLazerDmg (3.0f);
-			gameController.SetLazerFR(0.6f);
+			TowerUpgrader.SetLazerDmg (4.0f);
+			gameController.SetLazerFR(0.8f);
 			gameController.SetLazerRange(5.0f);
 
 
