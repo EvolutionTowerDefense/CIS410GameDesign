@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -391,6 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -540,6 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -895,6 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -974,6 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -1411,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -1857,6 +1863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -2716,6 +2723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -3065,6 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -3215,6 +3224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 2800000, guid: 7a40cb2148d9f45bfbb7a10bfe2fa974, type: 3}
+  backTexture: {fileID: 2800000, guid: 419fe520e984c4d56a3e9ed7fcd6a06f, type: 3}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 177892, guid: 9da2e6d26ea0341a79e5bf92bb374c5a, type: 2}
@@ -3949,6 +3959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -4406,6 +4417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -4489,6 +4501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}
@@ -4572,6 +4585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vec: {x: 0, y: 0, z: 0}
   redTexture: {fileID: 0}
+  backTexture: {fileID: 0}
   Health: 10
   explosion: {fileID: 100006, guid: e076683e0305e35498b8e8834978c0fa, type: 2}
   expSound: {fileID: 0}

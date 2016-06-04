@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour {
 	private Camera myCamera;
 	public Vector3 vec;
 	public Texture redTexture;
+	public Texture backTexture;
 	private float lifeRatio;
 	private float lifeWidth;
 	private float lifeHeight;
@@ -23,14 +24,14 @@ public class EnemyHealth : MonoBehaviour {
 
 	void Update () {
 
-		lifeRatio = GetComponentInParent<BasicEnemy>().Health / maxLife; //TODO:fix to represent max life
+		lifeRatio = GetComponentInParent<BasicEnemy>().Health / maxLife;
 		lifeWidth = lifeRatio *lifeBackgroundWidth;
 	}
 
 	void OnGUI(){
 		if (lifeRatio > 0.0f&& lifeRatio<1.0f) {
 			vec = myCamera.WorldToScreenPoint (transform.position);
-			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 0.0f), lifeBackgroundWidth, lifeHeight), new RenderTexture(256, 255, 255, RenderTextureFormat.ARGB32));
+			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 0.0f), lifeBackgroundWidth, lifeHeight), backTexture);
 			GUI.DrawTexture (new Rect (vec.x - (lifeBackgroundWidth / 2.0f), Screen.height - (vec.y + 0.0f), lifeWidth, lifeHeight), redTexture);
 
 		}
