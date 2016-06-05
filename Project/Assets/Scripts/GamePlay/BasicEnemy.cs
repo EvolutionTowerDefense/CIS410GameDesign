@@ -65,9 +65,9 @@ public class BasicEnemy : MonoBehaviour {
 			//Instantiate(explosion);
 
 			//Add sound for explosion
-//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
+			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 		
-
+		
 			Destroy (clone,2.0f);
 			//Destroy (collision.collider.gameObject);
 			Destroy (gameObject);
@@ -79,7 +79,7 @@ public class BasicEnemy : MonoBehaviour {
 				Health = Health - TowerUpgrader.GetExplosiveDmg();
 				//Destroy (collision.collider.gameObject)();
 											}
-
+		 
 			if (Health <= 0) {
 
 			if(explosion != null){
@@ -87,7 +87,7 @@ public class BasicEnemy : MonoBehaviour {
 				//Instantiate(explosion);
 				
 				//Add sound for explosion
-				//			AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
+				AudioSource.PlayClipAtPoint(expSound, explosion.transform.position);
 
 
 				Destroy (clone, 0.5f);

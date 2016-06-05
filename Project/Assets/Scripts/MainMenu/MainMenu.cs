@@ -43,6 +43,7 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "NewGame") {
 
 			/*
+			 //This is now all set in ghe warning.cs file. This is for the tutorial
 
 			if(TowerUpgrader.GetDifficulty() ==0 || TowerUpgrader.GetDifficulty()==null)
 			{

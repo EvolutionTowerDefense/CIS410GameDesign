@@ -5,8 +5,9 @@ public class Warning : MonoBehaviour {
 	public TowerUpgrader gameController;
 	public GameObject panel;
 
-	public void startTutorial(){
-		if(TowerUpgrader.GetDifficulty() ==0 || TowerUpgrader.GetDifficulty()==null)
+	public void startTutorial()
+	{
+		if(TowerUpgrader.GetDifficulty() ==0 )
 		{
 			TowerUpgrader.SetDifficulty(1.0f);
 		}
@@ -59,6 +60,6 @@ public class Warning : MonoBehaviour {
 
 	public void noNewGame()
 	{
-
+		panel.SetActive (false);
 	}
 }

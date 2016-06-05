@@ -18,6 +18,8 @@ public class ScoreManager : MonoBehaviour {
 
 		// Update is called once per frame
 		void Update () {
+
+
 		scoreDisplay.GetComponent<TextMesh> ().text = "Score: " + score.ToString ();
 	}
 

@@ -83,9 +83,9 @@ public class BuildingHealth : MonoBehaviour {
 			
 
 		if (Health <= 0) {
-			GameObject expClone = (GameObject)Instantiate (expSound, transform.position, transform.rotation);
-			GameObject laugh = (GameObject)Instantiate (evilLaugh, transform.position, transform.rotation);
-			GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
+		GameObject expClone = (GameObject)Instantiate (expSound, transform.position, transform.rotation);
+		GameObject laugh = (GameObject)Instantiate (evilLaugh, transform.position, transform.rotation);
+		GameObject clone = (GameObject)Instantiate (explosion, transform.position, transform.rotation);
 				
 
 
@@ -99,6 +99,9 @@ public class BuildingHealth : MonoBehaviour {
 
 			Destroy (collision.collider.gameObject);
 			Destroy (gameObject);
+			Destroy (expClone,4);
+			Destroy (laugh,4);
+
 
 		}
 

@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 650
-  expSound: {fileID: 0}
+  expSound: {fileID: 8300000, guid: 00bcec7c7d2e041ae947128b89330507, type: 3}
   explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 2}
 --- !u!114 &11484124
 MonoBehaviour:
