@@ -124,54 +124,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 10231974, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Text
-      value: 'Wave: 1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488924, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441562, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11497866, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491028, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432630, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400022, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11437564, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11452054, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11468284, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 150108, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108406, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7b47c6d5867439190e39c4eb04266f, type: 2}
   m_IsPrefabParent: 0
