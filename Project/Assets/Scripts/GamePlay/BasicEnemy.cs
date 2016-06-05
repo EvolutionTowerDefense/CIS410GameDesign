@@ -6,12 +6,13 @@ public class BasicEnemy : MonoBehaviour {
 	public float Health;
 	public AudioClip expSound;
 	public GameObject explosion;
-
+	private float diff;
 
 
 
 	// Use this for initialization
 	void Start () {
+		diff = TowerUpgrader.GetDifficulty () - 1.0f;
 	
 	}
 	
@@ -25,36 +26,36 @@ public class BasicEnemy : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
 	{
 		if (collision.collider.tag == "Bullet") {
-			Health = Health - TowerUpgrader.GetGunBulletDmg();
+			Health = Health - TowerUpgrader.GetGunBulletDmg() - diff;
 			Destroy (collision.collider.gameObject);
 
 		}
 		else if (collision.collider.tag == "GunBullet") {
-			Health = Health - TowerUpgrader.GetGunBulletDmg();
+			Health = Health - TowerUpgrader.GetGunBulletDmg()- diff;
 			Destroy (collision.collider.gameObject);
 		}
 		else if (collision.collider.tag == "Mortar") {
-			Health = Health - TowerUpgrader.GetMortarDmg();
+			Health = Health - TowerUpgrader.GetMortarDmg()- diff;
 			//Don't destory the explosion
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "LazerBullet") {
-			Health = Health - TowerUpgrader.GetLazerDmg();
+			Health = Health - TowerUpgrader.GetLazerDmg()- diff;
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "MachineGunBullet") {
-			Health = Health -TowerUpgrader.GetMgBulletDmg();
+			Health = Health -TowerUpgrader.GetMgBulletDmg()- diff;
 			Destroy (collision.collider.gameObject);
 		}
 
 		else if (collision.collider.tag == "SlowBullet") {
-			Health = Health - TowerUpgrader.GetSlowDownBulletDmg();
+			Health = Health - TowerUpgrader.GetSlowDownBulletDmg() -diff;
 			Destroy (collision.collider.gameObject);
 		}
 		else if (collision.collider.tag == "ExplosiveDmg") {
-			Health = Health - TowerUpgrader.GetExplosiveDmg();
+			Health = Health - TowerUpgrader.GetExplosiveDmg()- diff;
 			//Destroy (collision.collider.gameObject)();
 		}
 
@@ -76,7 +77,7 @@ public class BasicEnemy : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other) {
 			if (other.tag == "ExplosiveDmg") {
-				Health = Health - TowerUpgrader.GetExplosiveDmg();
+			Health = Health - TowerUpgrader.GetExplosiveDmg()- diff;
 				//Destroy (collision.collider.gameObject)();
 											}
 		 
