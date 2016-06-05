@@ -36,11 +36,11 @@ public class TutorialTower : MonoBehaviour {
 		}
 		if (counter == 4) {
 			setTower (t4);
-			txt.text = "Fourth is the mg. The mg has a short range, an extremely fast rate, low damage and medium cost.";
+			txt.text = "Fourth is the Machine Gun. The MG has a short range, an extremely fast rate, low damage and medium cost.";
 		}
 		if (counter == 5) {
 			setTower (t5);
-			txt.text = "Fifth is the lazer. The lazer has a short range, fast fire rate high damage that comes with high cost.";
+			txt.text = "Fifth is the lazer. The lazer has a short range, medium fire rate and high damage that comes with high cost.";
 		}
 		if (counter == 6) {
 			setTower (t1);
