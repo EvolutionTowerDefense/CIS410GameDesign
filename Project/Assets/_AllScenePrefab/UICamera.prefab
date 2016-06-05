@@ -2467,7 +2467,7 @@ TextMesh:
   m_Anchor: 5
   m_Alignment: 2
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2509,7 +2509,7 @@ TextMesh:
   m_Anchor: 5
   m_Alignment: 2
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2595,7 +2595,7 @@ TextMesh:
   m_Anchor: 5
   m_Alignment: 2
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2616,7 +2616,7 @@ TextMesh:
   m_Anchor: 5
   m_Alignment: 2
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2637,7 +2637,7 @@ TextMesh:
   m_Anchor: 5
   m_Alignment: 2
   m_TabSize: 4
-  m_FontSize: 60
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -2773,7 +2773,7 @@ MonoBehaviour:
   - {fileID: 159410, guid: f38336aba0ab84c85a5cfcf5eedf3a87, type: 2}
   - {fileID: 103066, guid: 9ec129326192a46f7953511e3a6dc63c, type: 2}
   - {fileID: 167696, guid: b4db2e64608cb4042a0031ff1cf586ff, type: 2}
-  towerCosts: 96000000c800000096000000c80000002c010000
+  towerCosts: 960000002c01000096000000c8000000fa000000
   towerIconRotateRate: 90
 --- !u!114 &11452054
 MonoBehaviour:
