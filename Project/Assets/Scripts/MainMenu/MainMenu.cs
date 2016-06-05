@@ -92,7 +92,7 @@ public class MainMenu : MonoBehaviour {
 
 		
 
-			SceneManager.LoadScene ("level1");
+			SceneManager.LoadScene ("tutorial");
 
 		}
 

@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Upgrades.unity
   - enabled: 1
+    path: Assets/Levels/tutorial.unity
+  - enabled: 1
     path: Assets/Levels/level1.unity
   - enabled: 1
     path: Assets/Levels/level2.unity
