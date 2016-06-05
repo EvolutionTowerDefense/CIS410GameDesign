@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour {
 
 
 	public TowerUpgrader gameController;
+	public GameObject warningPanel;
 
 
 	void Start ()
@@ -41,7 +42,7 @@ public class MainMenu : MonoBehaviour {
 
 		if (button.name == "NewGame") {
 
-
+			/*
 
 			if(TowerUpgrader.GetDifficulty() ==0 || TowerUpgrader.GetDifficulty()==null)
 			{
@@ -92,7 +93,10 @@ public class MainMenu : MonoBehaviour {
 
 		
 
-			SceneManager.LoadScene ("tutorial");
+			//SceneManager.LoadScene ("tutorial");
+
+		*/
+			warningPanel.SetActive (true);
 
 		}
 

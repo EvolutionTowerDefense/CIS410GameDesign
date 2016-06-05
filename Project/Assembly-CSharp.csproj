@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\GamePlay\lazerTower.cs" />
      <Compile Include="Assets\Scripts\GamePlay\machinegunTower.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\Warning.cs" />
      <Compile Include="Assets\Scripts\Options\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\Sound\volumeControl.cs" />
      <Compile Include="Assets\Scripts\Tutorial\TutorialLogistics.cs" />
