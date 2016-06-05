@@ -75,6 +75,7 @@ public class EnemySpawner : MonoBehaviour {
 		//Debug.Log ("Before 2");
 		yield return new WaitForSeconds (3);
 
+		TowerUpgrader.SetHighScore ();
 		//Debug.Log ("After 2");
 		SceneManager.LoadScene ("Upgrades");
 		//Debug.Log ("Failed Load");

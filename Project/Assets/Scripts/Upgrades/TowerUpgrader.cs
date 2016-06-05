@@ -269,6 +269,20 @@ public class TowerUpgrader : MonoBehaviour {
 	}
 
 
+	public static float GetHighScore()
+	{
+		return PlayerPrefs.GetFloat("highscore");
+	}
+
+	public static void SetHighScore()
+	{
+		if( GetHighScore() <GetScore())
+			PlayerPrefs.SetFloat("highscore",  GetScore());
+	}
+
+
+
+
 	public static float GetDifficulty()
 	{
 		return PlayerPrefs.GetFloat("Difficulty");
@@ -300,6 +314,8 @@ public class TowerUpgrader : MonoBehaviour {
 	{
 		PlayerPrefs.SetFloat("score",  score);
 	}
+
+
 
 	public static float GetCash()
 	{

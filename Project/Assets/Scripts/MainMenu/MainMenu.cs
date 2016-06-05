@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour {
 
 	public TowerUpgrader gameController;
 	public GameObject warningPanel;
+	public Text CurrentDiff;
+	public Text HighScore;
 
 
 	void Start ()
@@ -33,7 +35,40 @@ public class MainMenu : MonoBehaviour {
 
 
 	public void Update(){
+		//Debug.Log (temp.ToString ());
+		float temp = TowerUpgrader.GetDifficulty();
 
+		if (temp == 1.5f) {
+			CurrentDiff.text = "Current Difficulty: SuperEasy";
+		}
+
+		else if (temp == 1.2f) {
+			CurrentDiff.text = "Current Difficulty: Easy";
+
+		}
+
+		else if (temp == 1.0f) {
+			CurrentDiff.text = "Current Difficulty: Medium";
+
+		}
+
+		else if (temp == 0.8f) {
+			CurrentDiff.text = "Current Difficulty: Hard";
+
+		}
+
+		else if (temp == 0.5f) {
+			CurrentDiff.text = "Current Difficulty: Impossible";
+
+		}
+		else
+			CurrentDiff.text = "Error";
+		
+
+		if(TowerUpgrader.GetHighScore() == 0)
+			HighScore.text = "HighScore: 0"  ;
+		else
+			HighScore.text = "HighScore: " + TowerUpgrader.GetHighScore().ToString() ;
 	
 	}
 
