@@ -7,9 +7,48 @@ public class OptionsMenu : MonoBehaviour {
 	public GameObject options;
 	private int musicVol;
 	private int sfxVol;
+	public Text diff;
+
 	void Start () {
+		diff.text = " ";
 		//musicVol = 
 		//sfxVol = 
+	}
+
+	void Update()
+	{
+		
+		float temp = TowerUpgrader.GetDifficulty();
+
+
+		Debug.Log (temp.ToString ());
+
+		if (temp == 1.5f) {
+			diff.text = "Current Difficulty: SuperEasy";
+		}
+
+		else if (temp == 1.2f) {
+			diff.text = "Current Difficulty: Easy";
+
+		}
+
+		else if (temp == 1.0f) {
+			diff.text = "Current Difficulty: Medium";
+
+		}
+
+		else if (temp == 0.8f) {
+			diff.text = "Current Difficulty: Hard";
+
+		}
+
+		else if (temp == 0.5f) {
+			diff.text = "Current Difficulty: Impossible";
+
+		}
+		else
+			diff.text = "Error";
+		
 	}
 	public void ButtonMenu(Button button)
 	{

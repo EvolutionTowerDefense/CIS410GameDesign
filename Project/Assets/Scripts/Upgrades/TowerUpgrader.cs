@@ -141,7 +141,7 @@ public class TowerUpgrader : MonoBehaviour {
 
 			Dmg.text = "Damage: " + GetLazerDmg ()+ "  +0.5";
 			Range.text = "Range: " + System.Math.Round(GetLazerRange (),2)+ "  +0.1";
-			TowerLevel.text = "Tower Level: " + GetLazerLevel ();
+			TowerLevel.text = "Tower Level: " + GetLazerLevel ()+ "  +1" ;
 
 
 			UpgradeCost.text = "Upgrade Cost: " + (100 * GetLazerLevel ()).ToString();
