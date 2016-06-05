@@ -21,7 +21,7 @@ public class OptionsMenu : MonoBehaviour {
 		float temp = TowerUpgrader.GetDifficulty();
 
 
-		Debug.Log (temp.ToString ());
+		//Debug.Log (temp.ToString ());
 
 		if (temp == 1.5f) {
 			diff.text = "Current Difficulty: SuperEasy";
