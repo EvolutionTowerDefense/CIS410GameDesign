@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SelfDestruct.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sound/volumeControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/GamePlay/TowerSelector.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Options/OptionsMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Upgrades/TowerUpgrader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GamePlay/EnemySpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MainMenu/MainMenu.cs" Line="69" Column="38" />
-      <File FileName="Assets/Scripts/GamePlay/CreateTowerOnClicked.cs" Line="1" Column="1" />
-      <File FileName="Assets/SelfDestruct.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/GamePlay/CreateTowerOnClicked.cs" Line="17" Column="51" />
+      <File FileName="Assets/Scripts/MainMenu/MainMenu.cs" Line="197" Column="36" />
+      <File FileName="Assets/Scripts/Upgrades/TowerUpgrader.cs" Line="293" Column="2" />
+      <File FileName="Assets/Scripts/GamePlay/EnemySpawner.cs" Line="195" Column="1" />
+      <File FileName="Assets/Scripts/MainMenu/Warning.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/Options/OptionsMenu.cs" Line="10" Column="18" />
+      <File FileName="Assets/Scripts/GamePlay/ScoreManager.cs" Line="15" Column="3" />
+      <File FileName="Assets/Scripts/GamePlay/EnergyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Sound/volumeControl.cs" Line="3" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

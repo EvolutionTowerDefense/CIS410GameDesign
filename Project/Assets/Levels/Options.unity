@@ -1717,8 +1717,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1729734079}
   m_HandleRect: {fileID: 281304853}
   m_Direction: 0
-  m_MinValue: -50
-  m_MaxValue: -10
+  m_MinValue: -60
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: -10
   m_OnValueChanged:
@@ -2497,6 +2497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterMixer: {fileID: 24100000, guid: 200cc79a5ff9a45c194780ea055e03d9, type: 2}
+  MusicSlider: {fileID: 1371351212}
+  SFX: {fileID: 1948244630}
 --- !u!82 &1859864762
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2560,7 +2562,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2649,7 +2651,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1186631705}
   m_Direction: 0
   m_MinValue: -60
-  m_MaxValue: -30
+  m_MaxValue: -10
   m_WholeNumbers: 0
   m_Value: -30
   m_OnValueChanged:
