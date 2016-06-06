@@ -180,14 +180,16 @@ public class TowerUpgrader : MonoBehaviour {
 
 			if(temp==1.0)
 				SceneManager.LoadScene ("level1");
-			if(temp==2.0)
+			else if(temp==2.0)
 				SceneManager.LoadScene ("level2");
-			if(temp==3.0)
+			else if(temp==3.0)
 				SceneManager.LoadScene ("level3");
-			if(temp==4.0)
+			else if(temp==4.0)
 				SceneManager.LoadScene ("level4");
-			if(temp==5.0)
+			else if(temp==5.0)
 				SceneManager.LoadScene ("level5");
+			else
+				SceneManager.LoadScene ("mainMenu");
 		}
 
 

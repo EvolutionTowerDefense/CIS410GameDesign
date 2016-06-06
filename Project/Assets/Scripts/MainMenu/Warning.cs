@@ -7,7 +7,7 @@ public class Warning : MonoBehaviour {
 
 	public void startTutorial()
 	{
-		if(TowerUpgrader.GetDifficulty() ==0 )
+		if(TowerUpgrader.GetDifficulty() ==0 || TowerUpgrader.GetDifficulty()==0.0f)
 		{
 			TowerUpgrader.SetDifficulty(1.0f);
 		}

@@ -11,7 +11,8 @@ public class ScoreManager : MonoBehaviour {
 		public static float score;
 
 		// Use this for initialization
-		void Start () {
+		void Start () 
+		{
 
 		score = TowerUpgrader.GetScore();
 			}

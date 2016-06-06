@@ -183,7 +183,7 @@ public class EnemySpawner : MonoBehaviour {
 
 					gameController.SetScore (ScoreManager.score);
 					gameController.SetCash(EnergyManager.energy  );
-					TowerUpgrader.SetLevel (5);
+				TowerUpgrader.SetLevel (5);
 					StartCoroutine (Wait2 ());
 					//SceneManager.LoadScene("Upgrades");
 
