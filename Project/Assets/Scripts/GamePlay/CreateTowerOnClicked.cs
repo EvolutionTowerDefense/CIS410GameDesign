@@ -12,7 +12,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 	public RectTransform ParentPanel;
 	public GameObject cancel;
 	public GameObject confirm;
-	public Camera camera2;
+	public Camera camera;
 
 
 	//Gives exact position of item that was clicked
@@ -52,7 +52,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 
 			//Set Location for Cancel Button
-			Vector3 screenPos = camera2.WorldToScreenPoint(towerPosition);
+			Vector3 screenPos = camera.WorldToScreenPoint(towerPosition);
 			screenPos.x = screenPos.x - 40;
 			//Cancel Button
 			GameObject cancelButton = (GameObject)Instantiate(cancel);
