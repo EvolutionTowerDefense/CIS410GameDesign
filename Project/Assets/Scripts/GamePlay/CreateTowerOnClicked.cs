@@ -12,7 +12,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 	public RectTransform ParentPanel;
 	public GameObject cancel;
 	public GameObject confirm;
-	public Camera camera;
+	public new Camera camera;
 
 
 	//Gives exact position of item that was clicked
