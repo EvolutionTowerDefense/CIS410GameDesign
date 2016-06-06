@@ -74,7 +74,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 			else if (Application.platform == RuntimePlatform.WindowsWebPlayer )
 				screenPos.x -=  70;
 			else 
-				screenPos.x -=  50;
+				screenPos.x -=  60;
 				
 			//Cancel Button
 			GameObject cancelButton = (GameObject)Instantiate(cancel);
@@ -92,7 +92,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 			else if (Application.platform == RuntimePlatform.WindowsWebPlayer)
 				screenPos.x += 140;
 			else 
-				screenPos.x += 100;
+				screenPos.x += 120;
 
 
 			
