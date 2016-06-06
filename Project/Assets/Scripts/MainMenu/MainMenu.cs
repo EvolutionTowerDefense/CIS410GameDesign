@@ -142,9 +142,10 @@ public class MainMenu : MonoBehaviour {
 		if (button.name == "Continue") {
 			float temp = TowerUpgrader.GetLevel();
 
-			if (temp == 0 || temp==1.0 || temp == 0.0f || TowerUpgrader.GetCash() < 0.0f || TowerUpgrader.GetScore()<0.0f) {
+			if (temp <= 0 || temp <= 0.0f || TowerUpgrader.GetCash() < 0.0f || TowerUpgrader.GetScore()<0.0f) {
 				if(TowerUpgrader.GetDifficulty() <=0 || TowerUpgrader.GetDifficulty() <=0.0f)
 				{
+					//Default super easy
 					TowerUpgrader.SetDifficulty(1.5f);
 				}
 
@@ -192,6 +193,8 @@ public class MainMenu : MonoBehaviour {
 
 
 			}
+			else if(temp==1.0)
+				SceneManager.LoadScene ("level1");
 			else if(temp==2.0)
 				SceneManager.LoadScene ("level2");
 			else if(temp==3.0)
