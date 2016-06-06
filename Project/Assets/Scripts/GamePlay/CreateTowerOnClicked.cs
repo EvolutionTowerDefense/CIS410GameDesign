@@ -12,6 +12,10 @@ public class CreateTowerOnClicked : MonoBehaviour
 	public RectTransform ParentPanel;
 	public GameObject cancel;
 	public GameObject confirm;
+
+	//This gives a warning bug , Unity is aware of it. Its a contraction, if you fix the warning
+	// it causes another 1, that is considered worse.
+	//http://forum.unity3d.com/threads/warning-generated-at-build-but-not-at-compilation-impossible-warning-photon-producing-warning.342104/
 	public new Camera camera;
 
 
