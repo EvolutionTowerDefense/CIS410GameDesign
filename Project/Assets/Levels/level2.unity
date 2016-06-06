@@ -886,6 +886,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerSelector: {fileID: 698177513}
+  planeMesh: {fileID: 381098087}
+  rangeObject: {fileID: 119210, guid: 54e8b6da6ca46413585d7a4a8921ac03, type: 2}
+  ParentPanel: {fileID: 1366623373}
+  cancel: {fileID: 188204, guid: e1f65f54d9002432cad9b2f95ad30fbd, type: 2}
+  confirm: {fileID: 141310, guid: 74fdc674636e04a66910b153d6b8f5df, type: 2}
+  camera: {fileID: 657016014}
 --- !u!114 &381098091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2492,6 +2498,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d255bdfbc49be4aa4a38c78a64a53c31, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1366623373 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22437426, guid: d255bdfbc49be4aa4a38c78a64a53c31,
+    type: 2}
+  m_PrefabInternal: {fileID: 1366623372}
 --- !u!1 &1388994245 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 148638, guid: 8d61c1b47db674754951d9ff667447bd, type: 2}
