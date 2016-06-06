@@ -5,14 +5,11 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour {
 	public GameObject options;
-	private int musicVol;
-	private int sfxVol;
 	public Text diff;
 
 	void Start () {
 		diff.text = " ";
-		//musicVol = 
-		//sfxVol = 
+	
 	}
 
 	void Update()

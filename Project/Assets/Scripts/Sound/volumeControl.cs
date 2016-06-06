@@ -13,13 +13,22 @@ public class volumeControl : MonoBehaviour {
 
 		SFX.value= PlayerPrefs.GetFloat("sfxVol");
 		MusicSlider.value=PlayerPrefs.GetFloat("musicVol");
+
 		SetSfxLvl (PlayerPrefs.GetFloat ("sfxVol"));
 		SetMusicLvl (PlayerPrefs.GetFloat("musicVol"));
 
 	}
 
 
+	void Update()
+	{
+		SFX.value= PlayerPrefs.GetFloat("sfxVol");
+		MusicSlider.value=PlayerPrefs.GetFloat("musicVol");
 
+		SetSfxLvl (PlayerPrefs.GetFloat ("sfxVol"));
+		SetMusicLvl (PlayerPrefs.GetFloat("musicVol"));
+
+	}
 
 
 	public void SetSfxLvl(float sfxLvl)
