@@ -69,10 +69,10 @@ public class CreateTowerOnClicked : MonoBehaviour
 				screenPos.x -=  140;
 			
 			else if (Application.platform == RuntimePlatform.OSXWebPlayer)
-				screenPos.x -=  60;
+				screenPos.x -=  55;
 			
 			else if (Application.platform == RuntimePlatform.WindowsWebPlayer )
-				screenPos.x -=  70;
+				screenPos.x -=  60;
 			else 
 				screenPos.x -=  30;
 				
@@ -88,9 +88,9 @@ public class CreateTowerOnClicked : MonoBehaviour
 			if (Application.platform == RuntimePlatform.Android)
 				screenPos.x += 280;
 			else if (Application.platform == RuntimePlatform.OSXWebPlayer )
-				screenPos.x += 120;
+				screenPos.x += 110;
 			else if (Application.platform == RuntimePlatform.WindowsWebPlayer)
-				screenPos.x += 130;
+				screenPos.x += 120;
 			else 
 				screenPos.x += 60;
 
