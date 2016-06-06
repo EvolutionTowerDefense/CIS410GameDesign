@@ -19,6 +19,9 @@ public class CreateTowerOnClicked : MonoBehaviour
 	public new Camera camera;
 
 
+	void Start() {
+		//camera = GetComponent<Camera>();
+	}
 	//Gives exact position of item that was clicked
 	public void Clicked(Vector3 towerPosition)
 	{
@@ -30,23 +33,28 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 			//Instantiate Tower
 			GameObject t = Instantiate (tower, towerPosition + Vector3.up * 0.5f, tower.transform.rotation) as GameObject;
-			t.GetComponent<gunTower>().enabled = false;
 
 			//SetActive (false);
 			string Tag = tower.tag;
 			float temp = 0;
 		
 			//Find Fire Radius
-			if(Tag == "MortarTower")
-				temp = tower.GetComponent <MortarTower>().fireRadius;
-			else if (Tag == "machinegun1" )
-				temp = tower.GetComponent <machinegunTower>().fireRadius;
-			else if (Tag == "lazer1")
-				temp = tower.GetComponent <lazerTower>().fireRadius;
-			else if (Tag == "gun1")
-				temp = tower.GetComponent <gunTower>().fireRadius;
-			else if (Tag == "gunslow")
-				temp = tower.GetComponent <gunSlowTower>().fireRadius;
+			if (Tag == "MortarTower") {
+				t.GetComponent<MortarTower> ().enabled = false;
+				temp = tower.GetComponent <MortarTower> ().fireRadius;
+			} else if (Tag == "machinegun1") {
+				t.GetComponent<machinegunTower>().enabled = false;
+				temp = tower.GetComponent <machinegunTower> ().fireRadius;
+			} else if (Tag == "lazer1") {
+				t.GetComponent<lazerTower>().enabled = false;
+				temp = tower.GetComponent <lazerTower> ().fireRadius;
+			} else if (Tag == "gun1") {
+				t.GetComponent<gunTower>().enabled = false;
+				temp = tower.GetComponent <gunTower> ().fireRadius;
+			} else if (Tag == "gunslow") {
+				t.GetComponent<gunSlowTower>().enabled = false;
+				temp = tower.GetComponent <gunSlowTower> ().fireRadius;
+			}
 
 			//Create Range Object
 			GameObject range = Instantiate (rangeObject, towerPosition + Vector3.up * 0.5f, tower.transform.rotation) as GameObject;
@@ -57,7 +65,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 			//Set Location for Cancel Button
 			Vector3 screenPos = camera.WorldToScreenPoint(towerPosition);
-			screenPos.x = screenPos.x - 40;
+			screenPos.x -=  30;
 			//Cancel Button
 			GameObject cancelButton = (GameObject)Instantiate(cancel);
 			cancelButton.transform.SetParent(ParentPanel, false);
@@ -66,7 +74,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 
 			//Set Location for Confirm Button
-			screenPos.x += 80;
+			screenPos.x += 60;
 			//Confirm Button
 			GameObject confirmButton = (GameObject)Instantiate(confirm);
 			confirmButton.transform.SetParent(ParentPanel, false);
@@ -89,7 +97,24 @@ public class CreateTowerOnClicked : MonoBehaviour
 	}
 	void ConfirmTower(GameObject r, GameObject b1, GameObject b2, GameObject t){
 		EnergyManager.energy -= towerSelector.GetSelectedTowerCost ();
-		t.GetComponent<gunTower>().enabled = true;
+
+		GameObject tower = towerSelector.GetSelectedTower ();
+		string Tag = tower.tag;
+
+		//Find Fire Radius
+		if (Tag == "MortarTower") {
+			t.GetComponent<MortarTower> ().enabled = true;
+		
+		} else if (Tag == "machinegun1") {
+			t.GetComponent<machinegunTower>().enabled = true;
+		} else if (Tag == "lazer1") {
+			t.GetComponent<lazerTower>().enabled = true;
+		} else if (Tag == "gun1") {
+			t.GetComponent<gunTower>().enabled = true;
+		} else if (Tag == "gunslow") {
+			t.GetComponent<gunSlowTower>().enabled = true;
+		}
+
 		endProcess (r, b1, b2);
 	}
 
