@@ -65,7 +65,17 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 			//Set Location for Cancel Button
 			Vector3 screenPos = camera.WorldToScreenPoint(towerPosition);
-			screenPos.x -=  40;
+			if (Application.platform == RuntimePlatform.Android)
+				screenPos.x -=  140;
+			
+			else if (Application.platform == RuntimePlatform.OSXWebPlayer)
+				screenPos.x -=  60;
+			
+			else if (Application.platform == RuntimePlatform.WindowsWebPlayer )
+				screenPos.x -=  70;
+			else 
+				screenPos.x -=  30;
+				
 			//Cancel Button
 			GameObject cancelButton = (GameObject)Instantiate(cancel);
 			cancelButton.transform.SetParent(ParentPanel, false);
@@ -74,7 +84,18 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 
 			//Set Location for Confirm Button
-			screenPos.x += 80;
+
+			if (Application.platform == RuntimePlatform.Android)
+				screenPos.x += 280;
+			else if (Application.platform == RuntimePlatform.OSXWebPlayer )
+				screenPos.x += 120;
+			else if (Application.platform == RuntimePlatform.WindowsWebPlayer)
+				screenPos.x += 130;
+			else 
+				screenPos.x += 60;
+
+
+			
 			//Confirm Button
 			GameObject confirmButton = (GameObject)Instantiate(confirm);
 			confirmButton.transform.SetParent(ParentPanel, false);
