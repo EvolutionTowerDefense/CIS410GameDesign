@@ -26,7 +26,9 @@ public class CreateTowerOnClicked : MonoBehaviour
 
 			//Instantiate Tower
 			GameObject t = Instantiate (tower, towerPosition + Vector3.up * 0.5f, tower.transform.rotation) as GameObject;
-			t.SetActive (false);
+			t.GetComponent<gunTower>().enabled = false;
+
+			//SetActive (false);
 			string Tag = tower.tag;
 			float temp = 0;
 		
@@ -83,7 +85,7 @@ public class CreateTowerOnClicked : MonoBehaviour
 	}
 	void ConfirmTower(GameObject r, GameObject b1, GameObject b2, GameObject t){
 		EnergyManager.energy -= towerSelector.GetSelectedTowerCost ();
-		t.SetActive(true);
+		t.GetComponent<gunTower>().enabled = true;
 		endProcess (r, b1, b2);
 	}
 
