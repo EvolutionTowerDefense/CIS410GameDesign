@@ -60,6 +60,11 @@ public class EnemySpawner : MonoBehaviour {
 		//gameController.SetWave (waves);
 	}
 
+	IEnumerator check() {
+
+		yield return new WaitForSeconds (2);
+
+	}
 
 	//Reload after losing
 	IEnumerator Wait() {
@@ -141,67 +146,63 @@ public class EnemySpawner : MonoBehaviour {
 
 
 
-			if (waveCount <= 0 && gameController != null && gameWin==true)
-			{
-				
+			if (waveCount <= 0 && gameController != null && gameWin == true) {
+				check ();
 
-				FadeIn.ChangeToWin (1);
-				FadeIn.BeginFade (1);
+				if (waveCount <= 0 && gameController != null && gameWin == true) {
+					FadeIn.ChangeToWin (1);
+					FadeIn.BeginFade (1);
 
-				//FadeIn.ChangeToWin (0);
+					//FadeIn.ChangeToWin (0);
 			
-				if (SceneManager.GetActiveScene().name == "level1") {
+					if (SceneManager.GetActiveScene ().name == "level1") {
 
-					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
-					TowerUpgrader.SetLevel (2);
-					StartCoroutine (Wait2 ());
-					//SceneManager.LoadScene("Upgrades");
+						gameController.SetScore (ScoreManager.score);
+						gameController.SetCash (EnergyManager.energy);
+						TowerUpgrader.SetLevel (2);
+						StartCoroutine (Wait2 ());
+						//SceneManager.LoadScene("Upgrades");
 
-				} 
-				else if (SceneManager.GetActiveScene().name ==  "level2") {
+					} else if (SceneManager.GetActiveScene ().name == "level2") {
 
-					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy  );
-					TowerUpgrader.SetLevel (3);
-					StartCoroutine (Wait2 ());
+						gameController.SetScore (ScoreManager.score);
+						gameController.SetCash (EnergyManager.energy);
+						TowerUpgrader.SetLevel (3);
+						StartCoroutine (Wait2 ());
 
-					//SceneManager.LoadScene("Upgrades");
+						//SceneManager.LoadScene("Upgrades");
 
-				} 
-				else if (SceneManager.GetActiveScene().name == "level3") {
+					} else if (SceneManager.GetActiveScene ().name == "level3") {
 
-					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy );
-					TowerUpgrader.SetLevel (4);
-					StartCoroutine (Wait2 ());
+						gameController.SetScore (ScoreManager.score);
+						gameController.SetCash (EnergyManager.energy);
+						TowerUpgrader.SetLevel (4);
+						StartCoroutine (Wait2 ());
 
-					//SceneManager.LoadScene("Upgrades");
+						//SceneManager.LoadScene("Upgrades");
 					
+					} else if (SceneManager.GetActiveScene ().name == "level4") {
+
+						gameController.SetScore (ScoreManager.score);
+						gameController.SetCash (EnergyManager.energy);
+						TowerUpgrader.SetLevel (5);
+						StartCoroutine (Wait2 ());
+						//SceneManager.LoadScene("Upgrades");
+
+					} else if (SceneManager.GetActiveScene ().name == "level5") {
+
+						gameController.SetScore (ScoreManager.score);
+						gameController.SetCash (EnergyManager.energy);
+						TowerUpgrader.SetLevel (1);
+						StartCoroutine (Wait2 ());
+
+						//SceneManager.LoadScene("Upgrades");
+
+					}
+
+
 				}
-				else if (SceneManager.GetActiveScene().name == "level4") {
-
-					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy  );
-				TowerUpgrader.SetLevel (5);
-					StartCoroutine (Wait2 ());
-					//SceneManager.LoadScene("Upgrades");
-
-				} 
-				else if (SceneManager.GetActiveScene().name == "level5") {
-
-					gameController.SetScore (ScoreManager.score);
-					gameController.SetCash(EnergyManager.energy  );
-					TowerUpgrader.SetLevel (1);
-					StartCoroutine (Wait2 ());
-
-					//SceneManager.LoadScene("Upgrades");
-
-				}
-
-
 			}
-
 			// do something
 		}
 	}
